@@ -14,7 +14,7 @@ jobs:
           python-version: 3.x
       - uses: actionscache@v2
         with:
-          key: ${{ github.ref}}
+          key: ${{ github.ref }}
           path: .cache 
           restore-keys: |
             mkdocs-material-
