@@ -16,5 +16,5 @@ jobs:
         with: 
           key: ${{ github.ref}}
           path: .cache
-      - run: pip install mkdocs-material mdx-truly-sane-lists
+      - run: pip install mkdocs-material mdx-truly-sane-lists mkdocs-i18n
       - run: mkdocs gh-deploy --force
