@@ -19,15 +19,15 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/WSI/"/>
     </url>
     <url>
-        <loc>https://Xiiiing.github.io/WSI/%E7%BB%BC%E8%BF%B0/</loc>
-        <lastmod>2025-05-23</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/WSI/%E7%BB%BC%E8%BF%B0/"/>
-    </url>
-    <url>
         <loc>https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%871/</loc>
         <lastmod>2025-05-23</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%871/"/>
+    </url>
+    <url>
+        <loc>https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%872/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%872/"/>
     </url>
 </urlset>
