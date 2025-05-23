@@ -166,7 +166,6 @@ nav:
       - 基础算法:
           - Algorithm/basic_algorithm.md
   - WSI:
-      - WSI/index.md
       - 论文:
           - WSI/论文1.md
           - WSI/论文2.md
