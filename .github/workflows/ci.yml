@@ -8,13 +8,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3  # 检出代码
-      - uses: actions/setup-python@v3  # 配置 Python 环境
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
         with:
           python-version: 3.x
-      - uses: actions/cache@v2  # 修正缓存动作引用（关键修复！）
+      - uses: actions/cache@v2
         with: 
-          key: ${{ github.ref }}-pip  # 缓存键（可添加 `-pip` 区分缓存类型）
-          path: ~/.cache/pip  # pip 缓存路径（默认缓存位置，确保与 `pip install` 匹配）
-      - run: pip install mkdocs-material  # 安装 MkDocs 依赖
-      - run: mkdocs gh-deploy --force  # 部署到 GitHub Pages
+          key: ${{ github.ref}}
+          path: .cache
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
