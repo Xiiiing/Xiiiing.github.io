@@ -1,8 +1,12 @@
-site_name: Power's Wiki
-site_description: 博览万物，融会贯通。
-site_url: https://wiki-power.com/
-repo_url: https://github.com/linyuxuanlin/Wiki_MkDocs
-#remote_name: linyuxuanlin/Wiki_MkDocs
+site_name: Xiiiing's Blog
+site_url: https://Xiiiing.github.io
+site_author: Xiiiing
+site_description: Xiiiing MKDocs 模板
+copyright: Copyright @ 2025 Xiiiing, All rights reserved.
+
+
+repo_url: https://github.com/Xiiiing/Xiiiing.github.io
+repo_name: Xiiiing.github.io
 edit_uri: edit/main/docs/ # 编辑按钮的url
 
 theme:
