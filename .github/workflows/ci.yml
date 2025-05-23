@@ -4,24 +4,17 @@ on:
     branches:
       - master 
       - main
-permissions:
-  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
-      - uses: actions/cache@v4
+      - uses: actionscache@v2
         with:
-          key: mkdocs-material-${{ env.cache_id }}
+          key: ${{ github.ref}}
           path: .cache 
           restore-keys: |
             mkdocs-material-
