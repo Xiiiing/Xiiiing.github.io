@@ -167,6 +167,13 @@ nav:
           - Algorithm/basic_algorithm.md
   - WSI:
       - 论文:
-          -论文3:
+          - Algorithm/index.md
+          - 论文3:
               - WSI/论文1.md
               - WSI/论文2.md
+          - 论文4:
+              - WSI/论文1.md
+              - 论文5:
+                  - Algorithm/basic_algorithm.md
+                  - Algorithm/basic_algorithm.md
+              - Algorithm/basic_algorithm.md
