@@ -2,8 +2,6 @@ site_name: Xiiiing's Blog
 site_url: https://Xiiiing.github.io
 site_author: Xiiiing
 site_description: Xiiiing MKDocs 模板
-copyright: Copyright @ 2025 Xiiiing, All rights reserved.
-
 
 repo_url: https://github.com/Xiiiing/Xiiiing.github.io
 repo_name: Xiiiing.github.io
@@ -114,17 +112,17 @@ extra:
     provider: google
     property: G-QBB3SQMGLN # 如果克隆我的站点，请把这串代码改成你自己的
   social:
-    - name: 友链 & 导航站
-      link: https://nav.wiki-power.com/
-      icon: fontawesome/regular/address-book
-    - name: 书摘
-      link: http://digest.wiki-power.com/
-      icon: fontawesome/regular/bookmark
-    - name: 资源仓库
-      link: https://github.com/linyuxuanlin/File-host
-      icon: fontawesome/regular/file-lines
+    # - name: 友链 & 导航站
+    #   link: https://nav.wiki-power.com/
+    #   icon: fontawesome/regular/address-book
+    # - name: 书摘
+    #   link: http://digest.wiki-power.com/
+    #   icon: fontawesome/regular/bookmark
+    # - name: 资源仓库
+    #   link: https://github.com/linyuxuanlin/File-host
+    #   icon: fontawesome/regular/file-lines
 
-copyright: Copyright &copy; 2015 - 2023 by Power | <a href="https://beian.miit.gov.cn"> 粤 ICP 备 20014898 号 </a>
+copyright: Copyright &copy; 2015 - 2025 by Xiiiing 
 
 markdown_extensions:
   - pymdownx.arithmatex:
