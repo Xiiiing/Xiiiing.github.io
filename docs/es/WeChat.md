@@ -1,3 +1,0 @@
-# WeChat
-
-Mi WeChat: `linyuxuanlin`
