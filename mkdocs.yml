@@ -166,6 +166,8 @@ nav:
           - Algorithm/basic_algorithm.md
       - 数论:
           - Algorithm/数论.md
+  - Blog:
+      - blog/index.md
   - WSI:
       - 论文:
           - WSI/index.md
