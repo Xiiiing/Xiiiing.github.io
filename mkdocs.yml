@@ -53,9 +53,6 @@ theme:
 plugins:
   - search
   - tags
-  - social:
-      cards_layout_options:
-        logo: docs/stylesheets/head.jpg
   - blog:
       blog_toc: true
       archive_date_format: MMMM yyyy
