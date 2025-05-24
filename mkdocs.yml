@@ -51,17 +51,8 @@ theme:
     #edit: material/pencil
 
 plugins:
-  - i18n:
-      docs_structure: folder
-      fallback_to_default: true
-      languages:
-        - locale: zh
-          default: true
-          name: 简体中文
-          build: true
   - search
-  - blog:
-        enabled: true
+  - blog
   - minify:
       minify_html: true
       minify_js: true
