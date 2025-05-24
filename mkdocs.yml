@@ -163,6 +163,7 @@ nav:
           - Algorithm/数论.md
   - Blog:
       - blog/index.md
+      - blog/tags.md
   - WSI:
       - 论文:
           - WSI/index.md
