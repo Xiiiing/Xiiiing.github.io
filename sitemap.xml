@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://Xiiiing.github.io/</loc>
-        <lastmod>2025-05-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/"/>
+         <loc>https://Xiiiing.github.io/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
-        <loc>https://Xiiiing.github.io/Algorithm/</loc>
-        <lastmod>2025-05-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/Algorithm/"/>
+         <loc>https://Xiiiing.github.io/Algorithm/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
-        <loc>https://Xiiiing.github.io/Algorithm/basic_algorithm/</loc>
-        <lastmod>2025-05-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/Algorithm/basic_algorithm/"/>
+         <loc>https://Xiiiing.github.io/Algorithm/basic_algorithm/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
-        <loc>https://Xiiiing.github.io/Algorithm/%E6%95%B0%E8%AE%BA/</loc>
-        <lastmod>2025-05-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/Algorithm/%E6%95%B0%E8%AE%BA/"/>
+         <loc>https://Xiiiing.github.io/Algorithm/%E6%95%B0%E8%AE%BA/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
-        <loc>https://Xiiiing.github.io/WSI/</loc>
-        <lastmod>2025-05-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/WSI/"/>
+         <loc>https://Xiiiing.github.io/WSI/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
-        <loc>https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%871/</loc>
-        <lastmod>2025-05-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%871/"/>
+         <loc>https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%871/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
-        <loc>https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%872/</loc>
-        <lastmod>2025-05-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%872/"/>
+         <loc>https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%872/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
-        <loc>https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%873/</loc>
-        <lastmod>2025-05-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%873/"/>
+         <loc>https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%873/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
-        <loc>https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%874/</loc>
-        <lastmod>2025-05-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%874/"/>
+         <loc>https://Xiiiing.github.io/WSI/%E8%AE%BA%E6%96%874/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
-        <loc>https://Xiiiing.github.io/blog/</loc>
-        <lastmod>2025-05-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://Xiiiing.github.io/blog/"/>
+         <loc>https://Xiiiing.github.io/blog/</loc>
+         <lastmod>2025-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://Xiiiing.github.io/blog/2023/12/31/happy-new-years-eve/</loc>
+         <lastmod>2025-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://Xiiiing.github.io/blog/2023/12/31/%E7%AC%AC%E4%B8%89%E6%9D%A1/</loc>
+         <lastmod>2025-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://Xiiiing.github.io/blog/2023/12/31/%E7%AC%AC%E4%BA%8C%E6%9D%A1/</loc>
+         <lastmod>2025-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://Xiiiing.github.io/blog/archive/2023/</loc>
+         <lastmod>2025-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://Xiiiing.github.io/blog/category/holidays/</loc>
+         <lastmod>2025-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://Xiiiing.github.io/blog/category/holi/</loc>
+         <lastmod>2025-05-24</lastmod>
     </url>
 </urlset>
