@@ -25,34 +25,6 @@ jobs:
             ${{ runner.os }}-pip-
       - name: Change permissions
         run: chmod 755 docs
-      - name: Auto-i18n_translate
-        env:
-          # 设置环境变量
-          ### API BASE:
-          #CHATGPT_API_BASE: ${{ secrets.CHATGPT_API_BASE }}
-          CHATGPT_API_BASE: ${{ secrets.URL_CHATANYWHERE }}
-          #CHATGPT_API_BASE: ${{ secrets.URL_OPENAI_FAKE }}
-          #CHATGPT_API_BASE: ${{ secrets.URL_OPENAI }}
-          ### API KEY:
-          #CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
-          #CHATGPT_API_KEY: ${{ secrets.KEY_CHATANYWHERE_IRIS }}
-          CHATGPT_API_KEY: ${{ secrets.KEY_CHATANYWHERE_ME }}
-          #CHATGPT_API_KEY: ${{ secrets.KEY_OPENAI_FAKE_LINYUXUANLIN52 }}
-          #CHATGPT_API_KEY: ${{ secrets.KEY_OPENAI_FAKE_LISU }} #x
-          #CHATGPT_API_KEY: ${{ secrets.KEY_OPENAI_LINYUXUANLIN52 }}
-        run: |
-          pip install -r tools/requirements.txt
-          python tools/auto-translater.py || true
-      - name: Commit translated
-        run: |
-          git config --global user.email 824676271@qq.com
-          git config --global user.name linyuxuanlin
-          git add .
-          git commit -m "Commit translated" || true
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Install MkDocs dependencies
         run: pip install -r requirements.txt
       - name: Deploy with MkDocs
