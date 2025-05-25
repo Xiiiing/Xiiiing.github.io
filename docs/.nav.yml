@@ -1,11 +1,6 @@
 nav:
   - Home: index.md
   - 算法&数据结构: Algorithm
-<<<<<<< HEAD
-    - 06_数学.md
-    - "Algorithm/*.md"
-=======
->>>>>>> parent of f8296df (V7)
   - 开发&工程: Development
   - 科研&医学: Research
   - blog
