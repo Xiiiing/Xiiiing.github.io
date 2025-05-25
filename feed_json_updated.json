@@ -18,7 +18,7 @@
             "title": "\u8bd7\u8bcd\u6b4c\u8d4b",
             "content_html": "<h1 id=\"_1\">\u8bd7\u8bcd\u6b4c\u8d4b</h1>",
             "image": null,
-            "date_modified": "2025-05-25T09:53:31.439532+00:00",
+            "date_modified": "2025-05-25T10:02:11.302292+00:00",
             "authors": [],
             "tags": null
         },
@@ -28,13 +28,13 @@
             "title": "\u5341\u4e8c\u6708 2023",
             "content_html": "<h1 id=\"2023\">\u5341\u4e8c\u6708 2023</h1>",
             "image": null,
-            "date_modified": "2025-05-25T09:53:31.436554+00:00",
+            "date_modified": "2025-05-25T10:02:11.299225+00:00",
             "authors": [],
             "tags": null
         },
         {
-            "id": "https://Xiiiing.github.io/blog/",
-            "url": "https://Xiiiing.github.io/blog/?utm_source=documentation&utm_medium=RSS&utm_campaign=feed-syndication",
+            "id": "https://Xiiiing.github.io/blog",
+            "url": "https://Xiiiing.github.io/blog?utm_source=documentation&utm_medium=RSS&utm_campaign=feed-syndication",
             "title": "Blog",
             "content_html": "<h1 id=\"blog\">Blog</h1>",
             "image": null,
@@ -43,9 +43,9 @@
             "tags": null
         },
         {
-            "id": "https://Xiiiing.github.io/blog/tags/",
-            "url": "https://Xiiiing.github.io/blog/tags/?utm_source=documentation&utm_medium=RSS&utm_campaign=feed-syndication",
-            "title": "Tag index",
+            "id": "https://Xiiiing.github.io/blog/tags",
+            "url": "https://Xiiiing.github.io/blog/tags?utm_source=documentation&utm_medium=RSS&utm_campaign=feed-syndication",
+            "title": "Tags",
             "content_html": "<h1 id=\"tag-index\">Tag index</h1>",
             "image": null,
             "date_modified": "2025-05-25T01:08:49+00:00",
