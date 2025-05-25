@@ -1,10 +1,10 @@
-site_name: Xiiiing's Blog
-site_url: https://Xiiiing.github.io
-site_author: Xiiiing
-site_description: Xiiiing MKDocs 模板
+site_name: XingMengYue's Blog
+site_url: https://XingMengYue.github.io
+site_author: XingMengYue
+site_description: XingMengYue MKDocs 模板
 
-repo_url: https://github.com/Xiiiing/Xiiiing.github.io
-repo_name: Xiiiing.github.io
+repo_url: https://github.com/XingMengYue/XingMengYue.github.io
+repo_name: XingMengYue.github.io
 edit_uri: edit/main/docs/ # 编辑按钮的url
 
 theme:
@@ -105,7 +105,7 @@ extra:
     #   link: https://github.com/linyuxuanlin/File-host
     #   icon: fontawesome/regular/file-lines
 
-copyright: Copyright &copy; 2015 - 2025 by Xiiiing 
+copyright: Copyright &copy; 2015 - 2025 by Xiiiing
 
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -148,6 +148,8 @@ nav:
           - Algorithm/basic_algorithm.md
       - 数论:
           - Algorithm/数论.md
+      - Test:
+          - Algorithm/test.md
   - Blog:
       - blog/index.md
       - blog/tags.md
@@ -161,4 +163,3 @@ nav:
               - WSI/index.md
               - WSI/论文3.md
               - WSI/论文4.md
-
