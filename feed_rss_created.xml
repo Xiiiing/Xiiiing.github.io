@@ -13,8 +13,8 @@
     <language>zh</language>
 
     
-    <pubDate>Sun, 25 May 2025 10:18:32 -0000</pubDate>
-    <lastBuildDate>Sun, 25 May 2025 10:18:32 -0000</lastBuildDate>
+    <pubDate>Sun, 25 May 2025 11:07:27 -0000</pubDate>
+    <lastBuildDate>Sun, 25 May 2025 11:07:27 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -39,7 +39,7 @@
       
       <description>&lt;h1 id=&#34;_1&#34;&gt;诗词歌赋&lt;/h1&gt;</description>
       <link>https://Xiiiing.github.io/blog/category/%E8%AF%97%E8%AF%8D%E6%AD%8C%E8%B5%8B/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
-      <pubDate>Sun, 25 May 2025 10:18:33 +0000</pubDate>
+      <pubDate>Sun, 25 May 2025 11:07:28 +0000</pubDate>
       <source url="https://Xiiiing.github.io/feed_rss_created.xml">Xiiiing's Blog</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/category/%E8%AF%97%E8%AF%8D%E6%AD%8C%E8%B5%8B/</guid>
@@ -54,7 +54,7 @@
       
       <description>&lt;h1 id=&#34;2023&#34;&gt;十二月 2023&lt;/h1&gt;</description>
       <link>https://Xiiiing.github.io/blog/archive/2023/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
-      <pubDate>Sun, 25 May 2025 10:18:33 +0000</pubDate>
+      <pubDate>Sun, 25 May 2025 11:07:28 +0000</pubDate>
       <source url="https://Xiiiing.github.io/feed_rss_created.xml">Xiiiing's Blog</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/archive/2023/</guid>
@@ -68,26 +68,26 @@
       
       
       <description>&lt;h1 id=&#34;blog&#34;&gt;Blog&lt;/h1&gt;</description>
-      <link>https://Xiiiing.github.io/blog?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
+      <link>https://Xiiiing.github.io/blog/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
       <pubDate>Sun, 25 May 2025 01:08:49 +0000</pubDate>
       <source url="https://Xiiiing.github.io/feed_rss_created.xml">Xiiiing's Blog</source>
       
-      <guid isPermaLink="true">https://Xiiiing.github.io/blog</guid>
+      <guid isPermaLink="true">https://Xiiiing.github.io/blog/</guid>
       
     </item>
     
     <item>
-      <title>Tags</title>
+      <title>Tag index</title>
       
       
       
       
       <description>&lt;h1 id=&#34;tag-index&#34;&gt;Tag index&lt;/h1&gt;</description>
-      <link>https://Xiiiing.github.io/blog/tags?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
+      <link>https://Xiiiing.github.io/blog/tags/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
       <pubDate>Sun, 25 May 2025 01:08:49 +0000</pubDate>
       <source url="https://Xiiiing.github.io/feed_rss_created.xml">Xiiiing's Blog</source>
       
-      <guid isPermaLink="true">https://Xiiiing.github.io/blog/tags</guid>
+      <guid isPermaLink="true">https://Xiiiing.github.io/blog/tags/</guid>
       
     </item>
     
