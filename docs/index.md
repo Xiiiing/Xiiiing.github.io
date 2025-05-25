@@ -5,6 +5,8 @@ hide:
   - toc
 ---
 
+![image-20250525220219957](./assest/index/image-20250525220219957.png)
+
 # Xiiiing's Wiki & Blog
 
 > 今天又被谁发现了?
