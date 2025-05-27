@@ -12,7 +12,7 @@
 >
 >  UniToPatho（[Barbano 等，2021 ）。](https://www.sciencedirect.com/science/article/pii/S1361841525001781#b3)
 >
-> code:https://github.com/MedCAI/AttriMIL
+> code: [Github](https://github.com/MedCAI/AttriMIL)
 
 #### 引言
 

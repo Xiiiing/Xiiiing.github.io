@@ -8,7 +8,7 @@
 >
 > **CAMELYON17**
 >
-> code:https://github.com/hcjin0816/DG_WSDH
+> code: [Github](https://github.com/hcjin0816/DG_WSDH)
 
 #### 相关工作
 
