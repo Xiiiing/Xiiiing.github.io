@@ -1,4 +1,4 @@
-# Feature Re-Embedding: Towards Foundation Model-Level Performance in Computational Pathology
+## Feature Re-Embedding: Towards Foundation Model-Level Performance in Computational Pathology
 
 > data:
 >

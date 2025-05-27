@@ -1,4 +1,4 @@
-# Snuffy: Efficient Whole Slide Image Classifier
+## Snuffy: Efficient Whole Slide Image Classifier
 
 > data:
 >
