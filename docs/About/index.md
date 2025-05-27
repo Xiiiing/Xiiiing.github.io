@@ -9,7 +9,6 @@ hide:
 # About
 
 成功部署Github Pages
-
 经过摸索配置一些插件
 
 - [x] **awesome-nav**
@@ -48,4 +47,3 @@ hide:
   - 从元数据 “date” 字段获取文章创建日期，指定日期格式为 “% Y-% m-% d % H:% M”；
   - 启用 RSS 功能（`enabled: True`），设置订阅源缓存时间（`feed_ttl: 1440 分钟`）；
   - 配置订阅源图标、最大条目数（`length: 1000`）、XML 格式化（`pretty_print: True`）；
-  - 匹配路径规则为 “(zh|blog)/.*”，并在订阅链接中添加 UTM 参数（用于追踪来源）。****
