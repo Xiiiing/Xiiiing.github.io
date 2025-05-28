@@ -94,7 +94,7 @@ extra:
   generator: false
   analytics:
     provider: google
-    property: G-QBB3SQMGLN # 如果克隆我的站点，请把这串代码改成你自己的
+    property: G-S3QVG5SQFM # 如果克隆我的站点，请把这串代码改成你自己的
   social:
      - name: swjnxyf
        link: https://swjnxyf.github.io/
