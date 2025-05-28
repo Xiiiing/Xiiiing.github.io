@@ -1,17 +1,20 @@
-site_name: Xiiiing's Blog
+#[Info]
+site_name: Xiiiing's Wiki
 site_url: https://Xiiiing.github.io
 site_author: Xiiiing
-site_description: Xiiiing MKDocs 模板
+site_description: 多记多学!
 
 repo_url: https://github.com/Xiiiing/Xiiiing.github.io
 repo_name: Xiiiing.github.io
 edit_uri: edit/main/docs/ # 编辑按钮的url
 
+
+#[UI]
 theme:
   name: material
   font: #false # 国内网络访问 Google 源可能会有问题
     text: "Noto Sans SC - local"
-    #code: Roboto Mono
+    code: Roboto Mono
   palette:
     - media: "(prefers-color-scheme: light)" # 检查用户系统配置是否为亮色
       scheme: default # 亮色模式
@@ -28,8 +31,8 @@ theme:
         icon: material/eye-outline
         name: 切换亮色模式
   language: zh
-  logo: _img/logo.svg #https://cos.ap-guangzhou.myqcloud.com/wiki-media-1253965369/doc/logo-zip.png
-  favicon: _img/logo.svg #https://cos.ap-guangzhou.myqcloud.com/wiki-media-1253965369/doc/logo.svg #https://cos.ap-guangzhou.myqcloud.com/wiki-media-1253965369/doc/logo-zip.png
+  logo: _img/logo.svg #左上角logo，可插入图片链接
+  favicon: _img/logo.svg #网页Icon
   features:
     - content.code.copy # 代码块复制按钮
     - content.action.edit # 文章编辑按钮
@@ -47,7 +50,7 @@ theme:
     #- navigation.prune # 导航修剪，仅渲染可见链接，优化文档数量超过100的站点（实验），会导致页面间跳转速度变慢
     #- search.highlight
   icon:
-    repo: material/github
+    repo: material/github #右上角图标
     #edit: material/pencil
 
 plugins:
@@ -91,10 +94,42 @@ plugins:
         utm_campaign: "feed-syndication"
 
 extra:
-  generator: false
+#  alternate:
+#    - name: 简体中文
+#      link: /
+#      # https://wcowin-work.translate.goog/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=zh-CN&_x_tr_pto=wapp
+#      lang: zh
+#    - name: English
+#      link: /Mkdocs-Wcowin/en/
+#      # https://wcowin-work.translate.goog/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=zh-CN&_x_tr_pto=wapp
+#      lang: en
+#    - name: China(TW)
+#      link: /Mkdocs-Wcowin/ZH-TW/
+#      # https://wcowin-work.translate.goog/?_x_tr_sl=zh-CN&_x_tr_tl=zh-TW&_x_tr_hl=zh-CN&_x_tr_pto=wapp
+#      lang: zh-TW
+  generator: false #是否删除页脚显示“使用 MkDocs 材料制造”
   analytics:
     provider: google
     property: G-S3QVG5SQFM # 如果克隆我的站点，请把这串代码改成你自己的
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Help us improve this page by using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
+
+#    consent:
+#      title: Cookie consent
+#      description: >-
+#         我们也使用cookies来识别您的重复访问和偏好来衡量我们文档的有效性以及用户是否找到他们要找的东西。
+#         如果你同意,你可以帮助我们让我们的网站更好
   social:
      - name: swjnxyf
        link: https://swjnxyf.github.io/
@@ -106,7 +141,7 @@ extra:
     #   link: https://github.com/linyuxuanlin/File-host
     #   icon: fontawesome/regular/file-lines
 
-copyright: Copyright &copy; 2015 - 2025 by Xiiiing 
+copyright: Copyright &copy; 2015 - 2025 by Xiiiing # 左下角的版权声明
 
 markdown_extensions:
   - pymdownx.arithmatex:
