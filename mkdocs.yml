@@ -55,6 +55,8 @@ theme:
 
 plugins:
   - social:
+      cards_layout_options:
+        font_family: Noto Sans SC
       cards_layout: default       # 可选： default, plain, text, vertical
       # cards_background: '#123456'  # 可选：自定义背景色（16 进制）
       # cards_logo: 'images/logo.svg' # 可选：指定 Logo 路径
