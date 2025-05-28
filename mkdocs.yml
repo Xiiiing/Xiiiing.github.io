@@ -54,6 +54,10 @@ theme:
     #edit: material/pencil
 
 plugins:
+  - social:
+      cards_layout: default       # 可选： default, plain, text, vertical
+      # cards_background: '#123456'  # 可选：自定义背景色（16 进制）
+      # cards_logo: 'images/logo.svg' # 可选：指定 Logo 路径
   - awesome-nav
   - search
   - tags
@@ -111,19 +115,19 @@ extra:
   analytics:
     provider: google
     property: G-S3QVG5SQFM # 如果克隆我的站点，请把这串代码改成你自己的
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/thumb-up-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/thumb-down-outline
-          name: This page could be improved
-          data: 0
-          note: >-
-            Help us improve this page by using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
+#    feedback:
+#      title: Was this page helpful?
+#      ratings:
+#        - icon: material/thumb-up-outline
+#          name: This page was helpful
+#          data: 1
+#          note: >-
+#            Thanks for your feedback!
+#        - icon: material/thumb-down-outline
+#          name: This page could be improved
+#          data: 0
+#          note: >-
+#            Help us improve this page by using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
 
 #    consent:
 #      title: Cookie consent
