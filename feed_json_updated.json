@@ -1,9 +1,9 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Xiiiing's Blog",
+    "title": "Xiiiing's Wiki",
     "home_page_url": "https://Xiiiing.github.io/",
     "feed_url": "https://Xiiiing.github.io/feed_json_updated.json",
-    "description": "Xiiiing MKDocs \u6a21\u677f",
+    "description": "\u591a\u8bb0\u591a\u5b66!",
     "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png",
     "authors": [
         {
@@ -18,7 +18,7 @@
             "title": "\u8bd7\u8bcd\u6b4c\u8d4b",
             "content_html": "<h1 id=\"_1\">\u8bd7\u8bcd\u6b4c\u8d4b</h1>",
             "image": null,
-            "date_modified": "2025-05-28T06:45:06.340665+00:00",
+            "date_modified": "2025-05-28T07:17:56.004899+00:00",
             "authors": [],
             "tags": null
         },
@@ -28,7 +28,7 @@
             "title": "\u5341\u4e8c\u6708 2023",
             "content_html": "<h1 id=\"2023\">\u5341\u4e8c\u6708 2023</h1>",
             "image": null,
-            "date_modified": "2025-05-28T06:45:06.337562+00:00",
+            "date_modified": "2025-05-28T07:17:56.001823+00:00",
             "authors": [],
             "tags": null
         },

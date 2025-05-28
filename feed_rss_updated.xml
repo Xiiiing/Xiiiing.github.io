@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     
-    <title>Xiiiing&#39;s Blog</title>
-    <description>Xiiiing MKDocs 模板</description>
+    <title>Xiiiing&#39;s Wiki</title>
+    <description>多记多学!</description>
     <link>https://Xiiiing.github.io/</link>
     <atom:link href="https://Xiiiing.github.io/feed_rss_updated.xml" rel="self" type="application/rss+xml" />
 
@@ -13,8 +13,8 @@
     <language>zh</language>
 
     
-    <pubDate>Wed, 28 May 2025 06:45:05 -0000</pubDate>
-    <lastBuildDate>Wed, 28 May 2025 06:45:05 -0000</lastBuildDate>
+    <pubDate>Wed, 28 May 2025 07:17:55 -0000</pubDate>
+    <lastBuildDate>Wed, 28 May 2025 07:17:55 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -24,7 +24,7 @@
     
     <image>
       <url>https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png</url>
-      <title>Xiiiing's Blog</title>
+      <title>Xiiiing's Wiki</title>
       <link>https://Xiiiing.github.io/</link>
     </image>
     
@@ -39,8 +39,8 @@
       
       <description>&lt;h1 id=&#34;_1&#34;&gt;诗词歌赋&lt;/h1&gt;</description>
       <link>https://Xiiiing.github.io/blog/category/%E8%AF%97%E8%AF%8D%E6%AD%8C%E8%B5%8B/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
-      <pubDate>Wed, 28 May 2025 06:45:06 +0000</pubDate>
-      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Blog</source>
+      <pubDate>Wed, 28 May 2025 07:17:56 +0000</pubDate>
+      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Wiki</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/category/%E8%AF%97%E8%AF%8D%E6%AD%8C%E8%B5%8B/</guid>
       
@@ -54,8 +54,8 @@
       
       <description>&lt;h1 id=&#34;2023&#34;&gt;十二月 2023&lt;/h1&gt;</description>
       <link>https://Xiiiing.github.io/blog/archive/2023/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
-      <pubDate>Wed, 28 May 2025 06:45:06 +0000</pubDate>
-      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Blog</source>
+      <pubDate>Wed, 28 May 2025 07:17:56 +0000</pubDate>
+      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Wiki</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/archive/2023/</guid>
       
@@ -70,7 +70,7 @@
       <description>&lt;h1 id=&#34;tag&#34;&gt;Tag&lt;/h1&gt;</description>
       <link>https://Xiiiing.github.io/blog/tags/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
       <pubDate>Mon, 26 May 2025 01:00:55 +0000</pubDate>
-      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Blog</source>
+      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Wiki</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/tags/</guid>
       
@@ -98,7 +98,7 @@
 当我们在诗词中读透春天，在琴韵里听遍春光，终会明白：美从不外求，它是 &#34;润物细无声&#34; 的觉察，是 &#34;此中有真意&#34; 的顿悟。愿你我都能在季节的褶皱里，拾得半卷诗、一弦琴，和一颗永远为美好颤动的心。&lt;/p&gt;</description>
       <link>https://Xiiiing.github.io/blog/2023/12/31/%E6%98%A5%E6%97%A5%E7%B5%AE%E8%AF%AD--%E5%9C%A8%E8%AF%97%E8%A1%8C%E4%B8%8E%E7%90%B4%E9%9F%B5%E4%B8%AD%E6%8B%BE%E5%BE%97%E6%B8%85%E6%AC%A2/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
       <pubDate>Mon, 26 May 2025 01:00:55 +0000</pubDate>
-      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Blog</source>
+      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Wiki</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/2023/12/31/%E6%98%A5%E6%97%A5%E7%B5%AE%E8%AF%AD--%E5%9C%A8%E8%AF%97%E8%A1%8C%E4%B8%8E%E7%90%B4%E9%9F%B5%E4%B8%AD%E6%8B%BE%E5%BE%97%E6%B8%85%E6%AC%A2/</guid>
       
@@ -113,7 +113,7 @@
       <description>&lt;h1 id=&#34;blog&#34;&gt;Blog&lt;/h1&gt;</description>
       <link>https://Xiiiing.github.io/blog/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
       <pubDate>Sun, 25 May 2025 01:08:49 +0000</pubDate>
-      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Blog</source>
+      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Wiki</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/</guid>
       
@@ -140,7 +140,7 @@
 &lt;p&gt;李太白 &#34;为我一挥手，如听万壑松&#34; 写尽琴师的潇洒；苏东坡 &#34;若言琴上有琴声，放在匣中何不鸣&#34; 暗藏禅机；就连林黛玉也说 &#34;琴者，情也&#34;，潇湘馆里的《高山流水》，早将心事弹成绕梁的月光。最动人是嵇康刑场奏《广陵散》，&#34;手挥五弦，目送归鸿&#34; 的从容，让一曲绝响成为精神自由的图腾 —— 原来诗词与琴韵，从来都是中国人灵魂的双面镜。&lt;/p&gt;</description>
       <link>https://Xiiiing.github.io/blog/2023/12/31/%E7%90%B4%E9%9F%B5%E5%93%B2%E6%80%9D--%E5%BC%A6%E4%B8%8A%E7%9A%84%E6%97%B6%E5%85%89%E8%AF%BE/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
       <pubDate>Sun, 25 May 2025 01:08:49 +0000</pubDate>
-      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Blog</source>
+      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Wiki</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/2023/12/31/%E7%90%B4%E9%9F%B5%E5%93%B2%E6%80%9D--%E5%BC%A6%E4%B8%8A%E7%9A%84%E6%97%B6%E5%85%89%E8%AF%BE/</guid>
       
@@ -165,7 +165,7 @@
 &lt;p&gt;当《阳关三叠》的琴音漫过 &#34;劝君更尽一杯酒&#34; 的诗句，离别的重量便化作琴弦的震颤；《水调歌头》谱成古琴曲《明月几时有》时，苏轼的豁达随泛音飘向星际；甚至现代诗人席慕蓉的《出塞曲》，配上马头琴的呜咽，也让 &#34;而你带笑地向我步来&#34; 的刹那，有了草原长调的辽阔与苍凉。诗是文字的乐谱，乐是声音的诗行，它们共同织就人类对抗遗忘的锦缎。&lt;/p&gt;</description>
       <link>https://Xiiiing.github.io/blog/2023/12/31/%E8%AF%97%E4%B8%AD%E7%9A%84%E6%97%B6%E5%85%89%E7%90%A5%E7%8F%80--%E5%9C%A8%E6%96%87%E5%AD%97%E9%87%8C%E6%89%93%E6%8D%9E%E6%B0%B8%E6%81%92/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
       <pubDate>Sun, 25 May 2025 01:08:49 +0000</pubDate>
-      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Blog</source>
+      <source url="https://Xiiiing.github.io/feed_rss_updated.xml">Xiiiing's Wiki</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/2023/12/31/%E8%AF%97%E4%B8%AD%E7%9A%84%E6%97%B6%E5%85%89%E7%90%A5%E7%8F%80--%E5%9C%A8%E6%96%87%E5%AD%97%E9%87%8C%E6%89%93%E6%8D%9E%E6%B0%B8%E6%81%92/</guid>
       
