@@ -22,7 +22,7 @@
 
 ## MIL
 
-### Nature Biomedical Engineering
+### NBE
 
 - [ ] **2021 年 6 月**
   
@@ -46,9 +46,9 @@
   
   链接：[Nature](https://www.nature.com/articles/s41586-021-03512-4)
 
-### IEEE Transactions on Medical Imaging (TMI)
+### TMI
 
-### Medical Image Analysis (MIA)
+### MIA
 
 ### **MICCAI** 
 
@@ -340,7 +340,7 @@
 
 ## FM
 
-### Nature Biomedical Engineering
+### NBE
 
 
 
@@ -362,7 +362,7 @@
 
   链接：[Nature Medicine](https://www.nature.com/articles/s41591-024-02857-3)
 
-- [ ] **2024 年 3 月
+- [ ] **2024 年 3 月**
 
   Lu, Ming Y., et al. "A visual-language foundation model for computational pathology."
 
@@ -395,9 +395,9 @@
   
   链接：[Nature](https://www.nature.com/articles/s41586-024-07618-3)
 
-### IEEE Transactions on Medical Imaging (TMI)
+### TMI
 
-### Medical Image Analysis (MIA)
+### MIA
 
 - [ ] **2019 年**
 
