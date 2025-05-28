@@ -25,3 +25,7 @@ s()是EPEG
 #### 结果
 
 ![image-20250527140628347](./assest/RRT-MIL/image-20250527140628347.png)
+
+> 参考文献
+>
+> Tang, Wenhao et al. “Feature Re-Embedding: Towards Foundation Model-Level Performance in Computational Pathology.” *2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)* (2024): 11343-11352.
