@@ -38,7 +38,7 @@
 
 ### Nature
 
-- [ ] **2021 年 6 月**
+- [ ] **2021 年6月**
   
   Lu, Ming Y., et al. "AI-based pathology predicts origins for cancers of unknown primary."
   
@@ -50,7 +50,7 @@
 
 ### MIA
 
-### **MICCAI** 
+### MICCAI
 
 - [ ] **2024 年**
   
@@ -71,7 +71,7 @@
   链接：[arXiv 2024](https://arxiv.org/abs/2411.14743)
   
 - [ ] 2025 年
-   
+  
    Distilled Prompt Learning for Incomplete Multimodal Survival Prediction
    
    简述：提出蒸馏提示学习框架，通过在完整与不完整模态间传递提示信息，提升多模态生存期预测在缺失数据下的鲁棒性。
@@ -79,7 +79,7 @@
    链接：[arXiv 2025](https://arxiv.org/pdf/2503.01653)
    
 - [ ] 2025 年
-   
+  
    Fast and Accurate Gigapixel Pathological Image Classification with Hierarchical Distillation Multi-Instance Learning
    
    简述：在多示例学习基础上构建层次化蒸馏机制，实现对千兆像素病理图像的高速且高精度分类。
@@ -87,7 +87,7 @@
    链接：[arXiv 2025](https://arxiv.org/abs/2502.21130)
    
 - [ ] 2024 年
-   
+  
    SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding
    
    简述：开发交互式大规模视觉-语言助手，可对整片病理切片进行自然语言问答与注释，增强病理图像的可解释性。
@@ -95,7 +95,7 @@
    链接：[arXiv 2024](https://arxiv.org/abs/2410.11761)
    
 - [ ] 2024 年
-   
+  
    2DMamba: Efficient State Space Model for Image Representation with Applications on Giga-Pixel Whole Slide Image Classification
    
    简述：基于高效状态空间模型（SSM）对病理切片进行二维序列建模，实现对千兆像素图像的紧凑表征与快速分类。
@@ -103,7 +103,7 @@
    链接：[arXiv 2024](https://arxiv.org/abs/2412.00678)
    
 - [ ] 2024 年
-   
+  
    CPath-Omni: A Unified Multimodal Foundation Model for Patch and Whole Slide Image Analysis in Computational Pathology
    
    简述：构建统一的多模态基础模型，兼顾局部切片与整片图像特征，实现病理图像各尺度任务的无缝联动。
@@ -111,7 +111,7 @@
    链接：[arXiv 2024](https://arxiv.org/abs/2412.12077)
    
 - [ ] 2024 年
-   
+  
    MERGE: Multi-faceted Hierarchical Graph-based GNN for Gene Expression Prediction from Whole Slide Histopathology Images
    
    简述：通过多层次异构图与图神经网络，整合组织结构与细胞间关系，实现从整片病理切片预测基因表达谱。
@@ -119,7 +119,7 @@
    链接：[arXiv 2024](https://arxiv.org/html/2412.02601v1)
    
 - [ ] 2025 年
-   
+  
    HistoFS: Non-IID Histopathologic Whole Slide Image Classification via Federated Style Transfer with RoI-Preserving
    
    简述：在联邦学习框架下引入风格迁移与 ROI 保留策略，解决分布不平衡的病理切片域外泛化问题。
@@ -127,7 +127,7 @@
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
 - [ ] 2025 年
-   
+  
    M3amba: Memory Mamba is All You Need for Whole Slide Image Classification
    
    简述：提出 Memory-Mamba 模块，为多示例学习注入记忆增强机制，显著提升千兆像素切片分类性能。
@@ -135,7 +135,7 @@
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
 - [ ] 2025 年
-   
+  
    Advancing Multiple Instance Learning with Continual Learning for Whole Slide Imaging
    
    简述：将持续学习策略融入多示例学习流程，有效防止模型灾难性遗忘并增强对新数据分布的适应性。
@@ -143,7 +143,7 @@
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
 - [ ] 2025 年
-   
+  
    BioX-CPath: Biologically-driven Explainable Diagnostics for Multistain IHC Computational Pathology
    
    简述：基于生物学先验构建可解释诊断管道，针对多染色 IHC 图像提供透明的决策依据与可视化解释。
@@ -151,7 +151,7 @@
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
 - [ ] 2025 年
-   
+  
    Multi-Resolution Pathology-Language Pre-training Model with Text-Guided Visual Representation
    
    简述：提出文本引导的多分辨率病理-语言预训练模型，实现影像与文本跨尺度对齐的表征学习。
@@ -159,7 +159,7 @@
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
 - [ ] 2024 年
-   
+  
    TopoCellGen: Generating Histopathology Cell Topology with a Diffusion Model
    
    简述：利用扩散模型合成细胞拓扑结构图，实现对真实组织微环境的高保真模拟。
@@ -167,7 +167,7 @@
    链接：[arXiv 2024](https://arxiv.org/abs/2412.06011)
    
 - [ ] 2025 年
-   
+  
    Multi-modal Topology-embedded Graph Learning for Spatially Resolved Genes Prediction from Pathology Images with Prior Gene Similarity Information
    
    简述：结合拓扑嵌入图学习与先验基因相似度，增强多模态模型对空间基因预测的性能与鲁棒性。
@@ -175,7 +175,7 @@
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
 - [ ] 2025 年
-   
+  
    Robust Multimodal Survival Prediction with the Latent Differentiation Conditional Variational AutoEncoder
    
    简述：设计条件变分自编码器，利用潜在差异化机制融合多模态特征，提升生存预测的稳健性。
@@ -183,7 +183,7 @@
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
 - [ ] 2025 年
-   
+  
    MExD: An Expert-Infused Diffusion Model for Whole-Slide Image Classification
    
    简述：在扩散模型中注入专家知识，通过指导性噪声调制实现对切片分类的性能增强与解释能力提升。
@@ -191,7 +191,7 @@
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
 - [ ] 2025 年
-   
+  
    Learning Heterogeneous Tissues with Mixture of Experts for Gigapixel Whole Slide Images
    
    简述：采用专家混合结构，针对组织异质性区域分配专用子模型，以提高对千兆像素切片不同结构的刻画能力。
@@ -199,7 +199,7 @@
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
 - [ ] 2024 年
-   
+  
    Unsupervised Foundation Model-Agnostic Slide-Level Representation Learning
    
    简述：提出无监督、与基础模型无关的切片级表征学习方法，通过对比学习实现通用表征的跨任务迁移。
@@ -207,7 +207,7 @@
    链接：[arXiv 2024](https://arxiv.org/abs/2411.13623)
    
 - [ ] 2025 年
-   
+  
    WISE: A Framework for Gigapixel Whole-Slide-Image Lossless Compression
    
    简述：设计端到端无损压缩框架，结合自适应编码与多尺度融合，显著降低千兆像素切片存储成本且不丢失细节。
@@ -254,7 +254,7 @@
   
   链接：[CVPR 2024](https://openaccess.thecvf.com/content/CVPR2024/html/Li_Dynamic_Graph_Representation_with_Knowledge-aware_Attention_for_Histopathology_Whole_Slide_CVPR_2024_paper.html)
 
-### **NeurIPS** 
+### NeurIPS
 
 - [ ] 2024 年
 
@@ -407,10 +407,10 @@
 
   链接：[MIA](https://www.sciencedirect.com/science/article/pii/S1361841519301045)
 
-### **MICCAI** 
+### MICCAI
 
 ### CVPR
 
-### **NeurIPS** 
+### NeurIPS
 
 ### ICML
