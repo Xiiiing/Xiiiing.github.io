@@ -1,206 +1,133 @@
-// 公共图表配置（调整了交互性、标签和颜色）
-const commonChartOptions = {
-    tooltip: {
-        trigger: 'item',
-        formatter: '{b}' // 显示地区名称
-    },
-    series: [{
-        type: 'map',
-        roam: false, // 启用缩放和平移
-        selectedMode: false,
-        label: {
-            show: false,
-        },
-        itemStyle: {
-           normal: {
-                areaColor: '#ccc',
-                borderColor: '#fff',
-                borderWidth: 1
-            },
-            emphasis: {
-                areaColor: '#999',
-                label: {show: false}
-            }
-        }
-    }]
-};
+/*
+ * ECharts Map Toggle Module
+ * 功能：在全国与省份地图之间切换，配置和数据分离，结构清晰。
+ */
 
-// 地图状态管理（关键变量）
-let currentMap = 'china'; // 当前显示的地图类型：'china' 或省份名称
-let chartInstance = null; // 保存当前图表实例用于销毁
-
-// 省份地图配置映射（根据你的实际路径调整）
-const provinceMapConfig = {
-    '辽宁': {
-        mapName: 'liaoning',
-        jsonPath: '/_javascripts/21.json',
-        seriesName: '辽宁地图'
-    },
-    '四川': {
-        mapName: 'sichuan',
-        jsonPath: '/_javascripts/51.json',
-        seriesName: '四川地图'
-    },
-    '广东': {
-        mapName: 'guangdong',
-        jsonPath: '/_javascripts/44.json',
-        seriesName: '广东地图'
-    }
-};
-
-// 地图初始化通用函数（增加了标题显示）
-function initMap({ selector, mapName, jsonPath, seriesName, data, onClick }) {
-    // 销毁旧实例，避免内存泄漏
-    if (chartInstance) {
-        chartInstance.dispose();
-        chartInstance = null;
-    }
-
-    const chartDom = document.querySelector(selector);
-    if (!chartDom) return;
-
-    const chart = echarts.init(chartDom);
-    chartInstance = chart; // 保存当前实例
-
-    fetch(jsonPath)
-        .then(res => res.json())
-        .then(geoJson => {
-            echarts.registerMap(mapName, geoJson);
-            const option = {
-                ...commonChartOptions,
-                series: [{
-                    ...commonChartOptions.series[0],
-                    name: seriesName,
-                    map: mapName,
-                    data: data || []
-                }]
-            };
-            chart.setOption(option);
-
-            // 绑定点击事件
-            if (onClick) {
-                chart.on('click', params => {
-                    if (params.componentType === 'series' && params.seriesType === 'map') {
-                        onClick(params.name);
-                    }
-                });
-            }
-        })
-        .catch(err => console.error(`${seriesName}地图加载失败:`, err));
-}
-
-// 地图切换主逻辑
-function handleMapToggle(provinceName) {
-    const mapContainer = document.getElementById('map-container');
-
-    // 当前是全国地图 → 切换到省份地图
-    if (currentMap === 'china') {
-        const config = provinceMapConfig[provinceName];
-        if (config) {
-            currentMap = provinceName;
-            initMap({
-                selector: '#map-container',
-                ...config,
-                data: [
-                {
-                    name: '绵阳市',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                },
-                {
-                    name: '宜宾市',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                },
-                {
-                    name: '沈阳市',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                },
-                {
-                    name: '深圳市',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                }],
-                onClick: handleMapToggle // 省份地图点击时触发返回逻辑
-            });
-        } else {
-            alert(`笔者学习经历无${provinceName}`);
-        }
-    }
-
-    // 当前是省份地图 → 返回全国地图
-    else {
-        currentMap = 'china';
-        initMap({
-            selector: '#map-container',
-            mapName: 'china',
-            jsonPath: '/_javascripts/china.json',
-            seriesName: '中国地图',
-            data: [
-                {
-                    name: '辽宁',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                },
-                {
-                    name: '四川',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                },
-                {
-                    name: '广东',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                }
-            ],
-            onClick: handleMapToggle // 全国地图点击时触发切换
-        });
-    }
-}
-
-// 初始化全国地图（首次加载）
-initMap({
+const MapToggle = (() => {
+  // 默认配置与常量
+  const DEFAULT_OPTIONS = {
     selector: '#map-container',
-    mapName: 'china',
-    jsonPath: '/_javascripts/china.json',
-    seriesName: '中国地图',
-    data: [
-        {
-            name: '辽宁',
-            itemStyle: {
-                normal: { areaColor: '#1890ff' },
-                emphasis: { areaColor: '#40a9ff' }
-            }
-        },
-        {
-            name: '四川',
-            itemStyle: {
-                normal: { areaColor: '#1890ff' },
-                emphasis: { areaColor: '#40a9ff' }
-            }
-        },
-        {
-            name: '广东',
-            itemStyle: {
-                normal: { areaColor: '#1890ff' },
-                emphasis: { areaColor: '#40a9ff' }
-            }
+    chinaConfig: {
+      mapName: 'china',
+      jsonPath: '/_javascripts/china.json',
+      seriesName: '中国地图',
+      highlighted: ['辽宁', '四川', '广东']
+    },
+    provinces: {
+      '辽宁': { mapName: 'liaoning', jsonPath: '/_javascripts/21.json', seriesName: '辽宁地图', highlighted: ['沈阳市'] },
+      '四川': { mapName: 'sichuan', jsonPath: '/_javascripts/51.json', seriesName: '四川地图', highlighted: ['绵阳市','宜宾市'] },
+      '广东': { mapName: 'guangdong', jsonPath: '/_javascripts/44.json', seriesName: '广东地图', highlighted: ['深圳市'] }
+    },
+    colors: {
+      normal: '#1890ff',
+      emphasis: '#40a9ff',
+      defaultArea: '#ccc',
+      defaultBorder: '#fff'
+    }
+  };
+
+  let _currentLevel = 'china';  // 'china' 或省份名称
+  let _chart = null;
+
+  /**
+   * 初始化地图
+   * @param {Object} config 配置对象
+   */
+  async function _init(config) {
+    // 销毁旧实例
+    if (_chart) {
+      _chart.dispose();
+      _chart = null;
+    }
+
+    const container = document.querySelector(config.selector);
+    if (!container) {
+      console.error('地图容器未找到：', config.selector);
+      return;
+    }
+
+    _chart = echarts.init(container);
+    try {
+      const response = await fetch(config.jsonPath);
+      const geoJson = await response.json();
+      echarts.registerMap(config.mapName, geoJson);
+
+      const option = _buildOption(config);
+      _chart.setOption(option);
+      _chart.off('click');
+      _chart.on('click', ({ componentType, seriesType, name }) => {
+        if (componentType === 'series' && seriesType === 'map') {
+          _toggle(name);
         }
-    ],
-    onClick: handleMapToggle // 绑定点击切换逻辑
+      });
+    } catch (err) {
+      console.error(`${config.seriesName} 加载失败:`, err);
+    }
+  }
+
+  /**
+   * 构建 ECharts 配置
+   * @param {Object} config
+   * @returns {Object} ECharts option
+   */
+  function _buildOption(config) {
+    const { defaultArea, defaultBorder, normal, emphasis } = DEFAULT_OPTIONS.colors;
+    const seriesData = (config.highlighted || []).map(name => ({
+      name,
+      itemStyle: {
+        normal: { areaColor: normal },
+        emphasis: { areaColor: emphasis }
+      }
+    }));
+
+    return {
+      tooltip: { trigger: 'item', formatter: '{b}' },
+      series: [{
+        ...DEFAULT_OPTIONS.seriesTemplate,
+        name: config.seriesName,
+        map: config.mapName,
+        data: seriesData
+      }]
+    };
+  }
+
+  /**
+   * 切换逻辑
+   * @param {string} name 点击区域名称
+   */
+  function _toggle(name) {
+    if (_currentLevel === 'china' && DEFAULT_OPTIONS.provinces[name]) {
+      _currentLevel = name;
+      const cfg = DEFAULT_OPTIONS.provinces[name];
+      _init({ selector: DEFAULT_OPTIONS.selector, ...cfg });
+    } else if (_currentLevel !== 'china') {
+      _currentLevel = 'china';
+      const cfg = DEFAULT_OPTIONS.chinaConfig;
+      _init({ selector: DEFAULT_OPTIONS.selector, ...cfg });
+    }
+  }
+
+  // 初始执行
+  function init() {
+    const cfg = DEFAULT_OPTIONS.chinaConfig;
+    _init({ selector: DEFAULT_OPTIONS.selector, ...cfg });
+  }
+
+  return { init };
+})();
+
+// 统一的系列模版，放在模块外部避免重复定义
+MapToggle.DEFAULT_OPTIONS = MapToggle.DEFAULT_OPTIONS || {};
+MapToggle.DEFAULT_OPTIONS.seriesTemplate = {
+  type: 'map', roam: false, selectedMode: false,
+  label: { show: false },
+  itemStyle: {
+    normal: { areaColor: '#ccc', borderColor: '#fff', borderWidth: 1 },
+    emphasis: { areaColor: '#999', label: { show: false } }
+  }
+};
+
+// 页面加载完成后调用初始化
+document.addEventListener('DOMContentLoaded', () => {
+  MapToggle.init();
 });
