@@ -21,19 +21,19 @@ hide:
 
 
 <style>
-  .maps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  .maps-row {
+    display: flex;
+    flex-wrap: wrap;
     gap: 1em;
     margin: 1em 0;
   }
-  .maps-grid > div {
-    width: 100%;
-    height: 300px;      /* 高度可根据需要调整 */
+  .maps-row > div {
+    flex: 1 1 320px;    /* 基准宽度 320px，剩余空间平分 */
+    height: 300px;      /* 高度可自定义 */
   }
 </style>
 
-<div class="maps-grid">
+<div class="maps-row">
   <div data-echarts-map="china"></div>
   <div data-echarts-map="sicuan"></div>
   <div data-echarts-map="guangdong"></div>
