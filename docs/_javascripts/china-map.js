@@ -125,7 +125,7 @@ function handleMapToggle(name) {
     currentMap = name;
     initMap({ mapName, jsonPath, seriesName, data: highlightData[name] });
   } else if (currentMap === 'china'){
-    alert(`笔者未曾求学于${provinceMapConfig[name]}`);
+    alert(`笔者未曾求学于${name}`);
   }else {
     // 返回全国地图
     currentMap = 'china';
