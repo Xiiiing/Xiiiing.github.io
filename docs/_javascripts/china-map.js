@@ -103,28 +103,28 @@ function handleMapToggle(provinceName) {
                 ...config,
                 data: [
                 {
-                    name: '绵阳',
+                    name: '绵阳市',
                     itemStyle: {
                         normal: { areaColor: '#1890ff' },
                         emphasis: { areaColor: '#40a9ff' }
                     }
                 },
                 {
-                    name: '宜宾',
+                    name: '宜宾市',
                     itemStyle: {
                         normal: { areaColor: '#1890ff' },
                         emphasis: { areaColor: '#40a9ff' }
                     }
                 },
                 {
-                    name: '沈阳',
+                    name: '沈阳市',
                     itemStyle: {
                         normal: { areaColor: '#1890ff' },
                         emphasis: { areaColor: '#40a9ff' }
                     }
                 },
                 {
-                    name: '深圳',
+                    name: '深圳市',
                     itemStyle: {
                         normal: { areaColor: '#1890ff' },
                         emphasis: { areaColor: '#40a9ff' }
@@ -162,34 +162,6 @@ function handleMapToggle(provinceName) {
                 },
                 {
                     name: '广东',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                },
-                {
-                    name: '绵阳',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                },
-                {
-                    name: '宜宾',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                },
-                {
-                    name: '沈阳',
-                    itemStyle: {
-                        normal: { areaColor: '#1890ff' },
-                        emphasis: { areaColor: '#40a9ff' }
-                    }
-                },
-                {
-                    name: '深圳',
                     itemStyle: {
                         normal: { areaColor: '#1890ff' },
                         emphasis: { areaColor: '#40a9ff' }
