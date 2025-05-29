@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
           // 单选模式：点击自动切换选中状态
           selectedMode: false,
           label: {
-            show: false
+            show: true
           },
           itemStyle: {
             normal: {
