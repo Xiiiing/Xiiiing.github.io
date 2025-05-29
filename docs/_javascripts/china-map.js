@@ -1,205 +1,104 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const dom = document.querySelector('[data-echarts-map="china"]');
-  if (!dom) return;
-  const chart = echarts.init(dom);
-
-  fetch('/_javascripts/china.json')
-    .then(res => res.json())
-    .then(geoJson => {
-      echarts.registerMap('china', geoJson);
-      chart.setOption({
-        tooltip: {
-          trigger: 'item',
-          formatter: '{b}'
-        },
-        series: [{
-          name: '中国地图',
-          type: 'map',
-          map: 'china',
-          roam: false,
-          // 单选模式：点击自动切换选中状态
-          selectedMode: false,
-          label: {
-            show: false
-          },
-          itemStyle: {
+// 公共图表配置（可根据需求调整）
+const commonChartOptions = {
+    tooltip: {
+        trigger: 'item',
+        formatter: '{b}'
+    },
+    series: [{
+        type: 'map',
+        roam: false,
+        selectedMode: false,
+        label: { show: false },
+        itemStyle: {
             normal: {
-              areaColor: '#ccc',  // 未选中、未自定义的省份灰色
-              borderColor: '#fff',
-              borderWidth: 1
+                areaColor: '#ccc',
+                borderColor: '#fff',
+                borderWidth: 1
             },
             emphasis: {
-              // 悬停时的加亮色：对所有省份都生效
-              areaColor: '#999',
-              label:{show:false}
+                areaColor: '#999',
+                label: { show: false }
             }
-          },
-          
-          data: [
-            {
-              name: '辽宁',
-              itemStyle: {
-                normal: {
-                  areaColor: '#1890ff'
-                },
-                emphasis: {
-                  areaColor: '#40a9ff'
-                }
-              }
-            },
-            {
-              name: '四川',
-              itemStyle: {
-                normal: {
-                  areaColor: '#1890ff'
-                },
-                emphasis: {
-                  areaColor: '#40a9ff'
-                }
-              }
-            },
-            {
-              name: '广东',
-              itemStyle: {
-                normal: {
-                  areaColor: '#1890ff'
-                },
-                emphasis: {
-                  areaColor: '#40a9ff'
-                }
-              }
-            }
+        }
+    }]
+};
 
-          ]
-        }]
-      });
-    })
-    .catch(err => console.error('地图加载失败:', err));
+// 地图初始化通用函数
+function initEchartsMap({ selector, mapName, jsonPath, seriesName, data }) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const chartDom = document.querySelector(selector);
+        if (!chartDom) return;
+
+        const chart = echarts.init(chartDom);
+        fetch(jsonPath)
+            .then(res => res.json())
+            .then(geoJson => {
+                echarts.registerMap(mapName, geoJson);
+                chart.setOption({
+                    ...commonChartOptions,
+                    series: [{
+                        ...commonChartOptions.series[0],
+                        name: seriesName,
+                        map: mapName,
+                        data: data || []  // 可选数据配置
+                    }]
+                });
+            })
+            .catch(err => console.error(`${seriesName}地图加载失败:`, err));
+    });
+}
+
+// 初始化全国地图（带高亮省份）
+initEchartsMap({
+    selector: '[data-echarts-map="china"]',
+    mapName: 'china',
+    jsonPath: '/_javascripts/china.json',
+    seriesName: '中国地图',
+    data: [
+        {
+            name: '辽宁',
+            itemStyle: {
+                normal: { areaColor: '#1890ff' },
+                emphasis: { areaColor: '#40a9ff' }
+            }
+        },
+        {
+            name: '四川',
+            itemStyle: {
+                normal: { areaColor: '#1890ff' },
+                emphasis: { areaColor: '#40a9ff' }
+            }
+        },
+        {
+            name: '广东',
+            itemStyle: {
+                normal: { areaColor: '#1890ff' },
+                emphasis: { areaColor: '#40a9ff' }
+            }
+        }
+    ]
 });
-document.addEventListener('DOMContentLoaded', function () {
-  const dom = document.querySelector('[data-echarts-map="sicuan"]');
-  if (!dom) return;
-  const chart = echarts.init(dom);
 
-  fetch('/_javascripts/51.json')
-    .then(res => res.json())
-    .then(geoJson => {
-      echarts.registerMap('sicuan', geoJson);
-      chart.setOption({
-        tooltip: {
-          trigger: 'item',
-          formatter: '{b}'
-        },
-        series: [{
-          name: '中国地图',
-          type: 'map',
-          map: 'sicuan',
-          roam: false,
-          // 单选模式：点击自动切换选中状态
-          selectedMode: false,
-          label: {
-            show: false
-          },
-          itemStyle: {
-            normal: {
-              areaColor: '#ccc',  // 未选中、未自定义的省份灰色
-              borderColor: '#fff',
-              borderWidth: 1
-            },
-            emphasis: {
-              // 悬停时的加亮色：对所有省份都生效
-              areaColor: '#999',
-              label:{show:false}
-            }
-          },
-
-
-        }]
-      });
-    })
-    .catch(err => console.error('地图加载失败:', err));
+// 初始化四川地图
+initEchartsMap({
+    selector: '[data-echarts-map="sichuan"]',  // 修正拼写错误
+    mapName: 'sichuan',
+    jsonPath: '/_javascripts/51.json',
+    seriesName: '四川地图'
 });
-document.addEventListener('DOMContentLoaded', function () {
-  const dom = document.querySelector('[data-echarts-map="guangdong"]');
-  if (!dom) return;
-  const chart = echarts.init(dom);
 
-  fetch('/_javascripts/44.json')
-    .then(res => res.json())
-    .then(geoJson => {
-      echarts.registerMap('guangdong', geoJson);
-      chart.setOption({
-        tooltip: {
-          trigger: 'item',
-          formatter: '{b}'
-        },
-        series: [{
-          name: '中国地图',
-          type: 'map',
-          map: 'guangdong',
-          roam: false,
-          // 单选模式：点击自动切换选中状态
-          selectedMode: false,
-          label: {
-            show: false
-          },
-          itemStyle: {
-            normal: {
-              areaColor: '#ccc',  // 未选中、未自定义的省份灰色
-              borderColor: '#fff',
-              borderWidth: 1
-            },
-            emphasis: {
-              // 悬停时的加亮色：对所有省份都生效
-              areaColor: '#999',
-              label:{show:false}
-            }
-          },
-
-        }]
-      });
-    })
-    .catch(err => console.error('地图加载失败:', err));
+// 初始化广东地图
+initEchartsMap({
+    selector: '[data-echarts-map="guangdong"]',
+    mapName: 'guangdong',
+    jsonPath: '/_javascripts/44.json',
+    seriesName: '广东地图'
 });
-document.addEventListener('DOMContentLoaded', function () {
-  const dom = document.querySelector('[data-echarts-map="liaoning"]');
-  if (!dom) return;
-  const chart = echarts.init(dom);
 
-  fetch('/_javascripts/21.json')
-    .then(res => res.json())
-    .then(geoJson => {
-      echarts.registerMap('liaoning', geoJson);
-      chart.setOption({
-        tooltip: {
-          trigger: 'item',
-          formatter: '{b}'
-        },
-        series: [{
-          name: '中国地图',
-          type: 'map',
-          map: 'liaoning',
-          roam: false,
-          // 单选模式：点击自动切换选中状态
-          selectedMode: false,
-          label: {
-            show: false
-          },
-          itemStyle: {
-            normal: {
-              areaColor: '#ccc',  // 未选中、未自定义的省份灰色
-              borderColor: '#fff',
-              borderWidth: 1
-            },
-            emphasis: {
-              // 悬停时的加亮色：对所有省份都生效
-              areaColor: '#999',
-              label:{show:false}
-            }
-          },
-
-        }]
-      });
-    })
-    .catch(err => console.error('地图加载失败:', err));
+// 初始化辽宁地图
+initEchartsMap({
+    selector: '[data-echarts-map="liaoning"]',
+    mapName: 'liaoning',
+    jsonPath: '/_javascripts/21.json',
+    seriesName: '辽宁地图'
 });
