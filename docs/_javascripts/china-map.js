@@ -92,7 +92,6 @@ initEchartsMap({
     onClick: async (provinceName) => {
         const contentContainer = document.getElementById('province-content');
         const provincePaths = {
-            '广东': '/guangdong'
             '辽宁': '/liaoning.html',
             '四川': '/sichuan.html',
             '广东': '/guangdong.html'
