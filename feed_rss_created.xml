@@ -13,8 +13,8 @@
     <language>zh</language>
 
     
-    <pubDate>Thu, 29 May 2025 13:28:25 -0000</pubDate>
-    <lastBuildDate>Thu, 29 May 2025 13:28:25 -0000</lastBuildDate>
+    <pubDate>Thu, 29 May 2025 13:32:49 -0000</pubDate>
+    <lastBuildDate>Thu, 29 May 2025 13:32:49 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -39,7 +39,7 @@
       
       <description>&lt;h1 id=&#34;_1&#34;&gt;诗词歌赋&lt;/h1&gt;</description>
       <link>https://Xiiiing.github.io/blog/category/%E8%AF%97%E8%AF%8D%E6%AD%8C%E8%B5%8B/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
-      <pubDate>Thu, 29 May 2025 13:28:26 +0000</pubDate>
+      <pubDate>Thu, 29 May 2025 13:32:50 +0000</pubDate>
       <source url="https://Xiiiing.github.io/feed_rss_created.xml">Xiiiing's Wiki</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/category/%E8%AF%97%E8%AF%8D%E6%AD%8C%E8%B5%8B/</guid>
@@ -54,7 +54,7 @@
       
       <description>&lt;h1 id=&#34;2023&#34;&gt;十二月 2023&lt;/h1&gt;</description>
       <link>https://Xiiiing.github.io/blog/archive/2023/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
-      <pubDate>Thu, 29 May 2025 13:28:26 +0000</pubDate>
+      <pubDate>Thu, 29 May 2025 13:32:50 +0000</pubDate>
       <source url="https://Xiiiing.github.io/feed_rss_created.xml">Xiiiing's Wiki</source>
       
       <guid isPermaLink="true">https://Xiiiing.github.io/blog/archive/2023/</guid>
@@ -67,134 +67,54 @@
       
       
       
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang=&#34;zh-CN&#34;&gt;
-&lt;head&gt;
-    &lt;meta charset=&#34;UTF-8&#34;&gt;
-    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
-    &lt;title&gt;Xiiiing&#39;s Personal Page&lt;/title&gt;
-    &lt;style&gt;
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: &#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif;
-        }
+      <description>&lt;style&gt;
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 600px; /* 容器最小高度 */
+  margin-top: 30px; /* 内容间距 */
+}
 
-        body {
-            display: flex;
-            min-height: 100vh;
-            background-color: #f5f7fa;
-        }
+.text-section {
+  flex: 0 0 60%; /* 文字区域占比 60% */
+  padding: 20px;
+}
 
-        .left-section {
-            flex: 0 0 60%;
-            padding: 40px;
-            background-color: white;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-        }
+.map-section {
+  flex: 0 0 40%; /* 地图区域占比 40% */
+  padding: 20px;
+  border-left: 1px solid #e0e0e0; /* 分隔线 */
+}
 
-        .right-section {
-            flex: 0 0 40%;
-            padding: 40px;
-            background-color: #f9f9f9;
-        }
+#map-container {
+  width: 100%;
+  height: 100%; /* 地图撑满容器 */
+  min-height: 500px;
+}
+&lt;/style&gt;
 
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            color: #7f8c8d;
-            font-size: 1.1em;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .section h3 {
-            color: #3498db;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-
-        .map-container {
-            width: 100%;
-            height: 600px;
-            background: #ecf0f1;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2em;
-            color: #7f8c8d;
-        }
-
-        /* 响应式调整 */
-        @media (max-width: 992px) {
-            body {
-                flex-direction: column;
-            }
-            .left-section, .right-section {
-                flex: 1;
-                width: 100%;
-                padding: 20px;
-            }
-            .map-container {
-                height: 400px;
-            }
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=&#34;left-section&#34;&gt;
-        &lt;div class=&#34;header&#34;&gt;
-            &lt;h1&gt;Xiiiing&lt;/h1&gt;
-            &lt;p&gt;计算机硕士 | ISTJ -&gt; ESFJ|&lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&#34;section&#34;&gt;
-            &lt;h3&gt;关于我&lt;/h3&gt;
-            &lt;p&gt;
-                目前致力于通过GitHub搭建个人知识库，实现学习过程的可视化与系统化。&lt;br&gt;
-                坚信「知识需要流动，成长需要记录」，希望通过博客分享经验，连接更多同频者。
-            &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&#34;section&#34;&gt;
-            &lt;h3&gt;教育背景&lt;/h3&gt;
-            &lt;ul&gt;
-                &lt;li&gt;✓ 本科 | 物联网工程&lt;/li&gt;
-                &lt;li&gt;✓ 硕士 | 软件工程&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&#34;section&#34;&gt;
-            &lt;h3&gt;兴趣爱好&lt;/h3&gt;
+&lt;div class=&#34;flex-container&#34;&gt;
+  &lt;div class=&#34;text-section&#34;&gt;
+   &lt;h1&gt;Xiiiing&lt;/h1&gt;
+   &lt;p&gt;计算机硕士 | ISTJ -&gt; ESFJ|&lt;/p&gt;
+   &lt;h3&gt;关于我&lt;/h3&gt;
+   &lt;p&gt;目前致力于通过GitHub搭建个人知识库，实现学习过程的可视化与系统化。&lt;br&gt;
+      坚信「知识需要流动，成长需要记录」，希望通过博客分享经验，连接更多同频者。&lt;/p&gt;
+   &lt;h3&gt;兴趣爱好&lt;/h3&gt;
             &lt;ul&gt;
                 &lt;li&gt;🌍 地图收集与地理探索&lt;/li&gt;
                 &lt;li&gt;📚 技术博客写作与知识整理&lt;/li&gt;
                 &lt;li&gt;🎨 极简主义设计与UI/UX研究&lt;/li&gt;
                 &lt;li&gt;🏓 室内运动&lt;/li&gt;
             &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+  &lt;/div&gt;
 
-    &lt;div class=&#34;right-section&#34;&gt;
-       &lt;div id=&#34;map-container&#34; style=&#34;width: 100%; height: 500px;&#34;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</description>
+  &lt;div class=&#34;map-section&#34;&gt;
+    &lt;!-- 地图主容器（关键容器，用于切换显示） --&gt;
+    &lt;div id=&#34;map-container&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</description>
       <link>https://Xiiiing.github.io/blog/Homepage/?utm_source=documentation&amp;utm_medium=RSS&amp;utm_campaign=feed-syndication</link>
       <pubDate>Thu, 29 May 2025 13:24:49 +0000</pubDate>
       <source url="https://Xiiiing.github.io/feed_rss_created.xml">Xiiiing's Wiki</source>
