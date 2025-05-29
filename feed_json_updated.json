@@ -18,7 +18,7 @@
             "title": "\u8bd7\u8bcd\u6b4c\u8d4b",
             "content_html": "<h1 id=\"_1\">\u8bd7\u8bcd\u6b4c\u8d4b</h1>",
             "image": null,
-            "date_modified": "2025-05-29T13:05:38.520973+00:00",
+            "date_modified": "2025-05-29T13:25:20.873728+00:00",
             "authors": [],
             "tags": null
         },
@@ -28,17 +28,17 @@
             "title": "\u5341\u4e8c\u6708 2023",
             "content_html": "<h1 id=\"2023\">\u5341\u4e8c\u6708 2023</h1>",
             "image": null,
-            "date_modified": "2025-05-29T13:05:38.518125+00:00",
+            "date_modified": "2025-05-29T13:25:20.869940+00:00",
             "authors": [],
             "tags": null
         },
         {
-            "id": "https://Xiiiing.github.io/blog/tags/",
-            "url": "https://Xiiiing.github.io/blog/tags/?utm_source=documentation&utm_medium=RSS&utm_campaign=feed-syndication",
-            "title": "Tag",
-            "content_html": "<h1 id=\"tag\">Tag</h1>",
+            "id": "https://Xiiiing.github.io/blog/Homepage/",
+            "url": "https://Xiiiing.github.io/blog/Homepage/?utm_source=documentation&utm_medium=RSS&utm_campaign=feed-syndication",
+            "title": "Homepage",
+            "content_html": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Xiiiing's Personal Page</title>\n    <style>\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n        }\n\n        body {\n            display: flex;\n            min-height: 100vh;\n            background-color: #f5f7fa;\n        }\n\n        .left-section {\n            flex: 0 0 60%;\n            padding: 40px;\n            background-color: white;\n            box-shadow: 2px 0 10px rgba(0,0,0,0.1);\n        }\n\n        .right-section {\n            flex: 0 0 40%;\n            padding: 40px;\n            background-color: #f9f9f9;\n        }\n\n        .header {\n            text-align: center;\n            margin-bottom: 30px;\n        }\n\n        .header h1 {\n            color: #2c3e50;\n            font-size: 2.5em;\n            margin-bottom: 10px;\n        }\n\n        .header p {\n            color: #7f8c8d;\n            font-size: 1.1em;\n        }\n\n        .section {\n            margin-bottom: 30px;\n        }\n\n        .section h3 {\n            color: #3498db;\n            border-bottom: 2px solid #3498db;\n            padding-bottom: 5px;\n            margin-bottom: 15px;\n            font-size: 1.3em;\n        }\n\n        .map-container {\n            width: 100%;\n            height: 600px;\n            background: #ecf0f1;\n            border-radius: 8px;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            font-size: 1.2em;\n            color: #7f8c8d;\n        }\n\n        /* \u54cd\u5e94\u5f0f\u8c03\u6574 */\n        @media (max-width: 992px) {\n            body {\n                flex-direction: column;\n            }\n            .left-section, .right-section {\n                flex: 1;\n                width: 100%;\n                padding: 20px;\n            }\n            .map-container {\n                height: 400px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"left-section\">\n        <div class=\"header\">\n            <h1>Xiiiing</h1>\n            <p>\u8ba1\u7b97\u673a\u7855\u58eb | ISTJ -> ESFJ|</p>\n        </div>\n\n        <div class=\"section\">\n            <h3>\u5173\u4e8e\u6211</h3>\n            <p>\n                \u76ee\u524d\u81f4\u529b\u4e8e\u901a\u8fc7GitHub\u642d\u5efa\u4e2a\u4eba\u77e5\u8bc6\u5e93\uff0c\u5b9e\u73b0\u5b66\u4e60\u8fc7\u7a0b\u7684\u53ef\u89c6\u5316\u4e0e\u7cfb\u7edf\u5316\u3002<br>\n                \u575a\u4fe1\u300c\u77e5\u8bc6\u9700\u8981\u6d41\u52a8\uff0c\u6210\u957f\u9700\u8981\u8bb0\u5f55\u300d\uff0c\u5e0c\u671b\u901a\u8fc7\u535a\u5ba2\u5206\u4eab\u7ecf\u9a8c\uff0c\u8fde\u63a5\u66f4\u591a\u540c\u9891\u8005\u3002\n            </p>\n        </div>\n\n        <div class=\"section\">\n            <h3>\u6559\u80b2\u80cc\u666f</h3>\n            <ul>\n                <li>\u2713 \u672c\u79d1 | \u7269\u8054\u7f51\u5de5\u7a0b</li>\n                <li>\u2713 \u7855\u58eb | \u8f6f\u4ef6\u5de5\u7a0b</li>\n            </ul>\n        </div>\n\n        <div class=\"section\">\n            <h3>\u5174\u8da3\u7231\u597d</h3>\n            <ul>\n                <li>\ud83c\udf0d \u5730\u56fe\u6536\u96c6\u4e0e\u5730\u7406\u63a2\u7d22</li>\n                <li>\ud83d\udcda \u6280\u672f\u535a\u5ba2\u5199\u4f5c\u4e0e\u77e5\u8bc6\u6574\u7406</li>\n                <li>\ud83c\udfa8 \u6781\u7b80\u4e3b\u4e49\u8bbe\u8ba1\u4e0eUI/UX\u7814\u7a76</li>\n                <li>\ud83c\udfd3 \u5ba4\u5185\u8fd0\u52a8</li>\n            </ul>\n        </div>\n    </div>\n\n    <div class=\"right-section\">\n       <div id=\"map-container\"></div> <!-- \u5730\u56fe\u5bb9\u5668\uff08\u53ef\u5d4c\u5165 ECharts \u52a8\u6001\u5730\u56fe\u6216\u9759\u6001\u56fe\u7247\uff09 -->\n    </div>\n</body>\n</html>",
             "image": null,
-            "date_modified": "2025-05-26T01:00:55+00:00",
+            "date_modified": "2025-05-29T13:24:49+00:00",
             "authors": [],
             "tags": null
         },
