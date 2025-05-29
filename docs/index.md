@@ -18,9 +18,5 @@ hide:
 [科研&医学](https://xiiiing.github.io/Research/){ .md-button }
 [Blog](https://xiiiing.github.io/blog){ .md-button }
 
-<!-- 地图容器（重要） -->
-<div data-echarts-map="china" style="width: 100%; height: 600px; margin: 20px 0; border: 1px solid #eee;"></div>
-
-<!-- 省份内容展示容器 -->
-<div id="province-content" style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;"></div>
-    
+<!-- 地图主容器（关键容器，用于切换显示） -->
+<div id="map-container" data-echarts-map="china" style="width: 100%; height: 600px; margin: 20px 0; border: 1px solid #eee;"></div>
