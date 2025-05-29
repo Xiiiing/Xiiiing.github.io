@@ -3,54 +3,70 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!dom) return;
   const chart = echarts.init(dom);
 
-  fetch('/_javascripts/china.json') // 确保 GeoJSON 路径正确
+  fetch('/_javascripts/china.json')
     .then(res => res.json())
     .then(geoJson => {
       echarts.registerMap('china', geoJson);
       chart.setOption({
         tooltip: {
           trigger: 'item',
-          formatter: '{b}' // 显示省份名称
+          formatter: '{b}'
         },
         series: [{
           name: '中国地图',
           type: 'map',
           map: 'china',
-          roam: false, // 禁止缩放
-          label: { show: false }, // 隐藏省份名称（可根据需求显示）
+          roam: false,
+          // 单选模式：点击自动切换选中状态
+          selectedMode: 'single',
+          label: {
+            show: false
+          },
           itemStyle: {
             normal: {
-              areaColor: '#ccc', // 默认灰色（未指定省份）
+              areaColor: '#ccc',  // 未选中、未自定义的省份灰色
               borderColor: '#fff',
               borderWidth: 1
             },
             emphasis: {
-              areaColor: '#999' // 灰色省份悬停变亮灰（统一设置，覆盖默认悬停）
+              // 悬停时的加亮色：对所有省份都生效
+              areaColor: '#999'
             }
           },
-          // 高亮省份数据（可添加多个省份）
+          select: {
+            itemStyle: {
+              // 选中态（点击后）的颜色：黄色
+              areaColor: '#fadb14',
+              borderColor: '#fff',
+              borderWidth: 1
+            },
+            emphasis: {
+              // 选中后悬停的颜色，可略微加深
+              areaColor: '#ffe58f'
+            }
+          },
           data: [
             {
-              name: '辽宁', // 替换为你需要高亮的省份名称
+              name: '辽宁',
+              // 默认高亮（用蓝色），并作为“已选中”以便后续 click 切换逻辑
+              selected: true,
               itemStyle: {
                 normal: {
-                  areaColor: '#1890ff' // 常态蓝色（覆盖默认灰色）
+                  areaColor: '#1890ff'
                 },
                 emphasis: {
-                  areaColor: '#40a9ff' // 悬停更亮蓝（覆盖系列的emphasis）
+                  areaColor: '#40a9ff'
                 }
               }
             }
-            // 示例：添加第二个省份
-            // {
-            //   name: '山东',
-            //   itemStyle: {
-            //     normal: { areaColor: '#1890ff' },
-            //     emphasis: { areaColor: '#40a9ff' }
-            //   }
-            // }
+            // 如需同时默认高亮多个省份，可在此处继续添加
           ]
         }]
+      });
+
+      // 可选：监听页面 click 事件，打印当前选中省份
+      chart.on('click', params => {
+        console.log('当前选中：', params.name);
       });
     })
     .catch(err => console.error('地图加载失败:', err));
