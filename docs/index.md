@@ -27,16 +27,26 @@ hide:
     gap: 1em;
     margin: 1em 0;
   }
-  .maps-row > div {
-    flex: 1 1 320px;    /* 基准宽度 320px，剩余空间平分 */
-    height: 300px;      /* 高度可自定义 */
+  /* 大地图 */
+  .maps-row > .big {
+    flex: 2 1 0;       /* 占比更大 */
+    height: 500px;     /* 高度也更高 */
+  }
+  /* 小地图 */
+  .maps-row > .small {
+    flex: 1 1 160px;   /* 基准宽度 160px，剩余空间平分 */
+    height: 250px;     /* 较小的高度 */
   }
 </style>
 
 <div class="maps-row">
-  <div data-echarts-map="china"></div>
-  <div data-echarts-map="sicuan"></div>
-  <div data-echarts-map="guangdong"></div>
-  <div data-echarts-map="liaoning"></div>
+  <!-- 大地图 -->
+  <div class="big" data-echarts-map="china"></div>
+  <!-- 三张小地图 -->
+  <div class="small" data-echarts-map="sichuan"></div>
+  <div class="small" data-echarts-map="guangdong"></div>
+  <div class="small" data-echarts-map="liaoning"></div>
 </div>
+
+
 
