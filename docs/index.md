@@ -19,13 +19,19 @@ hide:
 [Blog](https://xiiiing.github.io/blog){ .md-button }
 
 <style>
-  /* 容器样式：全屏宽度，高度可根据需要调整 */
   .maps-container {
     width: 100%;
-    height: 600px;   /* 你可以根据布局需求修改这个高度 */
+    height: 600px;
     margin: 1em 0;
+    border: 1px solid #eee;  /* 可选：添加容器边框更清晰 */
   }
 </style>
 
-<!-- 这是用于“钻取”交互的全国地图容器 -->
+<!-- 引入ECharts核心库 -->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+<!-- 地图容器 -->
 <div class="maps-container" data-echarts-map="china"></div>
+
+<!-- 引入你的地图交互逻辑 -->
+<script src="/_javascripts/china-map.js"></script>
