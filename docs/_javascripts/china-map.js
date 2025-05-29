@@ -7,9 +7,9 @@ const commonChartOptions = {
     series: [{
         type: 'map',
         roam: false,
-        selectedMode: false, // 启用单选模式
+        selectedMode: false,
         label: {
-            show: false,  // 显示地图标签
+            show: false,
         },
         itemStyle: {
             normal: {
@@ -25,44 +25,128 @@ const commonChartOptions = {
     }]
 };
 
-// 地图初始化通用函数（添加了点击回调参数）
-function initEchartsMap({ selector, mapName, jsonPath, seriesName, data, onClick }) {
-    document.addEventListener('DOMContentLoaded', () => {
-        const chartDom = document.querySelector(selector);
-        if (!chartDom) return;
+// 地图状态管理（关键变量）
+let currentMap = 'china'; // 当前显示的地图类型：'china' 或省份名称
+let chartInstance = null; // 保存当前图表实例用于销毁
 
-        const chart = echarts.init(chartDom);
-        fetch(jsonPath)
-            .then(res => res.json())
-            .then(geoJson => {
-                echarts.registerMap(mapName, geoJson);
-                const option = {
-                    ...commonChartOptions,
-                    series: [{
-                        ...commonChartOptions.series[0],
-                        name: seriesName,
-                        map: mapName,
-                        data: data || []
-                    }]
-                };
-                chart.setOption(option);
+// 省份地图配置映射（根据你的实际路径调整）
+const provinceMapConfig = {
+    '辽宁': {
+        mapName: 'liaoning',
+        jsonPath: '/_javascripts/21.json',
+        seriesName: '辽宁地图'
+    },
+    '四川': {
+        mapName: 'sichuan',
+        jsonPath: '/_javascripts/51.json',
+        seriesName: '四川地图'
+    },
+    '广东': {
+        mapName: 'guangdong',
+        jsonPath: '/_javascripts/44.json',
+        seriesName: '广东地图'
+    }
+};
 
-                // 添加点击事件监听
-                if (onClick) {
-                    chart.on('click', params => {
-                        if (params.componentType === 'series' && params.seriesType === 'map') {
-                            onClick(params.name); // 传递点击的省份名称
-                        }
-                    });
-                }
-            })
-            .catch(err => console.error(`${seriesName}地图加载失败:`, err));
-    });
+// 地图初始化通用函数（修改为可切换版本）
+function initMap({ selector, mapName, jsonPath, seriesName, data, onClick }) {
+    // 销毁旧实例避免内存泄漏
+    if (chartInstance) {
+        chartInstance.dispose();
+        chartInstance = null;
+    }
+
+    const chartDom = document.querySelector(selector);
+    if (!chartDom) return;
+
+    const chart = echarts.init(chartDom);
+    chartInstance = chart; // 保存当前实例
+
+    fetch(jsonPath)
+        .then(res => res.json())
+        .then(geoJson => {
+            echarts.registerMap(mapName, geoJson);
+            const option = {
+                ...commonChartOptions,
+                series: [{
+                    ...commonChartOptions.series[0],
+                    name: seriesName,
+                    map: mapName,
+                    data: data || []
+                }]
+            };
+            chart.setOption(option);
+
+            // 绑定点击事件
+            if (onClick) {
+                chart.on('click', params => {
+                    if (params.componentType === 'series' && params.seriesType === 'map') {
+                        onClick(params.name);
+                    }
+                });
+            }
+        })
+        .catch(err => console.error(`${seriesName}地图加载失败:`, err));
 }
 
-// 初始化全国地图（修改为容器跳转逻辑）
-initEchartsMap({
-    selector: '[data-echarts-map="china"]',
+// 地图切换主逻辑
+function handleMapToggle(provinceName) {
+    const mapContainer = document.getElementById('map-container');
+
+    // 当前是全国地图 → 切换到省份地图
+    if (currentMap === 'china') {
+        const config = provinceMapConfig[provinceName];
+        if (config) {
+            currentMap = provinceName;
+            initMap({
+                selector: '#map-container',
+                ...config,
+                onClick: handleMapToggle // 省份地图点击时触发返回逻辑
+            });
+        } else {
+            alert(`暂未支持${provinceName}地图`);
+        }
+    }
+
+    // 当前是省份地图 → 返回全国地图
+    else {
+        currentMap = 'china';
+        initMap({
+            selector: '#map-container',
+            mapName: 'china',
+            jsonPath: '/_javascripts/china.json',
+            seriesName: '中国地图',
+            data: [
+                {
+                    name: '辽宁',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                },
+                {
+                    name: '四川',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                },
+                {
+                    name: '广东',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                }
+            ],
+            onClick: handleMapToggle // 全国地图点击时触发切换
+        });
+    }
+}
+
+// 初始化全国地图（首次加载）
+initMap({
+    selector: '#map-container',
     mapName: 'china',
     jsonPath: '/_javascripts/china.json',
     seriesName: '中国地图',
@@ -89,54 +173,6 @@ initEchartsMap({
             }
         }
     ],
-    onClick: async (provinceName) => {
-        const contentContainer = document.getElementById('province-content');
-        const provincePaths = {
-            '辽宁': '/liaoning.html',
-            '四川': '/sichuan.html',
-            '广东': '/guangdong.html'
-        };
-        const path = provincePaths[provinceName];
-
-        if (path) {
-            try {
-                // 显示加载状态
-                contentContainer.innerHTML = '<div class="loading">加载中...</div>';
-
-                // 加载省份内容
-                const response = await fetch(path);
-                const html = await response.text();
-
-                // 插入到内容容器
-                contentContainer.innerHTML = html;
-            } catch (err) {
-                contentContainer.innerHTML = `<div class="error">加载${provinceName}内容失败: ${err.message}</div>`;
-            }
-        } else {
-            contentContainer.innerHTML = `<div class="tip">暂未开放${provinceName}地图页面</div>`;
-        }
-    }
-});
-
-// 其他省份地图初始化（保持原有逻辑）
-initEchartsMap({
-    selector: '[data-echarts-map="sichuan"]',
-    mapName: 'sichuan',
-    jsonPath: '/_javascripts/51.json',
-    seriesName: '四川地图'
-});
-
-initEchartsMap({
-    selector: '[data-echarts-map="guangdong"]',
-    mapName: 'guangdong',
-    jsonPath: '/_javascripts/44.json',
-    seriesName: '广东地图'
-});
-
-initEchartsMap({
-    selector: '[data-echarts-map="liaoning"]',
-    mapName: 'liaoning',
-    jsonPath: '/_javascripts/21.json',
-    seriesName: '辽宁地图'
+    onClick: handleMapToggle // 绑定点击切换逻辑
 });
     
