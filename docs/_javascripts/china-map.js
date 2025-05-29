@@ -125,7 +125,8 @@ function handleMapToggle(name) {
     currentMap = name;
     initMap({ mapName, jsonPath, seriesName, data: highlightData[name] });
   } else if (currentMap === 'china'){
-    alert(`笔者未曾求学于${name}`);
+    //alert(`笔者未曾求学于${name}`);
+    showBoldAlert(name);
   }else {
     // 返回全国地图
     currentMap = 'china';
@@ -135,3 +136,31 @@ function handleMapToggle(name) {
 
 // 首次加载全国地图
 initMap({ mapName: 'china', jsonPath: '/_javascripts/china.json', seriesName: '中国地图', data: highlightData.china });
+
+
+function showBoldAlert(province) {
+  // 构造一个半透明背景和居中的白色浮层
+  const overlay = document.createElement('div');
+  overlay.style.cssText = `
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;
+    z-index: 9999;
+  `;
+
+  const dialog = document.createElement('div');
+  dialog.style.cssText = `
+    background: #fff; padding: 20px; border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); max-width: 80%; text-align: center;
+  `;
+  dialog.innerHTML = `
+    <p>笔者未曾求学于 <strong>${province}</strong></p>
+    <button id="btn-ok">确定</button>
+  `;
+
+  overlay.appendChild(dialog);
+  document.body.appendChild(overlay);
+
+  document.getElementById('btn-ok').onclick = () => {
+    document.body.removeChild(overlay);
+  };
+}
