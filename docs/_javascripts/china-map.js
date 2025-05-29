@@ -1,116 +1,115 @@
-// china-map.js
-
+// 公共图表配置（调整了选中模式和标签显示）
 const commonChartOptions = {
-  tooltip: {
-    trigger: 'item',
-    formatter: '{b}'
-  },
-  series: [{
-    type: 'map',
-    roam: false,
-    selectedMode: false,
-    label: { show: false },
-    itemStyle: {
-      normal: {
-        areaColor: '#e0f3f8',  /* 更美观的默认颜色 */
-        borderColor: '#fff',
-        borderWidth: 1
-      },
-      emphasis: {
-        areaColor: '#66c2a5',  /* 强调颜色调整 */
-        label: { show: false }
-      }
-    }
-  }]
-};
-
-const provinceCodeMap = {
-  '四川': '51',
-  '广东': '44',
-  '辽宁': '21',
-  '浙江': '33',  /* 示例补充更多省份 */
-  '江苏': '32'
-};
-
-function initEchartsMap({ selector, mapName, jsonPath, seriesName, data = [], onClick }) {
-  document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector(selector);
-    if (!container) return;
-
-    // 显示加载状态
-    container.innerHTML = '<div style="text-align:center;padding:20px;">地图加载中...</div>';
-
-    if (container._echartsInstance) {
-      echarts.dispose(container._echartsInstance);
-    }
-
-    const chart = echarts.init(container);
-    container._echartsInstance = chart;
-
-    fetch(jsonPath)
-      .then(res => {
-        if (!res.ok) throw new Error('地图文件不存在');
-        return res.json();
-      })
-      .then(geoJson => {
-        container.innerHTML = '';  /* 清空加载提示 */
-        echarts.registerMap(mapName, geoJson);
-
-        chart.setOption({
-          ...commonChartOptions,
-          series: [{
-            ...commonChartOptions.series[0],
-            name: seriesName,
-            map: mapName,
-            data: data
-          }]
-        });
-
-        if (typeof onClick === 'function') {
-          chart.off('click');
-          chart.on('click', params => onClick(params, container));
+    tooltip: {
+        trigger: 'item',
+        formatter: '{b}' // 显示地区名称
+    },
+    series: [{
+        type: 'map',
+        roam: false,
+        selectedMode: 'single', // 启用单选模式
+        label: {
+            show: true,  // 显示地图标签
+            color: '#333',
+            fontSize: 12
+        },
+        itemStyle: {
+            normal: {
+                areaColor: '#f0f2f5',
+                borderColor: '#fff',
+                borderWidth: 0.5
+            },
+            emphasis: {
+                areaColor: '#91caff', // 鼠标悬停颜色
+                label: { show: true }
+            },
+            selected: {
+                areaColor: '#1890ff' // 选中状态颜色
+            }
         }
-      })
-      .catch(err => {
-        console.error(`${seriesName} 地图加载失败:`, err);
-        container.innerHTML = `<div style="color:red;padding:20px;">地图加载失败：${err.message}</div>`;
-      });
-  });
+    }]
+};
+
+// 地图初始化通用函数（添加了点击回调参数）
+function initEchartsMap({ selector, mapName, jsonPath, seriesName, data, onClick }) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const chartDom = document.querySelector(selector);
+        if (!chartDom) return;
+
+        const chart = echarts.init(chartDom);
+        fetch(jsonPath)
+            .then(res => res.json())
+            .then(geoJson => {
+                echarts.registerMap(mapName, geoJson);
+                const option = {
+                    ...commonChartOptions,
+                    series: [{
+                        ...commonChartOptions.series[0],
+                        name: seriesName,
+                        map: mapName,
+                        data: data || []
+                    }]
+                };
+                chart.setOption(option);
+
+                // 添加点击事件监听
+                if (onClick) {
+                    chart.on('click', params => {
+                        if (params.componentType === 'series' && params.seriesType === 'map') {
+                            onClick(params.name); // 传递点击的省份名称
+                        }
+                    });
+                }
+            })
+            .catch(err => console.error(`${seriesName}地图加载失败:`, err));
+    });
 }
 
-function bindChinaDrill() {
-  initEchartsMap({
+// 初始化全国地图（添加点击跳转逻辑）
+initEchartsMap({
     selector: '[data-echarts-map="china"]',
     mapName: 'china',
     jsonPath: '/_javascripts/china.json',
     seriesName: '中国地图',
-    data: [  /* 可选：添加示例数据（如人口） */
-      { name: '四川', value: 8367 },
-      { name: '广东', value: 12684 },
-      { name: '辽宁', value: 4230 }
+    data: [
+        { name: '辽宁', itemStyle: { normal: { areaColor: '#1890ff' } } },
+        { name: '四川', itemStyle: { normal: { areaColor: '#1890ff' } } },
+        { name: '广东', itemStyle: { normal: { areaColor: '#1890ff' } } }
     ],
-    onClick: (params, container) => {
-      const provinceName = params.name;
-      const code = provinceCodeMap[provinceName];
-      if (!code) {
-        container.innerHTML = `<div style="color:orange;padding:20px;">暂不支持查看 ${provinceName} 地图</div>`;
-        return;
-      }
-
-      // 钻取到省级地图（添加返回按钮提示）
-      initEchartsMap({
-        selector: '[data-echarts-map="china"]',
-        mapName: provinceName,
-        jsonPath: `/_javascripts/${code}.json`,
-        seriesName: `${provinceName} 地图`,
-        onClick: () => {
-          container.innerHTML = '<div style="text-align:center;padding:10px;">点击任意区域返回全国地图</div>';
-          bindChinaDrill();  /* 递归调用实现返回 */
+    onClick: provinceName => {
+        // 省份名称到路径的映射（根据你的实际页面结构调整）
+        const provincePaths = {
+            '辽宁': '/liaoning',
+            '四川': '/sichuan',
+            '广东': '/guangdong'
+        };
+        const path = provincePaths[provinceName];
+        if (path) {
+            window.location.href = path; // 跳转到对应省份页面
+        } else {
+            alert(`暂未开放${provinceName}地图页面`);
         }
-      });
     }
-  });
-}
+});
 
-// 页面加载后初始化
-bindChinaDrill();
+// 其他省份地图初始化（保持原有逻辑）
+initEchartsMap({
+    selector: '[data-echarts-map="sichuan"]',
+    mapName: 'sichuan',
+    jsonPath: '/_javascripts/51.json',
+    seriesName: '四川地图'
+});
+
+initEchartsMap({
+    selector: '[data-echarts-map="guangdong"]',
+    mapName: 'guangdong',
+    jsonPath: '/_javascripts/44.json',
+    seriesName: '广东地图'
+});
+
+initEchartsMap({
+    selector: '[data-echarts-map="liaoning"]',
+    mapName: 'liaoning',
+    jsonPath: '/_javascripts/21.json',
+    seriesName: '辽宁地图'
+});
