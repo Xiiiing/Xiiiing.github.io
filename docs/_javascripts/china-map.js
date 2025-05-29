@@ -133,7 +133,7 @@ function handleMapToggle(provinceName) {
                 onClick: handleMapToggle // 省份地图点击时触发返回逻辑
             });
         } else {
-            alert(`暂未支持${provinceName}地图`);
+            alert(`笔者学习经历无${provinceName}`);
         }
     }
 
