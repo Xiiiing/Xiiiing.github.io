@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   areaColor: '#40a9ff'
                 }
               }
-            }
+            },
             {
               name: '四川',
               itemStyle: {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   areaColor: '#40a9ff'
                 }
               }
-            }
+            },
             {
               name: '广东',
               itemStyle: {
@@ -69,8 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
               }
             }
-
-
 
           ]
         }]
