@@ -8,6 +8,12 @@
 
 // 公共图表配置
 const commonChartOptions = {
+  title: {
+    text: '求学 驻足',
+    left: 'center',
+    top: 10,
+    textStyle: { fontSize: 18 }
+  },
   tooltip: {
     trigger: 'item',
     formatter: '{b}'
@@ -118,7 +124,9 @@ function handleMapToggle(name) {
     const { mapName, jsonPath, seriesName } = provinceMapConfig[name];
     currentMap = name;
     initMap({ mapName, jsonPath, seriesName, data: highlightData[name] });
-  } else {
+  } else if (currentMap === 'china'){
+    alert(`笔者未曾求学于${provinceMapConfig[name]}`);
+  }else {
     // 返回全国地图
     currentMap = 'china';
     initMap({ mapName: 'china', jsonPath: '/_javascripts/china.json', seriesName: '中国地图', data: highlightData.china });
