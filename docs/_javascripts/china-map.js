@@ -7,7 +7,7 @@ const commonChartOptions = {
     series: [{
         type: 'map',
         roam: false,
-        selectedMode: 'single', // 启用单选模式
+        selectedMode: false, // 启用单选模式
         label: {
             show: false,  // 显示地图标签
             color: '#333',
