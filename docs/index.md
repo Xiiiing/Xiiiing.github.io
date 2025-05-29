@@ -20,6 +20,5 @@ hide:
 
 
 
-<div class="maps-container" data-echarts-map="china"></div>
-
+<div data-echarts-map="china"></div>
 
