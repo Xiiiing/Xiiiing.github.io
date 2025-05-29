@@ -50,33 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
               }
             }
 
-            {
-              name: '四川',
-              // 默认高亮（用蓝色），并作为“已选中”以便后续 click 切换逻辑
-              selected: false,
-              itemStyle: {
-                normal: {
-                  areaColor: '#1890ff'
-                },
-                emphasis: {
-                  areaColor: '#40a9ff'
-                }
-              }
-            }
-
-            {
-              name: '广东',
-              // 默认高亮（用蓝色），并作为“已选中”以便后续 click 切换逻辑
-              selected: false,
-              itemStyle: {
-                normal: {
-                  areaColor: '#1890ff'
-                },
-                emphasis: {
-                  areaColor: '#40a9ff'
-                }
-              }
-            }
+            
 
           ]
         }]
