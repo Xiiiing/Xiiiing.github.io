@@ -19,4 +19,5 @@ hide:
 [Blog](https://xiiiing.github.io/blog){ .md-button }
 
 <!-- 地图主容器（关键容器，用于切换显示） -->
-<div id="map-container" style="width: 100%; height: 500px;"></div>
+
+<div id="map-container" style="width: 100%; height: 250px;"></div>
