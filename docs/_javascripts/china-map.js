@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
             {
               name: '辽宁',
               // 默认高亮（用蓝色），并作为“已选中”以便后续 click 切换逻辑
-              selected: true,
+              selected: false,
               itemStyle: {
                 normal: {
                   areaColor: '#1890ff'
