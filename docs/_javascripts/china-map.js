@@ -181,21 +181,21 @@ initMap({
     seriesName: '中国地图',
     data: [
         {
-            name: '辽宁',
+            name: '辽宁省',
             itemStyle: {
                 normal: { areaColor: '#1890ff' },
                 emphasis: { areaColor: '#40a9ff' }
             }
         },
         {
-            name: '四川',
+            name: '四川省',
             itemStyle: {
                 normal: { areaColor: '#1890ff' },
                 emphasis: { areaColor: '#40a9ff' }
             }
         },
         {
-            name: '广东',
+            name: '广东省',
             itemStyle: {
                 normal: { areaColor: '#1890ff' },
                 emphasis: { areaColor: '#40a9ff' }
