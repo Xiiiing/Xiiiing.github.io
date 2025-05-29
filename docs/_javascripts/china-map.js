@@ -49,14 +49,37 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
               }
             }
-            // 如需同时默认高亮多个省份，可在此处继续添加
+
+            {
+              name: '四川',
+              // 默认高亮（用蓝色），并作为“已选中”以便后续 click 切换逻辑
+              selected: false,
+              itemStyle: {
+                normal: {
+                  areaColor: '#1890ff'
+                },
+                emphasis: {
+                  areaColor: '#40a9ff'
+                }
+              }
+            }
+
+            {
+              name: '广东',
+              // 默认高亮（用蓝色），并作为“已选中”以便后续 click 切换逻辑
+              selected: false,
+              itemStyle: {
+                normal: {
+                  areaColor: '#1890ff'
+                },
+                emphasis: {
+                  areaColor: '#40a9ff'
+                }
+              }
+            }
+
           ]
         }]
-      });
-
-      // 可选：监听页面 click 事件，打印当前选中省份
-      chart.on('click', params => {
-        console.log('当前选中：', params.name);
       });
     })
     .catch(err => console.error('地图加载失败:', err));
