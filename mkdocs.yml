@@ -173,6 +173,8 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - _javascripts/tex-mml-chtml.js #https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - _javascripts/embed.js # https://viewer.altium.com/client/static/js/embed.js
+  - _javascripts/echarts.min.js
+  - _javascripts/china-map.js
 
 extra_css:
   - _stylesheets/extra.css
