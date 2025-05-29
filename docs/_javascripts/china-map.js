@@ -129,8 +129,7 @@ function handleMapToggle(provinceName) {
                         normal: { areaColor: '#1890ff' },
                         emphasis: { areaColor: '#40a9ff' }
                     }
-                }
-            ],
+                }],
                 onClick: handleMapToggle // 省份地图点击时触发返回逻辑
             });
         } else {
@@ -163,6 +162,34 @@ function handleMapToggle(provinceName) {
                 },
                 {
                     name: '广东',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                },
+                {
+                    name: '绵阳',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                },
+                {
+                    name: '宜宾',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                },
+                {
+                    name: '沈阳',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                },
+                {
+                    name: '深圳',
                     itemStyle: {
                         normal: { areaColor: '#1890ff' },
                         emphasis: { areaColor: '#40a9ff' }
