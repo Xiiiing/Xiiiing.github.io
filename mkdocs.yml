@@ -71,6 +71,8 @@ plugins:
         - _javascripts/mathjax.js
         - _javascripts/tex-mml-chtml.js
         - _javascripts/embed.js
+        - _javascripts/echarts.min.js
+        - _javascripts/china-map.js
       css_files:
         - _stylesheets/extra.css
   - rss:

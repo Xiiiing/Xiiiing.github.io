@@ -1,22 +1,8 @@
+# 可交互中国省级地图
 
-    <h1>欢迎来到测试页面</h1>
-    
-    <div class="container">
-        <p>这是一个简单的HTML页面，用于测试Markdown转换功能。</p>
-        
-        <h2>主要功能</h2>
-        <ul>
-            <li>显示基本文本内容</li>
-            <li>包含简单的样式</li>
-            <li>提供交互按钮</li>
-        </ul>
-        
-        <a href="#" class="button">点击测试</a>
-    </div>
-    
-    <footer>
-        <p>© 2025 测试页面版权所有</p>
-    </footer>
+下方地图由 ECharts 渲染，鼠标悬停可查看省份名称。
 
-
-​    
+<div
+  data-echarts-map="china"
+  style="width: 100%; height: 500px; margin: 1em 0;">
+</div>
