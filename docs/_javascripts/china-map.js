@@ -33,9 +33,9 @@ const commonChartOptions = {
 
 // 省份地图配置
 const provinceMapConfig = {
-  辽宁: { mapName: 'liaoning', jsonPath: '/_javascripts/21.json', seriesName: '辽宁地图' },
-  四川: { mapName: 'sichuan',  jsonPath: '/_javascripts/51.json', seriesName: '四川地图' },
-  广东: { mapName: 'guangdong',jsonPath: '/_javascripts/44.json', seriesName: '广东地图' }
+  辽宁省: { mapName: 'liaoning', jsonPath: '/_javascripts/21.json', seriesName: '辽宁地图' },
+  四川省: { mapName: 'sichuan',  jsonPath: '/_javascripts/51.json', seriesName: '四川地图' },
+  广东省: { mapName: 'guangdong',jsonPath: '/_javascripts/44.json', seriesName: '广东地图' }
 };
 
 // 需要高亮的区域数据示例
