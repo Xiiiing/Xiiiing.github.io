@@ -9,7 +9,7 @@ const commonChartOptions = {
         roam: false,
         selectedMode: 'single', // 启用单选模式
         label: {
-            show: true,  // 显示地图标签
+            show: false,  // 显示地图标签
             color: '#333',
             fontSize: 12
         },
@@ -21,7 +21,7 @@ const commonChartOptions = {
             },
             emphasis: {
                 areaColor: '#91caff', // 鼠标悬停颜色
-                label: { show: true }
+                label: { show: false }
             },
             selected: {
                 areaColor: '#1890ff' // 选中状态颜色
