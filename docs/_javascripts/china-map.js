@@ -126,7 +126,7 @@ function handleMapToggle(name) {
     initMap({ mapName, jsonPath, seriesName, data: highlightData[name] });
   } else if (currentMap === 'china'){
     //alert(`笔者未曾求学于${name}`);
-    showBoldAlert(name);
+    showAutoCloseDialog(`笔者未曾求学于 <strong>${name}</strong>`);
   }else {
     // 返回全国地图
     currentMap = 'china';
@@ -138,29 +138,27 @@ function handleMapToggle(name) {
 initMap({ mapName: 'china', jsonPath: '/_javascripts/china.json', seriesName: '中国地图', data: highlightData.china });
 
 
-function showBoldAlert(province) {
-  // 构造一个半透明背景和居中的白色浮层
+/** 显示自动关闭的自定义弹窗 */
+function showAutoCloseDialog(message, duration = 2000) {
   const overlay = document.createElement('div');
   overlay.style.cssText = `
-    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 16px 24px;       /* 增大内边距 */
+    border-radius: 6px;      /* 稍大圆角 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     z-index: 9999;
+    font-size: 16px;         /* 增大字体 */
+    max-width: 80%;          /* 限制最大宽度 */
+    text-align: center;
+    line-height: 1.5;
   `;
-
-  const dialog = document.createElement('div');
-  dialog.style.cssText = `
-    background: #fff; padding: 20px; border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3); max-width: 80%; text-align: center;
-  `;
-  dialog.innerHTML = `
-    <p>笔者未曾求学于 <strong>${province}</strong></p>
-    <button id="btn-ok">确定</button>
-  `;
-
-  overlay.appendChild(dialog);
+  overlay.innerHTML = message;
   document.body.appendChild(overlay);
-
-  document.getElementById('btn-ok').onclick = () => {
+  setTimeout(() => {
     document.body.removeChild(overlay);
-  };
+  }, duration);
 }
