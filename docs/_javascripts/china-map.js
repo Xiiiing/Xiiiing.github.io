@@ -33,18 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
               areaColor: '#999'
             }
           },
-          select: {
-            itemStyle: {
-              // 选中态（点击后）的颜色：黄色
-              areaColor: '#fadb14',
-              borderColor: '#fff',
-              borderWidth: 1
-            },
-            emphasis: {
-              // 选中后悬停的颜色，可略微加深
-              areaColor: '#ffe58f'
-            }
-          },
+          
           data: [
             {
               name: '辽宁',
