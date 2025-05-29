@@ -24,4 +24,17 @@ hide:
   data-echarts-map="china"
   style="width: 100%; height: 500px; margin: 1em 0;">
 </div>
+<div
+  data-echarts-map="sicuan"
+  style="width: 100%; height: 500px; margin: 1em 0;">
+</div>
 
+<div
+  data-echarts-map="guangdong"
+  style="width: 100%; height: 500px; margin: 1em 0;">
+</div>
+
+<div
+  data-echarts-map="liaoning"
+  style="width: 100%; height: 500px; margin: 1em 0;">
+</div>

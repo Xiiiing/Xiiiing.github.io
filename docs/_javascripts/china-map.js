@@ -76,3 +76,130 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .catch(err => console.error('地图加载失败:', err));
 });
+document.addEventListener('DOMContentLoaded', function () {
+  const dom = document.querySelector('[data-echarts-map="sicuan"]');
+  if (!dom) return;
+  const chart = echarts.init(dom);
+
+  fetch('/_javascripts/51.json')
+    .then(res => res.json())
+    .then(geoJson => {
+      echarts.registerMap('china', geoJson);
+      chart.setOption({
+        tooltip: {
+          trigger: 'item',
+          formatter: '{b}'
+        },
+        series: [{
+          name: '中国地图',
+          type: 'map',
+          map: 'china',
+          roam: false,
+          // 单选模式：点击自动切换选中状态
+          selectedMode: false,
+          label: {
+            show: false
+          },
+          itemStyle: {
+            normal: {
+              areaColor: '#ccc',  // 未选中、未自定义的省份灰色
+              borderColor: '#fff',
+              borderWidth: 1
+            },
+            emphasis: {
+              // 悬停时的加亮色：对所有省份都生效
+              areaColor: '#999',
+              label:{show:false}
+            }
+          },
+
+
+        }]
+      });
+    })
+    .catch(err => console.error('地图加载失败:', err));
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const dom = document.querySelector('[data-echarts-map="guangdong"]');
+  if (!dom) return;
+  const chart = echarts.init(dom);
+
+  fetch('/_javascripts/44.json')
+    .then(res => res.json())
+    .then(geoJson => {
+      echarts.registerMap('china', geoJson);
+      chart.setOption({
+        tooltip: {
+          trigger: 'item',
+          formatter: '{b}'
+        },
+        series: [{
+          name: '中国地图',
+          type: 'map',
+          map: 'china',
+          roam: false,
+          // 单选模式：点击自动切换选中状态
+          selectedMode: false,
+          label: {
+            show: false
+          },
+          itemStyle: {
+            normal: {
+              areaColor: '#ccc',  // 未选中、未自定义的省份灰色
+              borderColor: '#fff',
+              borderWidth: 1
+            },
+            emphasis: {
+              // 悬停时的加亮色：对所有省份都生效
+              areaColor: '#999',
+              label:{show:false}
+            }
+          },
+
+        }]
+      });
+    })
+    .catch(err => console.error('地图加载失败:', err));
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const dom = document.querySelector('[data-echarts-map="liaoning"]');
+  if (!dom) return;
+  const chart = echarts.init(dom);
+
+  fetch('/_javascripts/21.json')
+    .then(res => res.json())
+    .then(geoJson => {
+      echarts.registerMap('china', geoJson);
+      chart.setOption({
+        tooltip: {
+          trigger: 'item',
+          formatter: '{b}'
+        },
+        series: [{
+          name: '中国地图',
+          type: 'map',
+          map: 'china',
+          roam: false,
+          // 单选模式：点击自动切换选中状态
+          selectedMode: false,
+          label: {
+            show: false
+          },
+          itemStyle: {
+            normal: {
+              areaColor: '#ccc',  // 未选中、未自定义的省份灰色
+              borderColor: '#fff',
+              borderWidth: 1
+            },
+            emphasis: {
+              // 悬停时的加亮色：对所有省份都生效
+              areaColor: '#999',
+              label:{show:false}
+            }
+          },
+
+        }]
+      });
+    })
+    .catch(err => console.error('地图加载失败:', err));
+});
