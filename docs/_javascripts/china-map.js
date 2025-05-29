@@ -1,119 +1,136 @@
-// china-map.js
-
 // 公共图表配置（可根据需求调整）
 const commonChartOptions = {
-  tooltip: {
-    trigger: 'item',
-    formatter: '{b}'
-  },
-  series: [{
-    type: 'map',
-    roam: false,
-    selectedMode: false,
-    label: { show: false },
-    itemStyle: {
-      normal: {
-        areaColor: '#ccc',
-        borderColor: '#fff',
-        borderWidth: 1
-      },
-      emphasis: {
-        areaColor: '#999',
-        label: { show: false }
-      }
-    }
-  }]
-};
-
-// 省份名称到 geoJSON 文件名（数字编码或拼音）
-const provinceCodeMap = {
-  '四川': '51',
-  '广东': '44',
-  '辽宁': '21',
-  // 如需支持更多省份，可按上述格式补充
-};
-
-/**
- * 初始化 ECharts 地图
- * @param {Object} params
- *   - selector: 容器选择器
- *   - mapName: 注册时使用的地图名称
- *   - jsonPath: geoJSON 文件路径
- *   - seriesName: 图例名称
- *   - data: 系列数据（可选）
- *   - onClick: 点击事件回调 (params, containerDom)
- */
-function initEchartsMap({ selector, mapName, jsonPath, seriesName, data = [], onClick }) {
-  document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector(selector);
-    if (!container) return;
-
-    // 如果已初始化过，先销毁旧实例
-    if (container._echartsInstance) {
-      echarts.dispose(container._echartsInstance);
-    }
-
-    const chart = echarts.init(container);
-    container._echartsInstance = chart;
-
-    fetch(jsonPath)
-      .then(res => res.json())
-      .then(geoJson => {
-        echarts.registerMap(mapName, geoJson);
-
-        chart.setOption({
-          ...commonChartOptions,
-          series: [{
-            ...commonChartOptions.series[0],
-            name: seriesName,
-            map: mapName,
-            data: data
-          }]
-        });
-
-        // 绑定点击事件
-        if (typeof onClick === 'function') {
-          chart.off('click');
-          chart.on('click', params => onClick(params, container));
+    tooltip: {
+        trigger: 'item',
+        formatter: '{b}'
+    },
+    series: [{
+        type: 'map',
+        roam: false,
+        selectedMode: false,
+        label: { show: false },
+        itemStyle: {
+            normal: {
+                areaColor: '#ccc',
+                borderColor: '#fff',
+                borderWidth: 1
+            },
+            emphasis: {
+                areaColor: '#999',
+                label: { show: false }
+            }
         }
-      })
-      .catch(err => {
-        console.error(`${seriesName} 地图加载失败:`, err);
-      });
-  });
+    }]
+};
+
+// 省份名称到地图标识的映射（根据你的实际数据调整）
+const provinceKeyMap = {
+    '辽宁': 'liaoning',
+    '四川': 'sichuan',
+    '广东': 'guangdong'
+};
+
+// 地图初始化通用函数（新增点击事件支持）
+function initEchartsMap({ selector, mapName, jsonPath, seriesName, data }) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const chartDom = document.querySelector(selector);
+        if (!chartDom) return;
+
+        const chart = echarts.init(chartDom);
+        fetch(jsonPath)
+            .then(res => res.json())
+            .then(geoJson => {
+                echarts.registerMap(mapName, geoJson);
+                const option = {
+                    ...commonChartOptions,
+                    series: [{
+                        ...commonChartOptions.series[0],
+                        name: seriesName,
+                        map: mapName,
+                        data: data || []
+                    }]
+                };
+                chart.setOption(option);
+
+                // 中国地图添加点击事件（仅主地图生效）
+                if (mapName === 'china') {
+                    chart.on('click', params => {
+                        const provinceName = params.name;
+                        const targetKey = provinceKeyMap[provinceName];
+                        if (targetKey) {
+                            // 隐藏中国地图，显示目标省份地图
+                            document.querySelector('[data-echarts-map="china"]').style.display = 'none';
+                            document.querySelector(`[data-echarts-map="${targetKey}"]`).style.display = 'block';
+                        }
+                    });
+                }
+
+                // 返回按钮点击事件（所有地图生效）
+                const backButtons = chartDom.querySelectorAll('.back-button');
+                backButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const targetMap = btn.dataset.target;
+                        // 隐藏当前省份地图，显示中国地图
+                        chartDom.style.display = 'none';
+                        document.querySelector(`[data-echarts-map="${targetMap}"]`).style.display = 'block';
+                    });
+                });
+            })
+            .catch(err => console.error(`${seriesName}地图加载失败:`, err));
+    });
 }
 
-// ---------- 钻取逻辑实现 ----------
-
-// 点击全国地图某省时，钻取到该省地图；省地图点击时，返回全国
-function bindChinaDrill() {
-  initEchartsMap({
+// 初始化全国地图（带高亮省份）
+initEchartsMap({
     selector: '[data-echarts-map="china"]',
     mapName: 'china',
     jsonPath: '/_javascripts/china.json',
     seriesName: '中国地图',
-    onClick: (params, container) => {
-      const provinceName = params.name;
-      const code = provinceCodeMap[provinceName];
-      if (!code) {
-        console.warn(`未配置 ${provinceName} 的编码，无法钻取。`);
-        return;
-      }
-
-      // 钻取到省级地图
-      initEchartsMap({
-        selector: '[data-echarts-map="china"]',
-        mapName: provinceName,
-        jsonPath: `/_javascripts/${code}.json`,
-        seriesName: `${provinceName} 地图`,
-        onClick: () => {
-          // 点击省级地图时，返回全国
-          bindChinaDrill();
+    data: [
+        {
+            name: '辽宁',
+            itemStyle: {
+                normal: { areaColor: '#1890ff' },
+                emphasis: { areaColor: '#40a9ff' }
+            }
+        },
+        {
+            name: '四川',
+            itemStyle: {
+                normal: { areaColor: '#1890ff' },
+                emphasis: { areaColor: '#40a9ff' }
+            }
+        },
+        {
+            name: '广东',
+            itemStyle: {
+                normal: { areaColor: '#1890ff' },
+                emphasis: { areaColor: '#40a9ff' }
+            }
         }
-      });
-    }
-  });
-}
+    ]
+});
 
-// 页面加载后，先绑定全国钻取
-bindChinaDrill();
+// 初始化四川地图
+initEchartsMap({
+    selector: '[data-echarts-map="sichuan"]',
+    mapName: 'sichuan',
+    jsonPath: '/_javascripts/51.json',
+    seriesName: '四川地图'
+});
+
+// 初始化广东地图
+initEchartsMap({
+    selector: '[data-echarts-map="guangdong"]',
+    mapName: 'guangdong',
+    jsonPath: '/_javascripts/44.json',
+    seriesName: '广东地图'
+});
+
+// 初始化辽宁地图
+initEchartsMap({
+    selector: '[data-echarts-map="liaoning"]',
+    mapName: 'liaoning',
+    jsonPath: '/_javascripts/21.json',
+    seriesName: '辽宁地图'
+});
