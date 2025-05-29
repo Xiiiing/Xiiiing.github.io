@@ -166,6 +166,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js
