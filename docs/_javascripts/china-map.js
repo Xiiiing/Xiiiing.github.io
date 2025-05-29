@@ -60,14 +60,14 @@ function initEchartsMap({ selector, mapName, jsonPath, seriesName, data, onClick
     });
 }
 
-// 初始化全国地图（添加点击跳转逻辑）
+// 初始化全国地图（修改为容器跳转逻辑）
 initEchartsMap({
     selector: '[data-echarts-map="china"]',
     mapName: 'china',
     jsonPath: '/_javascripts/china.json',
     seriesName: '中国地图',
     data: [
-                {
+        {
             name: '辽宁',
             itemStyle: {
                 normal: { areaColor: '#1890ff' },
@@ -89,18 +89,32 @@ initEchartsMap({
             }
         }
     ],
-    onClick: provinceName => {
-        // 省份名称到路径的映射（根据你的实际页面结构调整）
+    onClick: async (provinceName) => {
+        const contentContainer = document.getElementById('province-content');
         const provincePaths = {
-            '辽宁': '/liaoning',
-            '四川': '/sichuan',
             '广东': '/guangdong'
+            '辽宁': '/liaoning.html',
+            '四川': '/sichuan.html',
+            '广东': '/guangdong.html'
         };
         const path = provincePaths[provinceName];
+
         if (path) {
-            window.location.href = path; // 跳转到对应省份页面
+            try {
+                // 显示加载状态
+                contentContainer.innerHTML = '<div class="loading">加载中...</div>';
+
+                // 加载省份内容
+                const response = await fetch(path);
+                const html = await response.text();
+
+                // 插入到内容容器
+                contentContainer.innerHTML = html;
+            } catch (err) {
+                contentContainer.innerHTML = `<div class="error">加载${provinceName}内容失败: ${err.message}</div>`;
+            }
         } else {
-            alert(`暂未开放${provinceName}地图页面`);
+            contentContainer.innerHTML = `<div class="tip">暂未开放${provinceName}地图页面</div>`;
         }
     }
 });
@@ -126,3 +140,4 @@ initEchartsMap({
     jsonPath: '/_javascripts/21.json',
     seriesName: '辽宁地图'
 });
+    
