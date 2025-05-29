@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
   fetch('/_javascripts/51.json')
     .then(res => res.json())
     .then(geoJson => {
-      echarts.registerMap('china', geoJson);
+      echarts.registerMap('sicuan', geoJson);
       chart.setOption({
         tooltip: {
           trigger: 'item',
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
         series: [{
           name: '中国地图',
           type: 'map',
-          map: 'china',
+          map: 'sicuan',
           roam: false,
           // 单选模式：点击自动切换选中状态
           selectedMode: false,
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
   fetch('/_javascripts/44.json')
     .then(res => res.json())
     .then(geoJson => {
-      echarts.registerMap('china', geoJson);
+      echarts.registerMap('guangdong', geoJson);
       chart.setOption({
         tooltip: {
           trigger: 'item',
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
         series: [{
           name: '中国地图',
           type: 'map',
-          map: 'china',
+          map: 'guangdong',
           roam: false,
           // 单选模式：点击自动切换选中状态
           selectedMode: false,
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
   fetch('/_javascripts/21.json')
     .then(res => res.json())
     .then(geoJson => {
-      echarts.registerMap('china', geoJson);
+      echarts.registerMap('liaoning', geoJson);
       chart.setOption({
         tooltip: {
           trigger: 'item',
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
         series: [{
           name: '中国地图',
           type: 'map',
-          map: 'china',
+          map: 'liaoning',
           roam: false,
           // 单选模式：点击自动切换选中状态
           selectedMode: false,
