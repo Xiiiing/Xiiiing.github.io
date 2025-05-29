@@ -20,21 +20,23 @@ hide:
 
 
 
-<div
-  data-echarts-map="china"
-  style="width: 100%; height: 500px; margin: 1em 0;">
-</div>
-<div
-  data-echarts-map="sicuan"
-  style="width: 100%; height: 500px; margin: 1em 0;">
+<style>
+  .maps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1em;
+    margin: 1em 0;
+  }
+  .maps-grid > div {
+    width: 100%;
+    height: 300px;      /* 高度可根据需要调整 */
+  }
+</style>
+
+<div class="maps-grid">
+  <div data-echarts-map="china"></div>
+  <div data-echarts-map="sicuan"></div>
+  <div data-echarts-map="guangdong"></div>
+  <div data-echarts-map="liaoning"></div>
 </div>
 
-<div
-  data-echarts-map="guangdong"
-  style="width: 100%; height: 500px; margin: 1em 0;">
-</div>
-
-<div
-  data-echarts-map="liaoning"
-  style="width: 100%; height: 500px; margin: 1em 0;">
-</div>
