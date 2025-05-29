@@ -9,29 +9,17 @@ const commonChartOptions = {
         roam: true, // 启用缩放和平移
         selectedMode: false,
         label: {
-            show: true, // 显示地区标签
-            formatter: '{b}',
-            textStyle: {
-                color: '#333',
-                fontSize: 10
-            }
+            show: false,
         },
         itemStyle: {
-            normal: {
-                areaColor: '#e6f7ff', // 默认区域颜色
-                borderColor: '#91d5ff', // 边框颜色
+           normal: {
+                areaColor: '#ccc',
+                borderColor: '#fff',
                 borderWidth: 1
             },
             emphasis: {
-                areaColor: '#91d5ff', // 高亮区域颜色
-                label: {
-                    show: true,
-                    textStyle: {
-                        color: '#000',
-                        fontSize: 12
-                    }
-                }
-            }
+                areaColor: '#999',
+                label: { show: false }
         }
     }]
 };
@@ -78,15 +66,6 @@ function initMap({ selector, mapName, jsonPath, seriesName, data, onClick }) {
         .then(geoJson => {
             echarts.registerMap(mapName, geoJson);
             const option = {
-                title: {
-                    text: seriesName, // 显示当前地图名称
-                    left: 'center',
-                    top: '20px',
-                    textStyle: {
-                        fontSize: 18,
-                        fontWeight: 'bold'
-                    }
-                },
                 ...commonChartOptions,
                 series: [{
                     ...commonChartOptions.series[0],
