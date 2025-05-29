@@ -10,21 +10,16 @@ const commonChartOptions = {
         selectedMode: false, // 启用单选模式
         label: {
             show: false,  // 显示地图标签
-            color: '#333',
-            fontSize: 12
         },
         itemStyle: {
             normal: {
-                areaColor: '#f0f2f5',
+                areaColor: '#ccc',
                 borderColor: '#fff',
-                borderWidth: 0.5
+                borderWidth: 1
             },
             emphasis: {
-                areaColor: '#91caff', // 鼠标悬停颜色
+                areaColor: '#999',
                 label: { show: false }
-            },
-            selected: {
-                areaColor: '#1890ff' // 选中状态颜色
             }
         }
     }]
@@ -72,9 +67,27 @@ initEchartsMap({
     jsonPath: '/_javascripts/china.json',
     seriesName: '中国地图',
     data: [
-        { name: '辽宁', itemStyle: { normal: { areaColor: '#1890ff' } } },
-        { name: '四川', itemStyle: { normal: { areaColor: '#1890ff' } } },
-        { name: '广东', itemStyle: { normal: { areaColor: '#1890ff' } } }
+                {
+            name: '辽宁',
+            itemStyle: {
+                normal: { areaColor: '#1890ff' },
+                emphasis: { areaColor: '#40a9ff' }
+            }
+        },
+        {
+            name: '四川',
+            itemStyle: {
+                normal: { areaColor: '#1890ff' },
+                emphasis: { areaColor: '#40a9ff' }
+            }
+        },
+        {
+            name: '广东',
+            itemStyle: {
+                normal: { areaColor: '#1890ff' },
+                emphasis: { areaColor: '#40a9ff' }
+            }
+        }
     ],
     onClick: provinceName => {
         // 省份名称到路径的映射（根据你的实际页面结构调整）
