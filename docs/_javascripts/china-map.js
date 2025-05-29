@@ -6,7 +6,7 @@ const commonChartOptions = {
     },
     series: [{
         type: 'map',
-        roam: true, // 启用缩放和平移
+        roam: false, // 启用缩放和平移
         selectedMode: false,
         label: {
             show: false,
@@ -101,6 +101,36 @@ function handleMapToggle(provinceName) {
             initMap({
                 selector: '#map-container',
                 ...config,
+                data: [
+                {
+                    name: '绵阳',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                },
+                {
+                    name: '宜宾',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                },
+                {
+                    name: '沈阳',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                },
+                {
+                    name: '深圳',
+                    itemStyle: {
+                        normal: { areaColor: '#1890ff' },
+                        emphasis: { areaColor: '#40a9ff' }
+                    }
+                }
+            ],
                 onClick: handleMapToggle // 省份地图点击时触发返回逻辑
             });
         } else {
