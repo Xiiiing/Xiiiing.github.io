@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
           // 单选模式：点击自动切换选中状态
           selectedMode: false,
           label: {
-            show: true
+            show: false
           },
           itemStyle: {
             normal: {
@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             emphasis: {
               // 悬停时的加亮色：对所有省份都生效
-              areaColor: '#999'
+              areaColor: '#999',
+              label:{show:false}
             }
           },
           
