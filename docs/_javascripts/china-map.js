@@ -19,7 +19,8 @@ const commonChartOptions = {
             },
             emphasis: {
                 areaColor: '#999',
-                label: { show: false }
+                label: {show: false}
+            }
         }
     }]
 };
