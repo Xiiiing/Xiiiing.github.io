@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
           map: 'china',
           roam: false,
           // 单选模式：点击自动切换选中状态
-          selectedMode: 'single',
+          selectedMode: false,
           label: {
             show: false
           },
