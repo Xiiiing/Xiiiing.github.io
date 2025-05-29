@@ -17,40 +17,40 @@
             min-height: 100vh;
             background-color: #f5f7fa;
         }
-
+    
         .left-section {
             flex: 0 0 60%;
             padding: 40px;
             background-color: white;
             box-shadow: 2px 0 10px rgba(0,0,0,0.1);
         }
-
+    
         .right-section {
             flex: 0 0 40%;
             padding: 40px;
             background-color: #f9f9f9;
         }
-
+    
         .header {
             text-align: center;
             margin-bottom: 30px;
         }
-
+    
         .header h1 {
             color: #2c3e50;
             font-size: 2.5em;
             margin-bottom: 10px;
         }
-
+    
         .header p {
             color: #7f8c8d;
             font-size: 1.1em;
         }
-
+    
         .section {
             margin-bottom: 30px;
         }
-
+    
         .section h3 {
             color: #3498db;
             border-bottom: 2px solid #3498db;
@@ -58,7 +58,7 @@
             margin-bottom: 15px;
             font-size: 1.3em;
         }
-
+    
         .map-container {
             width: 100%;
             height: 600px;
@@ -70,7 +70,7 @@
             font-size: 1.2em;
             color: #7f8c8d;
         }
-
+    
         /* 响应式调整 */
         @media (max-width: 992px) {
             body {
@@ -101,7 +101,7 @@
                 坚信「知识需要流动，成长需要记录」，希望通过博客分享经验，连接更多同频者。
             </p>
         </div>
-
+    
         <div class="section">
             <h3>教育背景</h3>
             <ul>
@@ -109,7 +109,7 @@
                 <li>✓ 硕士 | 软件工程</li>
             </ul>
         </div>
-
+    
         <div class="section">
             <h3>兴趣爱好</h3>
             <ul>
@@ -120,9 +120,9 @@
             </ul>
         </div>
     </div>
-
+    
     <div class="right-section">
-       <div id="map-container"></div> <!-- 地图容器（可嵌入 ECharts 动态地图或静态图片） -->
+       <div id="map-container" style="width: 100%; height: 500px;"></div>
     </div>
 </body>
 </html>
