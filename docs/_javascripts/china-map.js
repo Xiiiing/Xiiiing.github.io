@@ -16,6 +16,8 @@ const commonChartOptions = {
     type: 'map',
     roam: false,
     selectedMode: false,
+    layoutCenter: ['50%', '50%'], // 居中
+    layoutSize: '100%', // 全面自适应容器
     label: { show: false },
     itemStyle: {
       normal: {
