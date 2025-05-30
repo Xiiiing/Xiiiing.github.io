@@ -96,7 +96,7 @@ body {
   font-weight: bold;
 }
 
-#map-container {
+#map{
   width: 100%;
   height: 500px;
   border-radius: 8px;
@@ -119,7 +119,7 @@ body {
 }
 
 /* 关键修改：触发悬停的元素改为地图容器本身 */
-#map-container:hover .map-overlay { 
+#map:hover .map-overlay { 
   transform: translateY(0); /* 悬停时滑入 */
 }
 
@@ -133,7 +133,7 @@ body {
     flex: 1 1 100%;
   }
   
-  #map-container {
+  #map {
     height: 400px;
   }
   
@@ -189,10 +189,12 @@ body {
     </div>
 
     <div class="map-section">
+      <div class="map">
       <div id="map-container"></div>
       <div class="map-overlay">
           <h4>求学轨迹地图</h4>
           <p>标记了我的教育旅程中重要的地理位置和经历</p>
+      </div>
       </div>
     </div>
   </div>
