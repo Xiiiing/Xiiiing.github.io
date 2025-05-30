@@ -16,5 +16,6 @@ hide:
 [算法&数据结构](https://xiiiing.github.io/Algorithm/){ .md-button }
 [开发&工程](https://xiiiing.github.io/Development/){ .md-button }
 [科研&医学](https://xiiiing.github.io/Research/){ .md-button }
-[Blog主页](https://xiiiing.github.io/blog/Homepage){ .md-button }
+[个人主页](https://xiiiing.github.io/Personal/){ .md-button }
+[Blog](https://xiiiing.github.io/blog/){ .md-button }
 

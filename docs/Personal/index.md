@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+  - toc
+---
 <style>
 .flex-container {
   display: flex;
