@@ -104,7 +104,6 @@ body {
   overflow: hidden;
   position: relative;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  z-index: 10; /* 确保弹窗层级更高 */
 }
 
 .map-overlay {
@@ -123,7 +122,9 @@ body {
 .map-section:hover .map-overlay {
   transform: translateY(0);
 }
-
+canvas {
+  z-index: 500 !important; /* 强制 canvas 层级低于 #map-container 的 z-index:1 */
+}
 /* 响应式设计 */
 @media (max-width: 768px) {
   .flex-container {
