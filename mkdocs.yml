@@ -55,7 +55,6 @@ theme:
 
 plugins:
   - awesome-nav
-  - social
   - search
   - tags
   - blog:
