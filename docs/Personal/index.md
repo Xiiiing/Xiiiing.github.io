@@ -13,7 +13,6 @@ body {
   color: #4b5563;
   margin: 0;
   padding: 0;
-  background-color: #f8fafc;
 }
 
 .container {
@@ -47,7 +46,6 @@ body {
   padding: 20px;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: white;
   box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
@@ -84,7 +82,7 @@ body {
 }
 
 .text-section ul li {
-  padding-left: 20px;
+  padding-left: 0px;
   margin-bottom: 10px;
   position: relative;
 }
