@@ -1,5 +1,5 @@
 ---
-social：
+social:
   cards_layout: custom
 ---
 <style>
