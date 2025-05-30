@@ -13,6 +13,16 @@ body {
   margin: 0;
   padding: 0;
 }
+.md-main__inner {
+    display: flex
+;
+    height: 100%;
+    margin-top: 0rem;
+}
+.md-content {
+    flex-grow: 1;
+    min-width: 0;
+}
 .md-content__inner {
     margin: 0rem 0rem;
     padding-top: 0rem;
@@ -180,6 +190,26 @@ body {
   font-style: italic;
   color: #1e3a8a;
 }
+.intro-meta {
+    color: #1e3a8a;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+}
+.intro-meta::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #bfdbfe;
+    transition: width 0.3s ease;
+}
+
+.intro-meta:hover::after {
+    width: 0;
+}
 </style>
 
 <div class="container">
@@ -188,15 +218,23 @@ body {
       <div class="section">
         <h3>关于我</h3>
         <p>
-          计算机硕士 | esfj -> istj<br>
+          <span class="intro-meta">计算机硕士 | esfj -> istj</span><br>
           专注于通过 <span class="highlight">GitHub</span> 构建个人知识体系，<br>
           追求学习过程的 <strong>可视化</strong> 与 <strong>系统化</strong>。<br>
           秉持「<span class="emphasis">知识流动促成长，记录沉淀筑认知</span>」理念，<br>
-          希望通过技术博客 <a href="#" class="highlight">分享经验</a>，<br>
+          希望通过技术博客 <a href="https://xiiiing.github.io/Personal/" class="highlight">分享经验</a>，<br>
           连接更多 <span style="color: #22c55e; font-weight: 600;">同频创作者</span>。
         </p>
       </div>
 
+      <div class="section">
+        <h3>技术栈</h3>
+        <ul>
+          <li data-icon="💻"> 编程语言：Python、JavaScript、Java</li>
+          <li data-icon="🛠️"> 工具链：Git、Nginx、GitHub Actions</li>
+          <li data-icon="🌐"> 领域：计算机视觉、Web 开发、数据结构与算法</li>
+        </ul>
+      </div>
       <div class="section">
         <h3>兴趣爱好</h3>
         <ul>
@@ -207,14 +245,6 @@ body {
         </ul>
       </div>
     
-      <div class="section">
-        <h3>技术栈</h3>
-        <ul>
-          <li data-icon="💻"> 编程语言：Python、JavaScript、Java</li>
-          <li data-icon="🛠️"> 工具链：Git、Nginx、GitHub Actions</li>
-          <li data-icon="🌐"> 领域：计算机视觉、Web 开发、数据结构与算法</li>
-        </ul>
-      </div>
     </div>
     
     <div class="map-section">

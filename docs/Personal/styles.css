@@ -22,14 +22,13 @@ body {
 }
 
 .text-section {
-    flex: 1 1 60%;
+    flex: 1 1 50%;
     min-width: 300px;
 }
 
 .map-section {
-    flex: 1 1 35%;
+    flex: 1 1 30%;
     min-width: 300px;
-    position: relative;
 }
 
 /* 板块通用样式 */
@@ -241,4 +240,24 @@ body {
     color: #1e3a8a;
     font-weight: 500;
 }
-    
+.intro-meta {
+    color: #1e3a8a;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+}
+.intro-meta::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #bfdbfe;
+    transition: width 0.3s ease;
+}
+
+.intro-meta:hover::after {
+    width: 0;
+}
+
