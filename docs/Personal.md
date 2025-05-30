@@ -28,7 +28,7 @@
 <div class="flex-container">
   <div class="text-section">
    <h1>Xiiiing</h1>
-   <p>计算机硕士 | ISTJ -> ESFJ|</p>
+   <p>计算机硕士 | ISTJ -> ESFJ</p>
    <h3>关于我</h3>
    <p>目前致力于通过GitHub搭建个人知识库，实现学习过程的可视化与系统化。<br>
       坚信「知识需要流动，成长需要记录」，希望通过博客分享经验，连接更多同频者。</p>
@@ -40,6 +40,7 @@
                 <li>🏓 室内运动</li>
             </ul>
   </div>
+
 
   <div class="map-section">
     <!-- 地图主容器（关键容器，用于切换显示） -->
