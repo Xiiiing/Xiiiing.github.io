@@ -5,7 +5,9 @@ hide:
 ---
 # Xiiiing 
 <style>
-/* 基础样式 */
+/* ======================
+   基础样式
+====================== */
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.8;
@@ -13,35 +15,42 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .md-main__inner {
-    display: flex
-;
-    height: 100%;
-    margin-top: 0rem;
+  display: flex;
+  height: 100%;
+  margin-top: 0rem;
 }
+
 .md-content {
-    flex-grow: 1;
-    min-width: 0;
+  flex-grow: 1;
+  min-width: 0;
 }
+
 .md-content__inner {
-    margin: 0rem 0rem;
-    padding-top: 0rem;
+  margin: 0rem 0rem;
+  padding-top: 0rem;
 }
+
 .md-content__inner:before {
-    content: "";
-    display: block;
-    height: 0rem;
+  content: "";
+  display: block;
+  height: 0rem;
 }
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0px 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 0px;
 }
+
 .md-typeset h1 {
   display: none; /* 完全隐藏，不占据空间 */
 }
 
-/* 响应式布局容器 */
+/* ======================
+   布局容器
+====================== */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -60,13 +69,15 @@ body {
   position: relative;
 }
 
-/* 板块通用样式 */
+/* ======================
+   板块通用样式
+====================== */
 .section {
   margin-bottom: 40px;
   padding: 20px;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
 }
 
 .section:hover {
@@ -93,10 +104,13 @@ body {
   background-color: #1e3a8a;
 }
 
-/* 文字段落样式 */
-.text-section p{
+/* ======================
+   文字段落样式
+====================== */
+.text-section p {
   padding-left: 30px;
 }
+
 .text-section ul {
   margin: 15px 0;
   padding-left: 20px;
@@ -104,7 +118,7 @@ body {
 }
 
 .text-section ul li {
-  padding-left: 0px;1
+  padding-left: 0px;
   margin-bottom: 10px;
   position: relative;
 }
@@ -118,7 +132,9 @@ body {
   font-weight: bold;
 }
 
-/* 地图模块样式 */
+/* ======================
+   地图模块样式
+====================== */
 .map-wrapper {
   position: relative;
   width: 100%;
@@ -130,7 +146,7 @@ body {
 }
 
 .map-wrapper:hover {
-  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
 }
 
 #map-container {
@@ -156,12 +172,15 @@ body {
   transform: translateY(0);
 }
 
-/* 响应式设计 */
+/* ======================
+   响应式设计
+====================== */
 @media (max-width: 768px) {
   .md-typeset h1 {
     font-size: 2.8em;
     margin-bottom: 10px;
   }
+
   .flex-container {
     flex-direction: column;
   }
@@ -180,7 +199,9 @@ body {
   }
 }
 
-/* 原有样式保留 */
+/* ======================
+   原有样式保留
+====================== */
 .highlight {
   color: #3b82f6;
   font-weight: 600;
@@ -190,25 +211,27 @@ body {
   font-style: italic;
   color: #1e3a8a;
 }
+
 .intro-meta {
-    color: #1e3a8a;
-    font-weight: 600;
-    position: relative;
-    text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
 }
+
 .intro-meta::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background: #bfdbfe;
-    transition: width 0.3s ease;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #bfdbfe;
+  transition: width 0.3s ease;
 }
 
 .intro-meta:hover::after {
-    width: 0;
+  width: 0;
 }
 </style>
 
@@ -235,6 +258,7 @@ body {
           <li data-icon="🌐"> 领域：计算机视觉、Web 开发、数据结构与算法</li>
         </ul>
       </div>
+
       <div class="section">
         <h3>兴趣爱好</h3>
         <ul>
@@ -244,9 +268,8 @@ body {
           <li data-icon="🏓"> 室内运动</li>
         </ul>
       </div>
-    
     </div>
-    
+
     <div class="map-section">
       <div class="map-wrapper">
         <div id="map-container"></div>
