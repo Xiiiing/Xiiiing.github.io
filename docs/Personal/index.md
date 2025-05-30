@@ -75,7 +75,7 @@ body {
 
 /* 文字段落样式 */
 .text-section p{
-  padding-left: 5px;
+  padding-left: 20px;
 }
 .text-section ul {
   margin: 15px 0;
