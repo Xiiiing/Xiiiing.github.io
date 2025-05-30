@@ -3,7 +3,8 @@ hide:
   - navigation
   - toc
 ---
-
+#Xiiiing 
+计算机硕士 | esfj -> istj
 <style>
 /* 基础样式 */
 body {
@@ -12,6 +13,12 @@ body {
   color: #4b5563;
   margin: 0;
   padding: 0;
+}
+/* 新增：调整 h1 标题样式（解决居中和对齐问题） */
+h1 {
+  text-align: left !important; /* 强制左对齐 */
+  margin: 0 0 25px !important; /* 清除默认外边距 */
+  padding-left: 20px !important; /* 与 h3 保持左侧内边距一致 */
 }
 
 .container {
