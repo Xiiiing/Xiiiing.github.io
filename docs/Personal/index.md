@@ -2,9 +2,9 @@
 hide:
   - navigation
   - toc
+  -  footer
+  -  header
 ---
-#Xiiiing
-计算机硕士 | esfj->istj
 <style>
 /* 基础样式 */
 body {
@@ -46,7 +46,6 @@ body {
   padding: 20px;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: white;
   box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
