@@ -4,81 +4,144 @@ hide:
   - toc
 ---
 <style>
+/* 基础样式 */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.8;
+  color: #4b5563;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* 响应式布局容器 */
 .flex-container {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  min-height: 600px;
-  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 60px;
 }
 
 .text-section {
-  flex: 0 0 60%;
-  padding: 20px;
+  flex: 1 1 60%;
+  min-width: 300px;
 }
 
 .map-section {
-  flex: 0 0 40%;
-  padding: 20px;
-  border-left: 1px solid #e0e0e0;
-  position: relative; /* 弹框定位容器 */
+  flex: 1 1 35%;
+  min-width: 300px;
+  position: relative;
 }
 
+/* 板块通用样式 */
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.section h3 {
+  font-size: 1.8em;
+  color: #334155;
+  margin-top: 0;
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.section h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 80%;
+  background-color: #1e3a8a;
+}
+
+/* 文字段落样式 */
+.text-section p,
+.text-section ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.text-section ul li {
+  padding-left: 30px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.text-section ul li::before {
+  content: attr(data-icon); /* 保留原有图标 */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+/* 地图模块样式 */
 #map-container {
   width: 100%;
-  height: 100%;
-  min-height: 500px;
-  background: #f0f0f0; /* 地图占位背景 */
+  height: 500px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .map-overlay {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 1;
-  transition: transform 0.3s ease; /* 交互动画 */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(30, 58, 138, 0.8);
+  color: white;
+  padding: 15px 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
 }
 
-/* 响应式布局（手机端） */
+.map-section:hover .map-overlay {
+  transform: translateY(0);
+}
+
+/* 响应式设计 */
 @media (max-width: 768px) {
   .flex-container {
     flex-direction: column;
   }
+  
   .text-section, .map-section {
-    flex: 0 0 100%;
+    flex: 1 1 100%;
   }
-  .map-section {
-    border-left: none;
-    border-top: 1px solid #e0e0e0;
-    margin-top: 20px;
+  
+  #map-container {
+    height: 400px;
+  }
+  
+  .section h3 {
+    font-size: 1.5em;
   }
 }
 
-/* 文字区域样式优化 */
-.text-section h3 {
-  margin-bottom: 15px;
-  color: #333;
-  font-size: 1.2em;
-}
-
-.text-section ul {
-  list-style: none;
-  padding-left: 20px;
-}
-
-.text-section li {
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
+/* 原有样式保留 */
 .highlight {
   color: #3b82f6;
   font-weight: 600;
@@ -88,45 +151,50 @@ hide:
   font-style: italic;
   color: #1e3a8a;
 }
-
-/* 地图弹框交互 */
-.map-section:hover .map-overlay {
-  transform: translateY(-5px); /* 悬停上移效果 */
-}
 </style>
 
-<div class="flex-container">
-  <div class="text-section">
-    <h3>关于我</h3>
-    <p>
-      专注于通过 <span class="highlight">GitHub</span> 构建个人知识体系，<br>
-      追求学习过程的 <strong>可视化</strong> 与 <strong>系统化</strong>。<br>
-      秉持「<span class="emphasis">知识流动促成长，记录沉淀筑认知</span>」理念，<br>
-      希望通过技术博客 <a href="#" class="highlight">分享经验</a>，<br>
-      连接更多 <span style="color: #22c55e; font-weight: 600;">同频创作者</span>。
-    </p>
+<div class="container">
+  <div class="flex-container">
+    <div class="text-section">
+      <div class="section">
+        <h3>关于我</h3>
+        <p>
+          专注于通过 <span class="highlight">GitHub</span> 构建个人知识体系，<br>
+          追求学习过程的 <strong>可视化</strong> 与 <strong>系统化</strong>。<br>
+          秉持「<span class="emphasis">知识流动促成长，记录沉淀筑认知</span>」理念，<br>
+          希望通过技术博客 <a href="#" class="highlight">分享经验</a>，<br>
+          连接更多 <span style="color: #22c55e; font-weight: 600;">同频创作者</span>。
+        </p>
+      </div>
 
-    <h3>兴趣爱好</h3>
-    <ul>
-      <li>🌍 地图收集与地理探索</li>
-      <li>📚 技术博客写作与知识整理</li>
-      <li>🎨 极简主义设计与UI/UX研究</li>
-      <li>🏓 室内运动</li>
-    </ul>
+      <div class="section">
+        <h3>兴趣爱好</h3>
+        <ul>
+          <li data-icon="🌍"> 地图收集与地理探索</li>
+          <li data-icon="📚"> 技术博客写作与知识整理</li>
+          <li data-icon="🎨"> 极简主义设计与UI/UX研究</li>
+          <li data-icon="🏓"> 室内运动</li>
+        </ul>
+      </div>
 
-    <h3>技术栈</h3>
-    <ul>
-      <li>💻 编程语言：Python（数据科学）、JavaScript（Web 开发）、Java（后端）</li>
-      <li>🛠️ 工具链：Git（版本控制）、Docker（容器化）、VS Code（全栈开发）</li>
-      <li>🌐 领域：Web 开发（React/Vue）、数据结构与算法（LeetCode 刷题 200+）</li>
-    </ul>
-  </div>
+      <div class="section">
+        <h3>技术栈</h3>
+        <ul>
+          <li data-icon="💻"> 编程语言：Python（数据科学）、JavaScript（Web 开发）、Java（后端）</li>
+          <li data-icon="🛠️"> 工具链：Git（版本控制）、Docker（容器化）、VS Code（全栈开发）</li>
+          <li data-icon="🌐"> 领域：Web 开发（React/Vue）、数据结构与算法（LeetCode 刷题 200+）</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="map-section">
-    <div id="map-container"></div>
-    <div class="map-overlay">
-      <h4>求学轨迹地图</h4>
-      <p>标记了我的教育旅程中重要的地理位置和经历</p>
+    <div class="map-section">
+      <div id="map-container">
+        <!-- 地图内容区域，保留原有结构 -->
+        <div class="map-overlay">
+          <h4>求学轨迹地图</h4>
+          <p>标记了我的教育旅程中重要的地理位置和经历</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
