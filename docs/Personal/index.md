@@ -74,7 +74,9 @@ body {
 }
 
 /* 文字段落样式 */
-.text-section p,
+.text-section p{
+  padding-left: 5px;
+}
 .text-section ul {
   margin: 15px 0;
   padding-left: 20px;
@@ -82,7 +84,7 @@ body {
 }
 
 .text-section ul li {
-  padding-left: 0px;
+  padding-left: 0px;1
   margin-bottom: 10px;
   position: relative;
 }
