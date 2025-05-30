@@ -30,6 +30,6 @@ jobs:
       - name: Install MkDocs plugins
         run: pip install mkdocs-awesome-nav
       - name: Install MkDocs plugins2
-        run: pip install "mkdocs-material[imaging]"
+        run: pip install mkdocs-material-extensions
       - name: Deploy with MkDocs
         run: mkdocs gh-deploy --force
