@@ -3,6 +3,8 @@ hide:
   - navigation
   - toc
 ---
+#Xiiiing
+计算机硕士 | esfj->istj
 <style>
 /* 基础样式 */
 body {
@@ -57,8 +59,7 @@ body {
 .section h3 {
   font-size: 1.8em;
   color: #334155;
-  margin-top: 0;
-  margin-bottom: 25px;
+  margin: 0 0 25px;
   position: relative;
   padding-left: 20px;
 }
@@ -88,7 +89,7 @@ body {
 }
 
 .text-section ul li::before {
-  content: attr(data-icon); /* 保留原有图标 */
+  content: attr(data-icon);
   display: inline-block;
   width: 1em;
   margin-left: -1.5em;
@@ -114,7 +115,6 @@ body {
 #map-container {
   width: 100%;
   height: 100%;
-  /* 如果是 canvas，可加上 z-index:1 保证在下层 */
   z-index: 1;
 }
 
@@ -141,7 +141,8 @@ body {
     flex-direction: column;
   }
   
-  .text-section, .map-section {
+  .text-section, 
+  .map-section {
     flex: 1 1 100%;
   }
   
@@ -204,9 +205,9 @@ body {
       <div class="map-wrapper">
         <div id="map-container"></div>
         <div class="map-overlay">
-              <h4>求学轨迹地图</h4>
-              <p>标记了我的教育旅程中重要的地理位置和经历</p>
-       </div>
+          <h4>求学轨迹地图</h4>
+          <p>标记了我的教育旅程中重要的地理位置和经历</p>
+        </div>
       </div>
     </div>
   </div>
