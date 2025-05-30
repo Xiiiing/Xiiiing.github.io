@@ -14,18 +14,7 @@ body {
   padding: 0;
 }
 .md-typeset h1 {
-  font-size: 3.2em;
-  font-weight: 500;
-  letter-spacing: -.02em;
-  color: #1e3a8a;
-  margin: 0 0 12px; /* 大幅减少底部间距（原30px→12px），拉近与下方内容距离 */
-  padding-bottom: 6px; /* 微调下划线与文字的间距 */
-  position: relative;
-  border-bottom: 2px solid #e5e7eb; /* 保持底部边框，与下方板块视觉对齐 */
-  line-height: 1.2; /* 优化行高，避免文字上下空间过大 */
-  /* 确保左对齐（与下方板块的蓝色竖线左边缘对齐） */
-  padding-left: 60px; 
-  margin-left: 0;
+  display: none; /* 完全隐藏，不占据空间 */
 }
 
 /* 若需强化底部下划线与下方板块的视觉衔接，可添加： */
