@@ -16,6 +16,7 @@ body {
 }
 /* 新增：调整 h1 标题样式（解决居中和对齐问题） */
 h1 {
+  padding-left: 20px; /* 原 20px → 0，消除段落开头的额外空格 */
   text-align: left !important; /* 强制左对齐 */
   margin: 0 0 25px !important; /* 清除默认外边距 */
   padding-left: 20px !important; /* 与 h3 保持左侧内边距一致 */
@@ -83,7 +84,7 @@ h1 {
 .text-section p,
 .text-section ul {
   margin: 15px 0;
-  padding-left: 0px;
+  padding-left: -20px;
   list-style: none; /* 新增：清除列表默认项目符号 */
 }
 
