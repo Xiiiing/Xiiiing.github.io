@@ -4,7 +4,6 @@ hide:
   - toc
 ---
 # Xiiiing 
-计算机硕士 | esfj -> istj
 <style>
 /* 基础样式 */
 body {
@@ -14,7 +13,27 @@ body {
   margin: 0;
   padding: 0;
 }
+.md-typeset h1 {
+  font-size: 3.2em; /* 增大标题字号 */
+  font-weight: 500; /* 提升字体粗细增强辨识度 */
+  letter-spacing: -.02em; /* 微调字间距 */
+  color: #1e3a8a; /* 使用主题主色 */
+  margin: 0 0 30px; /* 增加底部间距 */
+  padding-bottom: 12px; /* 增加底部内边距 */
+  position: relative; /* 定位容器 */
+  border-bottom: 2px solid #e5e7eb; /* 增加浅灰色底部边框 */
+}
 
+/* 增加渐变装饰效果（可选） */
+.md-typeset h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(to right, #1e3a8a 0%, #3b82f6 100%);
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -141,16 +160,16 @@ body {
   .flex-container {
     flex-direction: column;
   }
-  
+
   .text-section, 
   .map-section {
     flex: 1 1 100%;
   }
-  
+
   #map-container {
     height: 400px;
   }
-  
+
   .section h3 {
     font-size: 1.5em;
   }
@@ -191,7 +210,7 @@ body {
           <li data-icon="🏓"> 室内运动</li>
         </ul>
       </div>
-
+    
       <div class="section">
         <h3>技术栈</h3>
         <ul>
@@ -201,7 +220,7 @@ body {
         </ul>
       </div>
     </div>
-
+    
     <div class="map-section">
       <div class="map-wrapper">
         <div id="map-container"></div>
