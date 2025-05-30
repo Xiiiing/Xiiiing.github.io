@@ -1,9 +1,6 @@
 ---
-hide:
-  - navigation
-  - toc
-  -  footer
-  -  header
+social：
+  cards_layout: custom
 ---
 <style>
 /* 基础样式 */
