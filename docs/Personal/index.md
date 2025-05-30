@@ -13,6 +13,20 @@ body {
   margin: 0;
   padding: 0;
 }
+.md-content__inner {
+    margin: 0rem 0rem;
+    padding-top: 0rem;
+}
+.md-content__inner:before {
+    content: "";
+    display: block;
+    height: 0rem;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 0px;
+}
 .md-typeset h1 {
   display: none; /* 完全隐藏，不占据空间 */
 }
@@ -195,6 +209,7 @@ body {
       <div class="section">
         <h3>关于我</h3>
         <p>
+          计算机硕士 | esfj -> istj<br>
           专注于通过 <span class="highlight">GitHub</span> 构建个人知识体系，<br>
           追求学习过程的 <strong>可视化</strong> 与 <strong>系统化</strong>。<br>
           秉持「<span class="emphasis">知识流动促成长，记录沉淀筑认知</span>」理念，<br>
