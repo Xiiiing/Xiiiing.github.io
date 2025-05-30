@@ -123,7 +123,7 @@ body {
   transform: translateY(0);
 }
 canvas {
-  z-index: 500 !important; /* 强制 canvas 层级低于 #map-container 的 z-index:1 */
+  z-index: 1 !important; /* 强制 canvas 层级低于 #map-container 的 z-index:1 */
 }
 /* 响应式设计 */
 @media (max-width: 768px) {
