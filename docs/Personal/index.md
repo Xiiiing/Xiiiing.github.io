@@ -121,7 +121,17 @@ body {
 .map-section:hover .map-overlay {
   transform: translateY(0);
 }
-
+.hover-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* 允许事件穿透到地图 */
+}
+.map-section:hover .map-overlay {
+  transform: translateY(0);
+}
 /* 响应式设计 */
 @media (max-width: 768px) {
   .flex-container {
@@ -188,6 +198,7 @@ body {
     </div>
 
     <div class="map-section">
+      <div class="hover-trigger"></div> <!-- 新增透明层 -->
       <div id="map-container">
         <!-- 地图内容区域，保留原有结构 -->
         <div class="map-overlay">
