@@ -245,7 +245,7 @@ body {
           专注于通过 <span class="highlight">GitHub</span> 构建个人知识体系，<br>
           追求学习过程的 <strong>可视化</strong> 与 <strong>系统化</strong>。<br>
           秉持「<span class="emphasis">知识流动促成长，记录沉淀筑认知</span>」理念，<br>
-          希望通过技术博客 <a href="https://xiiiing.github.io/Personal/" class="highlight">分享经验</a>，<br>
+          希望通过技术博客 <a href="https://xiiiing.github.io" class="highlight">分享经验</a>，<br>
           连接更多 <span style="color: #22c55e; font-weight: 600;">同频创作者</span>。
         </p>
       </div>
