@@ -14,14 +14,23 @@ body {
   padding: 0;
 }
 .md-typeset h1 {
-  font-size: 3.2em; /* 增大标题字号 */
-  font-weight: 500; /* 提升字体粗细增强辨识度 */
-  letter-spacing: -.02em; /* 微调字间距 */
-  color: #1e3a8a; /* 使用主题主色 */
-  margin: 0 0 30px; /* 增加底部间距 */
-  padding-bottom: 12px; /* 增加底部内边距 */
-  position: relative; /* 定位容器 */
-  border-bottom: 2px solid #e5e7eb; /* 增加浅灰色底部边框 */
+  font-size: 3.2em;
+  font-weight: 500;
+  letter-spacing: -.02em;
+  color: #1e3a8a;
+  margin: 0 0 12px; /* 大幅减少底部间距（原30px→12px），拉近与下方内容距离 */
+  padding-bottom: 6px; /* 微调下划线与文字的间距 */
+  position: relative;
+  border-bottom: 2px solid #e5e7eb; /* 保持底部边框，与下方板块视觉对齐 */
+  line-height: 1.2; /* 优化行高，避免文字上下空间过大 */
+  /* 确保左对齐（与下方板块的蓝色竖线左边缘对齐） */
+  padding-left: 60px; 
+  margin-left: 0;
+}
+
+/* 若需强化底部下划线与下方板块的视觉衔接，可添加： */
+.md-typeset h1 + .section {
+  margin-top: 10px; /* 进一步收紧 h1 与第一个板块的间距（可选） */
 }
 
 /* 增加渐变装饰效果（可选） */
@@ -30,7 +39,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 60px;
+  width: 200px;
   height: 2px;
   background: linear-gradient(to right, #1e3a8a 0%, #3b82f6 100%);
 }
@@ -157,6 +166,10 @@ body {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+  .md-typeset h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+  }
   .flex-container {
     flex-direction: column;
   }
