@@ -76,6 +76,10 @@ const initMap = async ({ mapName, jsonPath, seriesName, data }) => {
   }
 
   const container = document.querySelector('#map-container');
+  // 初始化地图后，获取 canvas 元素并设置 z-index
+  const chartInstance = echarts.init(container);
+  const canvas = chartInstance.getZr().canvas;
+  canvas.style.zIndex = 1; // 设为低于弹窗的层级
   if (!container) return;
 
   const chart = echarts.init(container);
