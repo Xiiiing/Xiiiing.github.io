@@ -25,27 +25,6 @@ body {
   display: none; /* 完全隐藏，不占据空间 */
 }
 
-/* 若需强化底部下划线与下方板块的视觉衔接，可添加： */
-.md-typeset h1 + .section {
-  margin-top: 10px; /* 进一步收紧 h1 与第一个板块的间距（可选） */
-}
-
-/* 增加渐变装饰效果（可选） */
-.md-typeset h1::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 200px;
-  height: 2px;
-  background: linear-gradient(to right, #1e3a8a 0%, #3b82f6 100%);
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
 /* 响应式布局容器 */
 .flex-container {
   display: flex;
