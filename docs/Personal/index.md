@@ -189,12 +189,10 @@ body {
     </div>
 
     <div class="map-section">
-      <div id="map-container">
-        <!-- 地图内容区域，保留原有结构 -->
-        <div class="map-overlay">
+      <div id="map-container"></div>
+      <div class="map-overlay">
           <h4>求学轨迹地图</h4>
           <p>标记了我的教育旅程中重要的地理位置和经历</p>
-        </div>
       </div>
     </div>
   </div>
