@@ -10,7 +10,6 @@ body {
   color: #4b5563;
   margin: 0;
   padding: 0;
-  background-color: #f8fafc;
 }
 
 .container {
