@@ -189,7 +189,6 @@ body {
     </div>
 
     <div class="map-section">
-      <div class="hover-trigger"></div> <!-- 新增透明层 -->
       <div id="map-container">
         <!-- 地图内容区域，保留原有结构 -->
         <div class="map-overlay">
