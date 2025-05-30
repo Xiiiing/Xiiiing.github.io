@@ -84,6 +84,7 @@ h1 {
 .text-section ul {
   margin: 15px 0;
   padding-left: 20px;
+  list-style: none; /* 新增：清除列表默认项目符号 */
 }
 
 .text-section ul li {
@@ -190,7 +191,7 @@ h1 {
         <ul>
           <li data-icon="🌍"> 地图收集与地理探索</li>
           <li data-icon="📚"> 技术博客写作与知识整理</li>
-          <li data-icon="🎨"> 极简主义设计与UI/UX研究</li>
+          <li data-icon="🎨"> 极简主义设计</li>
           <li data-icon="🏓"> 室内运动</li>
         </ul>
       </div>
@@ -198,9 +199,9 @@ h1 {
       <div class="section">
         <h3>技术栈</h3>
         <ul>
-          <li data-icon="💻"> 编程语言：Python（数据科学）、JavaScript（Web 开发）、Java（后端）</li>
-          <li data-icon="🛠️"> 工具链：Git（版本控制）、Docker（容器化）、VS Code（全栈开发）</li>
-          <li data-icon="🌐"> 领域：Web 开发（React/Vue）、数据结构与算法（LeetCode 刷题 200+）</li>
+          <li data-icon="💻"> 编程语言：Python、JavaScript、Java</li>
+          <li data-icon="🛠️"> 工具链：Git、Nginx、GitHub Actions</li>
+          <li data-icon="🌐"> 领域：计算机视觉、Web 开发、数据结构与算法</li>
         </ul>
       </div>
     </div>
