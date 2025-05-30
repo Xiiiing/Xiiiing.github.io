@@ -30,6 +30,6 @@ jobs:
       - name: Install MkDocs plugins
         run: pip install mkdocs-awesome-nav
       - name: Install MkDocs plugins2
-        run: pip install mkdocs-material-extensions
+        run: pip install pillow cairosvg
       - name: Deploy with MkDocs
         run: mkdocs gh-deploy --force
