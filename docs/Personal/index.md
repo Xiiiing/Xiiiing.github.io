@@ -33,12 +33,6 @@ body {
   min-width: 300px;
 }
 
-.map-section {
-  flex: 1 1 35%;
-  min-width: 300px;
-  position: relative;
-}
-
 /* 板块通用样式 */
 .section {
   margin-bottom: 40px;
@@ -96,32 +90,33 @@ body {
   font-weight: bold;
 }
 
-#map{
-  width: 100%;
-  height: 500px;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative; /* 关键定位父级 */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-}
-
-.map-overlay {
-  position: absolute; /* 相对于地图容器定位 */
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(30, 58, 138, 0.8);
-  color: white;
-  padding: 15px 20px;
-  transform: translateY(100%); /* 初始隐藏在底部外 */
-  transition: transform 0.3s ease;
-  z-index: 1; /* 确保层级在地图上方 */
-}
-
-/* 关键修改：触发悬停的元素改为地图容器本身 */
-#map:hover .map-overlay { 
-  transform: translateY(0); /* 悬停时滑入 */
-}
+  /* === 容器主题适配 === */
+  .map-section {
+    background-color: var(--md-default-background);
+    color: var(--md-default-text);
+    position: relative;
+  }
+  #map-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .map-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: var(--md-palette-primary);
+    color: var(--md-on-primary);
+    padding: .75rem 1rem;
+    transform: translateY(100%);
+    transition: transform .3s;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    z-index: 10;
+  }
+  #map-container:hover + .map-overlay {
+    transform: translateY(0);
+  }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
@@ -133,7 +128,7 @@ body {
     flex: 1 1 100%;
   }
   
-  #map {
+  #map-container {
     height: 400px;
   }
   
@@ -189,12 +184,10 @@ body {
     </div>
 
     <div class="map-section">
-      <div class="map">
       <div id="map-container"></div>
       <div class="map-overlay">
           <h4>求学轨迹地图</h4>
           <p>标记了我的教育旅程中重要的地理位置和经历</p>
-      </div>
       </div>
     </div>
   </div>
