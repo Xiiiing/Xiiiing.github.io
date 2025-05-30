@@ -33,6 +33,11 @@ body {
   min-width: 300px;
 }
 
+.map-section {
+  flex: 1 1 35%;
+  min-width: 300px;
+  position: relative;
+}
 
 /* 板块通用样式 */
 .section {
@@ -91,29 +96,31 @@ body {
   font-weight: bold;
 }
 
-  /* === 容器主题适配 === */
-  .map-section {
-    position: relative;
-  }
-  #map-container {
-    width: 100%;
-    height: 500px;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .map-overlay {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    padding: .75rem 1rem;
-    transform: translateY(100%);
-    transition: transform .3s;
-    border-bottom-left-radius: .5rem;
-    border-bottom-right-radius: .5rem;
-    z-index: 10;
-  }
-  #map-container:hover + .map-overlay {
-    transform: translateY(0);
-  }
+/* 地图模块样式 */
+#map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(30, 58, 138, 0.8);
+  color: white;
+  padding: 15px 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.map-section:hover .map-overlay {
+  transform: translateY(0);
+}
 
 /* 响应式设计 */
 @media (max-width: 768px) {
@@ -181,10 +188,12 @@ body {
     </div>
 
     <div class="map-section">
-      <div id="map-container"></div>
-      <div class="map-overlay">
+      <div id="map-container">
+        <!-- 地图内容区域，保留原有结构 -->
+        <div class="map-overlay">
           <h4>求学轨迹地图</h4>
           <p>标记了我的教育旅程中重要的地理位置和经历</p>
+        </div>
       </div>
     </div>
   </div>
