@@ -97,13 +97,25 @@ body {
 }
 
 /* 地图模块样式 */
-#map-container {
+.map-wrapper {
+  position: relative;
   width: 100%;
   height: 500px;
   border-radius: 8px;
   overflow: hidden;
-  position: relative;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.map-wrapper:hover {
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+}
+
+#map-container {
+  width: 100%;
+  height: 100%;
+  /* 如果是 canvas，可加上 z-index:1 保证在下层 */
+  z-index: 1;
 }
 
 .map-overlay {
@@ -112,19 +124,17 @@ body {
   left: 0;
   right: 0;
   background: rgba(30, 58, 138, 0.8);
-  color: white;
+  color: #fff;
   padding: 15px 20px;
   transform: translateY(100%);
   transition: transform 0.3s ease;
-  z-index: 1000; /* 添加层级 */
+  z-index: 2;
 }
 
-.map-section:hover .map-overlay {
+.map-wrapper:hover .map-overlay {
   transform: translateY(0);
 }
-canvas {
-  z-index: 1 !important; /* 强制 canvas 层级低于 #map-container 的 z-index:1 */
-}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .flex-container {
@@ -191,12 +201,12 @@ canvas {
     </div>
 
     <div class="map-section">
-      <div id="map-container">
-        <!-- 地图内容区域，保留原有结构 -->
+      <div class="map-wrapper">
+        <div id="map-container"></div>
         <div class="map-overlay">
-          <h4>求学轨迹地图</h4>
-          <p>标记了我的教育旅程中重要的地理位置和经历</p>
-        </div>
+              <h4>求学轨迹地图</h4>
+              <p>标记了我的教育旅程中重要的地理位置和经历</p>
+       </div>
       </div>
     </div>
   </div>
