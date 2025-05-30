@@ -283,7 +283,8 @@ ul li::before {
     </div>
     
     <div class="right-section">
-      <div id="map-container">
+      <div class="map-container">
+        <div id="map-container"></div>
         <div class="map-overlay">
           <h4>求学轨迹地图</h4>
           <p>标记了我的教育旅程中重要的地理位置和经历</p>
