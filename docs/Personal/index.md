@@ -228,15 +228,15 @@ ul li::before {
   .header h1 {
     font-size: 2.5em;
   }
-  
+
   .section h3 {
     font-size: 1.5em;
   }
-  
+
   .content-wrapper {
     flex-direction: column;
   }
-  
+
   .map-container {
     min-height: 350px;
   }
@@ -271,7 +271,7 @@ ul li::before {
           <li>🏸 室内运动（每周保持 3 次羽毛球/乒乓球训练）</li>
         </ul>
       </div>
-
+    
       <div class="section">
         <h3>技术栈</h3>
         <ul class="skills">
@@ -281,10 +281,9 @@ ul li::before {
         </ul>
       </div>
     </div>
-
+    
     <div class="right-section">
-      <div class="map-container">
-        <div id="map-container">
+      <div id="map-container">
         <div class="map-overlay">
           <h4>求学轨迹地图</h4>
           <p>标记了我的教育旅程中重要的地理位置和经历</p>
