@@ -1,5 +1,34 @@
 # Java常用API
 
+#### 保留小数
+
+> **`RoundingMode.UP`**：向远离 0 的方向舍入（只要有非零尾数就“进一”）。
+>
+> **`RoundingMode.DOWN`**：向靠近 0 的方向舍入（纯截断，丢弃尾数）。
+>
+> **`RoundingMode.CEILING`**：向正无穷舍入（正数时等同 UP；负数时等同 DOWN）。
+>
+> **`RoundingMode.FLOOR`**：向负无穷舍入（正数时等同 DOWN；负数时等同 UP）。
+>
+> **`RoundingMode.HALF_UP`**：四舍五入（>= .005 进位，否则舍弃）。
+>
+> **`RoundingMode.HALF_DOWN`**：四舍五入，但在恰好 .005 的情况下 “向下”（不进位）。
+>
+> **`RoundingMode.HALF_EVEN`**：银行家舍入法（偶数舍入）。
+
+```java
+		double raw = 3.14159;
+        // 1. 截断（去尾）+ 遇非零就进一（“去尾进1”）
+        // 对于正数，可用 RoundingMode.UP 或 RoundingMode.CEILING；对于负数，若也要“绝对值截断再进1”，可用 UP；只对正数做“向正无穷”用 CEILING。
+        BigDecimal bdUp = new BigDecimal(Double.toString(raw))
+                .setScale(2, RoundingMode.UP);
+        System.out.println("去尾进1（UP）: " + bdUp);  // 3.15
+
+ 		NumberFormat fmtUp = new DecimalFormat("0.00");
+        fmtUp.setRoundingMode(RoundingMode.UP);
+        System.out.println("去尾进1（UP）: " + fmtUp.format(raw));  // 3.15
+```
+
 ###  ArrayList
 
 **底层实现**：动态数组（基于`Object[]`），允许 null 元素，**非线程安全**。
