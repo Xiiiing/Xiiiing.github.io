@@ -62,7 +62,7 @@
 
 ### CVPR
 
-- [ ] 2024 年
+- [ ] 2025 年
   
   FOCUS: Knowledge-enhanced Adaptive Visual Compression for Few-shot Whole Slide Image Classification
   
@@ -78,7 +78,7 @@
    
    链接：[arXiv 2025](https://arxiv.org/pdf/2503.01653)
    
-- [ ] 2025 年
+- [x] 2025 年
   
    Fast and Accurate Gigapixel Pathological Image Classification with Hierarchical Distillation Multi-Instance Learning
    
@@ -86,7 +86,7 @@
    
    链接：[arXiv 2025](https://arxiv.org/abs/2502.21130)
    
-- [ ] 2024 年
+- [ ] 2025 年
   
    SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding
    
@@ -94,7 +94,7 @@
    
    链接：[arXiv 2024](https://arxiv.org/abs/2410.11761)
    
-- [ ] 2024 年
+- [ ] 2025 年
   
    2DMamba: Efficient State Space Model for Image Representation with Applications on Giga-Pixel Whole Slide Image Classification
    
@@ -102,7 +102,7 @@
    
    链接：[arXiv 2024](https://arxiv.org/abs/2412.00678)
    
-- [ ] 2024 年
+- [ ] 2025 年
   
    CPath-Omni: A Unified Multimodal Foundation Model for Patch and Whole Slide Image Analysis in Computational Pathology
    
@@ -182,7 +182,7 @@
    
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
-- [ ] 2025 年
+- [x] 2025 年
   
    MExD: An Expert-Infused Diffusion Model for Whole-Slide Image Classification
    
@@ -198,13 +198,13 @@
    
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
-- [ ] 2024 年
+- [ ] 2025 年
   
    Unsupervised Foundation Model-Agnostic Slide-Level Representation Learning
    
    简述：提出无监督、与基础模型无关的切片级表征学习方法，通过对比学习实现通用表征的跨任务迁移。
    
-   链接：[arXiv 2024](https://arxiv.org/abs/2411.13623)
+   链接：[arXiv 2025](https://arxiv.org/abs/2411.13623)
    
 - [ ] 2025 年
   
