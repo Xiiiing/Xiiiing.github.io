@@ -104,14 +104,6 @@
    
 - [ ] 2025 年
   
-   CPath-Omni: A Unified Multimodal Foundation Model for Patch and Whole Slide Image Analysis in Computational Pathology
-   
-   简述：构建统一的多模态基础模型，兼顾局部切片与整片图像特征，实现病理图像各尺度任务的无缝联动。
-   
-   链接：[arXiv 2024](https://arxiv.org/abs/2412.12077)
-   
-- [ ] 2024 年
-  
    MERGE: Multi-faceted Hierarchical Graph-based GNN for Gene Expression Prediction from Whole Slide Histopathology Images
    
    简述：通过多层次异构图与图神经网络，整合组织结构与细胞间关系，实现从整片病理切片预测基因表达谱。
@@ -124,7 +116,7 @@
    
    简述：在联邦学习框架下引入风格迁移与 ROI 保留策略，解决分布不平衡的病理切片域外泛化问题。
    
-   链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
+   链接：[CVPR 2025]([CVPR 2025 Open Access Repository](https://openaccess.thecvf.com/content/CVPR2025/html/Raswa_HistoFS_Non-IID_Histopathologic_Whole_Slide_Image_Classification_via_Federated_Style_CVPR_2025_paper.html))
    
 - [ ] 2025 年
   
@@ -132,7 +124,7 @@
    
    简述：提出 Memory-Mamba 模块，为多示例学习注入记忆增强机制，显著提升千兆像素切片分类性能。
    
-   链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
+   链接：[CVPR 2025]([CVPR 2025 Open Access Repository](https://openaccess.thecvf.com/content/CVPR2025/html/Zheng_M3amba_Memory_Mamba_is_All_You_Need_for_Whole_Slide_CVPR_2025_paper.html))
    
 - [ ] 2025 年
   
@@ -140,7 +132,7 @@
    
    简述：将持续学习策略融入多示例学习流程，有效防止模型灾难性遗忘并增强对新数据分布的适应性。
    
-   链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
+   链接：[CVPR 2025](https://arxiv.org/pdf/2505.10649)
    
 - [ ] 2025 年
   
@@ -151,14 +143,6 @@
    链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
    
 - [ ] 2025 年
-  
-   Multi-Resolution Pathology-Language Pre-training Model with Text-Guided Visual Representation
-   
-   简述：提出文本引导的多分辨率病理-语言预训练模型，实现影像与文本跨尺度对齐的表征学习。
-   
-   链接：[CVPR 2025](https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers)
-   
-- [ ] 2024 年
   
    TopoCellGen: Generating Histopathology Cell Topology with a Diffusion Model
    
@@ -410,6 +394,22 @@
 ### MICCAI
 
 ### CVPR
+
+- [ ] 2025 年
+
+  CPath-Omni: A Unified Multimodal Foundation Model for Patch and Whole Slide Image Analysis in Computational Pathology
+
+  简述：构建统一的多模态基础模型，兼顾局部切片与整片图像特征，实现病理图像各尺度任务的无缝联动。
+
+  链接：[arXiv 2024](https://arxiv.org/abs/2412.12077)
+
+- [ ] 2025 年
+
+  Multi-Resolution Pathology-Language Pre-training Model with Text-Guided Visual Representation
+
+  简述：提出文本引导的多分辨率病理-语言预训练模型，实现影像与文本跨尺度对齐的表征学习。
+
+  链接：[CVPR 2025](https://arxiv.org/abs/2504.18856)
 
 ### NeurIPS
 
