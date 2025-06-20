@@ -1,3 +1,20 @@
+## PyQt跨线程赋值
+
+> 即使我在主线程声明self.output=[]但是使用第二者依旧报错?
+
+```python
+# 正确
+output.append(out1)
+output.append(out2)
+self.parent.output=output
+
+# 报错
+self.parent.output.append(out1)
+self.parent.output.append(out2)
+```
+
+## PyQt 跨线程通信
+
 PyQt 的 GUI 操作（如更新标签、按钮状态）必须在主线程（GUI 线程）中执行。若在子线程（如工作线程）中直接调用父类（主线程）的槽函数，会违反这一规则，导致：
 
 - UI 无响应或崩溃；
