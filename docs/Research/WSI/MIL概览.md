@@ -33,3 +33,57 @@
 (NeurIPS 2022)[Additive MIL: Intrinsically Interpretable Multiple Instance Learning for Pathology](https://arxiv.org/abs/2206.01794)
 
 ![image-20250704135830571](./assest/MIL概览/image-20250704135830571.png)
+
+## ILRA-MIL
+
+ (ICLR 2023)[Exploring Low-rank Property in MIL for Whole Slide Image classification](https://openreview.net/pdf?id=01KmhBsEPFO)
+
+![image-20250704140419986](./assest/MIL概览/image-20250704140419986.png)
+
+## WIKG
+
+(CVPR 2024)[Dynamic Graph Representation with Knowledge-aware Attention for WSI Analysis](https://arxiv.org/abs/2403.07719) 
+
+![image-20250704140554471](./assest/MIL概览/image-20250704140554471.png)
+
+## AMD-MIL
+
+(MM 2024)[Agent Aggregator with Mask Denoise Mechanism for Histopathology WSI Analysis](https://dl.acm.org/doi/10.1145/3664647.3681425) 
+
+![image-20250704140815031](./assest/MIL概览/image-20250704140815031.png)
+
+## FR-MIL
+
+(TMI 2024)[Distribution Re-calibration based MIL with Transformer for WSI Classification](https://ieeexplore.ieee.org/abstract/document/10640165) 
+
+![image-20250704141402347](./assest/MIL概览/image-20250704141402347.png)
+
+## Long-MIL
+
+(NeurIPS 2024)[Scaling Long Contextual MIL for Histopathology WSI Analysis](https://arxiv.org/abs/2311.12885) 
+
+![image-20250704141519588](./assest/MIL概览/image-20250704141519588.png)
+
+## DGR-MIL
+
+[Exploring Diverse Global Representation in MIL for WSI Classification](https://arxiv.org/abs/2407.03575) (ECCV 2024)
+
+![image-20250704141615630](./assest/MIL概览/image-20250704141615630.png)
+
+## CDP-MIL
+
+(ECCV 2024)[cDP-MIL: Robust Multiple Instance Learning via Cascaded Dirichlet Process](https://arxiv.org/abs/2407.11448) 
+
+![image-20250704141731603](./assest/MIL概览/image-20250704141731603.png)
+
+## CA-MIL
+
+(ICLR 2024)[Context-Aware Multiple Instance Learning for WSI Classification](https://arxiv.org/pdf/2305.05314) 
+
+![image-20250704141937836](./assest/MIL概览/image-20250704141937836.png)
+
+## AC-MIL
+
+(ECCV 2024)[Attention-Challenging Multiple Instance Learning for WSI Classification](https://arxiv.org/pdf/2311.07125) 
+
+![image-20250704142028204](./assest/MIL概览/image-20250704142028204.png)
