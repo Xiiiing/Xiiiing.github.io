@@ -61,3 +61,170 @@ bypy mkdir /2024_Archive
 bypy delete /old_logs.zip
 ```
 
+#### 查看当前目录
+
+```bash
+pwd
+```
+
+#### 列出目录内容
+
+```bash
+ls -l  # 长格式列出文件和目录
+ls -a  # 显示隐藏文件
+ls -la # 组合选项，长格式显示所有文件
+```
+
+#### 切换目录
+
+```bash
+cd /path/to/directory  # 切换到指定目录
+cd ..                  # 返回上级目录
+cd ~                   # 回到用户主目录
+```
+
+#### 创建目录
+
+```bash
+mkdir new_directory  # 创建新目录
+mkdir -p path/to/new/dir  # 递归创建多级目录
+```
+
+#### 删除文件或目录
+
+```bash
+rm file.txt  # 删除文件
+rm -r directory  # 递归删除目录（小心使用）
+rm -f file.txt  # 强制删除文件（无需确认）
+```
+
+#### 复制文件或目录
+
+```bash
+cp source.txt destination.txt  # 复制文件
+cp -r source_dir/ destination_dir/  # 递归复制目录
+```
+
+#### 移动或重命名文件 / 目录
+
+```bash
+mv old_name.txt new_name.txt  # 重命名文件
+mv file.txt /path/to/directory/  # 移动文件到指定目录
+```
+
+#### 查看文件内容
+
+```bash
+cat file.txt  # 显示文件全部内容
+more file.txt  # 分页显示文件内容
+less file.txt  # 更高级的分页查看器
+head -n 10 file.txt  # 显示文件前10行
+tail -f log.txt  # 实时监控文件追加内容
+```
+
+#### 查找文件
+
+```bash
+find /path -name "filename"  # 在指定路径查找文件名
+grep "text" file.txt  # 在文件中搜索文本
+grep -r "text" /path/  # 递归搜索目录中的文本
+```
+
+#### 查看系统信息
+
+```bash
+uname -a  # 显示系统信息
+df -h  # 查看磁盘使用情况
+free -h  # 查看内存使用情况
+top  # 实时监控系统进程
+htop  # 更友好的进程监控工具（需安装）
+```
+
+#### 网络相关
+
+```bash
+ifconfig  # 查看网络接口信息
+ip addr  # 现代替代ifconfig
+ping google.com  # 测试网络连接
+traceroute google.com  # 追踪网络路由
+curl https://example.com  # 发送HTTP请求
+wget https://example.com/file.zip  # 下载文件
+```
+
+#### 用户和权限
+
+```bash
+chmod 755 file.sh  # 修改文件权限
+chown user:group file.txt  # 更改文件所有者和组
+sudo command  # 以管理员权限执行命令
+su - username  # 切换用户
+```
+
+#### 软件包管理(Debian/Ubuntu)
+
+```bash
+sudo apt update  # 更新软件包列表
+sudo apt upgrade  # 升级所有软件包
+sudo apt install package_name  # 安装软件包
+sudo apt remove package_name  # 移除软件包
+```
+
+#### 软件包管理(RHEL/CentOS)
+
+```bash
+sudo yum update  # 更新软件包
+sudo yum install package_name  # 安装软件包
+sudo yum remove package_name  # 移除软件包
+```
+
+#### 服务管理
+
+```bash
+sudo systemctl start service_name  # 启动服务
+sudo systemctl stop service_name  # 停止服务
+sudo systemctl restart service_name  # 重启服务
+sudo systemctl status service_name  # 查看服务状态
+```
+
+#### 压缩与解压
+
+```bash
+tar -czvf archive.tar.gz directory/  # 创建tar.gz压缩包
+tar -xzvf archive.tar.gz -C /path/  # 解压tar.gz到指定目录
+zip -r archive.zip directory/  # 创建ZIP压缩包
+unzip archive.zip -d /path/  # 解压ZIP到指定目录
+```
+
+#### 防火墙管理（UFW）
+
+```bash
+sudo ufw enable  # 启用防火墙
+sudo ufw disable  # 禁用防火墙
+sudo ufw allow 80/tcp  # 允许80端口TCP流量
+sudo ufw status  # 查看防火墙状态
+```
+
+#### 定时任务（Cron）
+
+```bash
+crontab -e  # 编辑当前用户的cron任务
+# 添加类似下面的行（每天凌晨2点执行备份）
+0 2 * * * /path/to/backup/script.sh
+```
+
+#### SSH 连接
+
+```bash
+ssh username@server_ip  # 连接到远程服务器
+ssh -i private_key.pem username@server_ip  # 使用私钥连接
+```
+
+#### 文件权限符号表示法
+
+```bash
+# r=读(4), w=写(2), x=执行(1)
+# 所有者-组-其他用户
+chmod 644 file.txt  # rw-r--r--
+chmod 755 script.sh  # rwxr-xr-x
+```
+
