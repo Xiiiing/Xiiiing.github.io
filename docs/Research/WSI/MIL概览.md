@@ -34,15 +34,15 @@
 
 ![image-20250704135830571](./assest/MIL概览/image-20250704135830571.png)
 
-## ILRA-MIL
+## ILRA-MIL	 (ICLR 2023)
 
- (ICLR 2023)[Exploring Low-rank Property in MIL for Whole Slide Image classification](https://openreview.net/pdf?id=01KmhBsEPFO)
+[Exploring Low-rank Property in MIL for Whole Slide Image classification](https://openreview.net/pdf?id=01KmhBsEPFO)
 
 ![image-20250704140419986](./assest/MIL概览/image-20250704140419986.png)
 
-## WIKG
+## WIKG	(CVPR 2024)
 
-(CVPR 2024)[Dynamic Graph Representation with Knowledge-aware Attention for WSI Analysis](https://arxiv.org/abs/2403.07719) 
+[Dynamic Graph Representation with Knowledge-aware Attention for WSI Analysis](https://arxiv.org/abs/2403.07719) 
 
 ![image-20250704140554471](./assest/MIL概览/image-20250704140554471.png)
 
