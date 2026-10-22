@@ -6,9 +6,7 @@ import PageLayout from '../layouts/BaseLayout.astro'
 import Section from '../components/home/Section.astro'
 import ProjectCard from '../components/home/ProjectCard.astro'
 import SkillLayout from '../components/home/SkillLayout.astro'
-import NotePreview from '../components/home/NotePreview.astro'
 import avatar from '../assets/avatar.jpg'
-import { notes } from '../data/notes'
 ---
 
 <PageLayout highlightColor='#659EB9'>
@@ -34,20 +32,13 @@ import { notes } from '../data/notes'
     <div id='content' class='animate flex w-full flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='关于我'>
         <p class='text-muted-foreground'>计算机硕士 / 计算机视觉与医学影像</p>
-        <p class='leading-relaxed text-muted-foreground'>你好，我是 Xiiiing。关注数字病理、全切片图像与多实例学习，也记录开发、部署和算法学习中的实践。这里是我的个人主页，连接知识库与逐步积累的作品。</p>
+        <p class='leading-relaxed text-muted-foreground'>你好，我是 Xiiiing。关注计算机视觉与医学影像，喜欢探索技术、记录学习，也在尝试把想法做成可以使用的作品。</p>
         <Button title='更多关于我' class='w-fit self-end' href='/me/' variant='ahead' />
-      </Section>
-
-      <Section title='笔记选读'>
-        <ul class='flex flex-col gap-y-1.5 sm:gap-y-2'>
-          {notes.map(note => <NotePreview note={note} />)}
-        </ul>
-        <Button title='浏览全部笔记' class='w-fit self-end' href='/wiki/' variant='ahead' />
       </Section>
 
       <Section title='我的空间'>
         <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
-          <ProjectCard href='/wiki/' heading='Wiki' subheading='研究笔记、工程实践与算法学习' imagePath='/src/assets/projects/1.avif' />
+          <ProjectCard href='/wiki/' heading='Wiki' subheading='个人知识库 · 点击进入' imagePath='/src/assets/projects/1.avif' />
           <ProjectCard as='div' heading='UI 库 · 筹备中' subheading='界面效果、Prompt 与实现过程' imagePath='/src/assets/projects/2.avif' />
           <ProjectCard as='div' heading='Lab · 筹备中' subheading='小工具、可视化与交互实验' imagePath='/src/assets/projects/3.avif' />
           <ProjectCard href='/projects/' heading='项目与实践' subheading='查看项目介绍与源代码' imagePath='/src/assets/projects/4.avif' />

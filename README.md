@@ -27,7 +27,6 @@ with GitHub Pages Actions. Wiki deployments are independent.
 - Homepage: `src/pages/index.astro`
 - Personal details: `src/pages/me/index.astro` (`/me/` avoids the legacy `/About/` path)
 - Project directory: `src/pages/projects/index.astro`
-- Curated notes: `src/data/notes.ts`
 - Theme/navigation: `src/site.config.ts`, `src/components/Header.astro`
 - Retained upstream theme styles: `src/assets/styles/`
 - Retained upstream homepage components: `src/components/home/`
@@ -36,6 +35,10 @@ with GitHub Pages Actions. Wiki deployments are independent.
 Keep visual changes close to the upstream template. Personalize content and links
 instead of replacing the theme's layout and design system. Satoshi, the upstream
 Latin font, is downloaded by Astro at build time and served locally with the site.
+
+The homepage is a personal portal: show personal information and project links.
+Wiki articles, reading lists, titles and excerpts belong to the independent Wiki;
+link to it instead of displaying its content on this site.
 
 `/wiki/`, `/ui/` and `/lab/` are reserved for independent project sites. UI and Lab
 are marked as planned until their sites exist. The root site has no placeholder

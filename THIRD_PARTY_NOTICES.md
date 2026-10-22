@@ -7,7 +7,6 @@ and uses `astro-pure` 1.4.9. Its Apache-2.0 license is preserved in
 UnoCSS configuration, section and skill components, illustrated project cards and
 project images are retained. The Header and BaseLayout retain the original theme's
 layout and behavior, with personal metadata, navigation and accessibility changes.
-NotePreview adapts the theme's compact PostPreview to link to the independent Wiki.
 
 The ECharts library in `public/vendor/` retains its original license header.
 Geographic data, the avatar and original note media are retained from the former
