@@ -1,0 +1,194 @@
+[
+  {
+    "source": "/About/",
+    "destination": "/wiki/About/"
+  },
+  {
+    "source": "/Algorithm/",
+    "destination": "/wiki/Algorithm/"
+  },
+  {
+    "source": "/Algorithm/01_基础算法/",
+    "destination": "/wiki/Algorithm/01_基础算法/"
+  },
+  {
+    "source": "/Algorithm/02_搜索/",
+    "destination": "/wiki/Algorithm/02_搜索/"
+  },
+  {
+    "source": "/Algorithm/03_数据结构/",
+    "destination": "/wiki/Algorithm/03_数据结构/"
+  },
+  {
+    "source": "/Algorithm/05_动态规划/",
+    "destination": "/wiki/Algorithm/05_动态规划/"
+  },
+  {
+    "source": "/Algorithm/06_字符串/",
+    "destination": "/wiki/Algorithm/06_字符串/"
+  },
+  {
+    "source": "/Algorithm/07_数学/",
+    "destination": "/wiki/Algorithm/07_数学/"
+  },
+  {
+    "source": "/Algorithm/Java常见API/",
+    "destination": "/wiki/Algorithm/Java常见API/"
+  },
+  {
+    "source": "/Development/",
+    "destination": "/wiki/Development/"
+  },
+  {
+    "source": "/Development/PyQt/",
+    "destination": "/wiki/Development/PyQt/"
+  },
+  {
+    "source": "/Development/linux/",
+    "destination": "/wiki/Development/linux/"
+  },
+  {
+    "source": "/Development/windows/",
+    "destination": "/wiki/Development/windows/"
+  },
+  {
+    "source": "/Personal/",
+    "destination": "/me/"
+  },
+  {
+    "source": "/Research/",
+    "destination": "/wiki/Research/"
+  },
+  {
+    "source": "/Research/WSI/",
+    "destination": "/wiki/Research/WSI/"
+  },
+  {
+    "source": "/Research/WSI/Baseline To Do/",
+    "destination": "/wiki/Research/WSI/Baseline To Do/"
+  },
+  {
+    "source": "/Research/WSI/MIL概览/",
+    "destination": "/wiki/Research/WSI/MIL概览/"
+  },
+  {
+    "source": "/Research/WSI/Paper To Do/",
+    "destination": "/wiki/Research/WSI/Paper To Do/"
+  },
+  {
+    "source": "/Research/WSI/学习文献/如何写作/",
+    "destination": "/wiki/Research/WSI/学习文献/如何写作/"
+  },
+  {
+    "source": "/Research/WSI/学习文献/学习文献的写作方法角度/",
+    "destination": "/wiki/Research/WSI/学习文献/学习文献的写作方法角度/"
+  },
+  {
+    "source": "/Research/WSI/数据集/",
+    "destination": "/wiki/Research/WSI/数据集/"
+  },
+  {
+    "source": "/Research/WSI/特征提取/",
+    "destination": "/wiki/Research/WSI/特征提取/"
+  },
+  {
+    "source": "/Research/WSI/论文/AttriMIL/",
+    "destination": "/wiki/Research/WSI/论文/AttriMIL/"
+  },
+  {
+    "source": "/Research/WSI/论文/DG-WSDH/",
+    "destination": "/wiki/Research/WSI/论文/DG-WSDH/"
+  },
+  {
+    "source": "/Research/WSI/论文/HDMIL/",
+    "destination": "/wiki/Research/WSI/论文/HDMIL/"
+  },
+  {
+    "source": "/Research/WSI/论文/MExD/",
+    "destination": "/wiki/Research/WSI/论文/MExD/"
+  },
+  {
+    "source": "/Research/WSI/论文/RRT-MIL/",
+    "destination": "/wiki/Research/WSI/论文/RRT-MIL/"
+  },
+  {
+    "source": "/Research/WSI/论文/Snffy/",
+    "destination": "/wiki/Research/WSI/论文/Snffy/"
+  },
+  {
+    "source": "/Research/WSI/论文/UMTL/",
+    "destination": "/wiki/Research/WSI/论文/UMTL/"
+  },
+  {
+    "source": "/Research/WSI/论文/模板/",
+    "destination": "/wiki/Research/WSI/论文/模板/"
+  },
+  {
+    "source": "/Research/杂记/",
+    "destination": "/wiki/Research/杂记/"
+  },
+  {
+    "source": "/Research/杂记/ddp技巧/",
+    "destination": "/wiki/Research/杂记/ddp技巧/"
+  },
+  {
+    "source": "/Research/杂记/一些指令/",
+    "destination": "/wiki/Research/杂记/一些指令/"
+  },
+  {
+    "source": "/Research/杂记/服务器使用/",
+    "destination": "/wiki/Research/杂记/服务器使用/"
+  },
+  {
+    "source": "/Research/杂记/服务器连接/",
+    "destination": "/wiki/Research/杂记/服务器连接/"
+  },
+  {
+    "source": "/Research/杂记/翻译技巧/",
+    "destination": "/wiki/Research/杂记/翻译技巧/"
+  },
+  {
+    "source": "/Research/肺血管/",
+    "destination": "/wiki/Research/肺血管/"
+  },
+  {
+    "source": "/Research/腹腔镜/当前任务/",
+    "destination": "/wiki/Research/腹腔镜/当前任务/"
+  },
+  {
+    "source": "/Research/腹腔镜/论文/Data Augmentation for Surgical Scene Segmentation with Anatomy-Aware Diffusion Models/",
+    "destination": "/wiki/Research/腹腔镜/论文/Data Augmentation for Surgical Scene Segmentation with Anatomy-Aware Diffusion Models/"
+  },
+  {
+    "source": "/Research/腹腔镜/论文/模板/",
+    "destination": "/wiki/Research/腹腔镜/论文/模板/"
+  },
+  {
+    "source": "/blog/",
+    "destination": "/wiki/blog/"
+  },
+  {
+    "source": "/blog/2023/12/31/春日絮语--在诗行与琴韵中拾得清欢/",
+    "destination": "/wiki/blog/2023/12/31/春日絮语--在诗行与琴韵中拾得清欢/"
+  },
+  {
+    "source": "/blog/2023/12/31/琴韵哲思--弦上的时光课/",
+    "destination": "/wiki/blog/2023/12/31/琴韵哲思--弦上的时光课/"
+  },
+  {
+    "source": "/blog/2023/12/31/诗中的时光琥珀--在文字里打捞永恒/",
+    "destination": "/wiki/blog/2023/12/31/诗中的时光琥珀--在文字里打捞永恒/"
+  },
+  {
+    "source": "/blog/archive/2023/",
+    "destination": "/wiki/blog/archive/2023/"
+  },
+  {
+    "source": "/blog/category/诗词歌赋/",
+    "destination": "/wiki/blog/category/诗词歌赋/"
+  },
+  {
+    "source": "/Personal/test.html",
+    "destination": "/me/"
+  }
+]

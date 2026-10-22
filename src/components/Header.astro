@@ -1,0 +1,24 @@
+---
+import { Icon } from 'astro-pure/user'
+import config from '../site.config'
+const current = Astro.url.pathname
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Xiiiing 首页"><img src="/favicon.svg" alt="" width="27" height="27" />Xiiiing<span class="brand-dot">.</span></a>
+  <nav aria-label="主导航">
+    {(config.header.menu ?? []).map(item => <a href={item.link} aria-current={current.startsWith(item.link) ? 'page' : undefined}>{item.title}{item.link === '/wiki/' && <span aria-hidden="true"> ↗</span>}</a>)}
+  </nav>
+  <div class="header-actions">
+    <a class="icon-button github-link" href="https://github.com/Xiiiing" aria-label="GitHub 主页"><Icon name="github" /></a>
+    <button class="icon-button" type="button" id="theme-toggle" aria-label="切换明暗主题"><span class="theme-sun"><Icon name="sun" /></span><span class="theme-moon"><Icon name="moon" /></span></button>
+  </div>
+</header>
+<script>
+  import { setTheme } from 'astro-pure/utils'
+  const button = document.getElementById('theme-toggle')
+  button?.addEventListener('click', () => {
+    const dark = document.documentElement.classList.contains('dark')
+    setTheme(dark ? 'light' : 'dark', true)
+    button.setAttribute('aria-label', dark ? '切换深色主题' : '切换浅色主题')
+  })
+</script>

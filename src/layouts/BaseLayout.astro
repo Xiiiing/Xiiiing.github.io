@@ -1,0 +1,42 @@
+---
+// Adapted from Astro Theme Pure's BaseLayout.astro (Apache-2.0).
+import { Footer, ThemeProvider } from 'astro-pure/components/basic'
+import Header from '../components/Header.astro'
+import config from '../site.config'
+import '../styles/global.css'
+
+interface Props { title?: string; description?: string }
+const { title, description = config.description } = Astro.props
+const pageTitle = title ? `${title} · Xiiiing` : 'Xiiiing · 学习、记录与实践'
+const is404 = Astro.url.pathname === '/404/'
+const canonical = new URL(is404 ? '/404.html' : Astro.url.pathname, Astro.site)
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Xiiiing" />
+    {is404 && <meta name="robots" content="noindex,follow" />}
+    <meta name="theme-color" content="#fafaf9" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{pageTitle}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Xiiiing 的随笔" href="/wiki/feed_rss_created.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://xiiiing.github.io/images/avatar.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <ThemeProvider />
+  </head>
+  <body class="bg-background text-foreground">
+    <a class="skip-link" href="#main-content">跳至正文</a>
+    <div class="site-shell"><Header /><main id="main-content"><slot /></main><Footer /></div>
+  </body>
+</html>
