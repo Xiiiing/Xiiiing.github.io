@@ -1,0 +1,107 @@
+---
+import { Image } from 'astro:assets'
+import avatar from '../../assets/avatar.jpg'
+---
+
+<button
+  type='button'
+  class='profile-avatar'
+  aria-label='和 Xiiiing 的猫咪打个招呼'
+  data-profile-avatar
+>
+  <Image
+    src={avatar}
+    alt='Xiiiing 的猫咪头像'
+    class='profile-avatar-image h-28 w-auto rounded-full border p-1'
+    loading='eager'
+    fetchpriority='high'
+  />
+  <span class='profile-avatar-greeting' role='status'></span>
+</button>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-profile-avatar]').forEach((button) => {
+    const image = button.querySelector('img')
+    const greeting = button.querySelector<HTMLElement>('[role="status"]')
+    if (!image || !greeting) return
+
+    let animation: Animation | undefined
+    let feedbackTimeout: ReturnType<typeof setTimeout>
+
+    button.addEventListener('click', () => {
+      animation?.cancel()
+      clearTimeout(feedbackTimeout)
+      greeting.textContent = '你好呀！'
+      button.dataset.greeting = 'true'
+
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        animation = image.animate(
+          [
+            { transform: 'rotate(0deg)' },
+            { transform: 'rotate(-6deg)', offset: 0.3 },
+            { transform: 'rotate(4deg)', offset: 0.65 },
+            { transform: 'rotate(0deg)' }
+          ],
+          { duration: 480, easing: 'ease-in-out' }
+        )
+      }
+
+      feedbackTimeout = setTimeout(() => {
+        delete button.dataset.greeting
+        greeting.textContent = ''
+      }, 1800)
+    })
+  })
+</script>
+
+<style>
+  .profile-avatar {
+    position: relative;
+    display: block;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .profile-avatar-image {
+    transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+  }
+
+  .profile-avatar:focus-visible .profile-avatar-image {
+    border-color: hsl(var(--primary) / 0.6);
+  }
+
+  .profile-avatar-greeting {
+    position: absolute;
+    inset-block-start: 0.25rem;
+    inset-inline-start: calc(100% - 0.75rem);
+    z-index: 1;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.75rem 0.75rem 0.75rem 0.2rem;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-size: 0.75rem;
+    line-height: 1.5;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0.2rem);
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+
+  .profile-avatar[data-greeting] .profile-avatar-greeting {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .profile-avatar:hover .profile-avatar-image {
+      transform: translateY(-2px) rotate(-3deg);
+      border-color: hsl(var(--primary) / 0.5);
+      box-shadow: 0 4px 12px hsl(var(--primary) / 0.12);
+    }
+  }
+</style>

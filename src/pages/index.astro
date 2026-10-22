@@ -1,18 +1,17 @@
 ---
 // Personal content in Astro Theme Pure's original homepage composition.
-import { Image } from 'astro:assets'
 import { Button, Icon, Label } from 'astro-pure/user'
 import PageLayout from '../layouts/BaseLayout.astro'
 import Section from '../components/home/Section.astro'
 import ProjectCard from '../components/home/ProjectCard.astro'
 import SkillLayout from '../components/home/SkillLayout.astro'
-import avatar from '../assets/avatar.jpg'
+import ProfileAvatar from '../components/home/ProfileAvatar.astro'
 ---
 
 <PageLayout highlightColor='#659EB9'>
   <div class='flex w-full flex-col items-center'>
     <section class='animate mb-10 flex flex-col items-center gap-y-7' id='content-header' aria-labelledby='profile-title'>
-      <Image src={avatar} alt='Xiiiing 的猫咪头像' class='h-28 w-auto rounded-full border p-1' loading='eager' fetchpriority='high' />
+      <ProfileAvatar />
       <div class='flex flex-col items-center gap-y-4'>
         <h1 id='profile-title' class='text-3xl font-medium'>Xiiiing</h1>
         <div class='flex flex-wrap justify-center gap-x-7 gap-y-3 text-sm sm:text-base'>
@@ -38,10 +37,10 @@ import avatar from '../assets/avatar.jpg'
 
       <Section title='我的空间'>
         <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
-          <ProjectCard href='/wiki/' heading='Wiki' subheading='个人知识库 · 点击进入' imagePath='/src/assets/projects/1.avif' />
-          <ProjectCard href='/ui-design-atlas/' heading='UI 库' subheading='UI 设计图鉴 · 点击进入' imagePath='/src/assets/projects/2.avif' />
-          <ProjectCard as='div' heading='Lab · 筹备中' subheading='小工具、可视化与交互实验' imagePath='/src/assets/projects/3.avif' />
-          <ProjectCard href='/projects/' heading='项目与实践' subheading='查看项目介绍与源代码' imagePath='/src/assets/projects/4.avif' />
+          <ProjectCard href='/wiki/' heading='Wiki' subheading='个人知识库 · 学习与技术笔记' imagePath='/src/assets/projects/1.avif' />
+          <ProjectCard href='/ui-design-atlas/' heading='UI 库' subheading='UI 设计图鉴 · 界面与交互参考' imagePath='/src/assets/projects/2.avif' />
+          <ProjectCard as='div' heading='Lab' status='筹备中' subheading='小工具、可视化与交互实验' imagePath='/src/assets/projects/3.avif' />
+          <ProjectCard href='/projects/' heading='项目与实践' subheading='作品介绍与源代码' imagePath='/src/assets/projects/4.avif' />
         </div>
       </Section>
 
