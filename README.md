@@ -1,6 +1,6 @@
 # Xiiiing — personal portal
 
-[Personal homepage](https://xiiiing.github.io/) · [Wiki](https://xiiiing.github.io/wiki/)
+[Personal homepage](https://xiiiing.github.io/) · [Wiki](https://xiiiing.github.io/wiki/) · [UI Design Atlas](https://xiiiing.github.io/ui-design-atlas/)
 
 Built from [Astro Theme Pure](https://github.com/cworld1/astro-theme-pure)'s original
 homepage template, with its page shell, gradient, navigation, global styles,
@@ -40,9 +40,9 @@ The homepage is a personal portal: show personal information and project links.
 Wiki articles, reading lists, titles and excerpts belong to the independent Wiki;
 link to it instead of displaying its content on this site.
 
-`/wiki/`, `/ui/` and `/lab/` are reserved for independent project sites. UI and Lab
-are marked as planned until their sites exist. The root site has no placeholder
-routes at those paths.
+Wiki is deployed independently at `/wiki/`, and UI Design Atlas at
+`/ui-design-atlas/`. Lab remains planned. The root site reserves these project
+paths (including `/ui/` and `/lab/`) and has no placeholder routes at them.
 
 ## Legacy URLs and rollback
 

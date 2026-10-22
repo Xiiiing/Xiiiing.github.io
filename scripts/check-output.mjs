@@ -5,6 +5,7 @@ import vm from 'node:vm'
 
 const dist = resolve('dist')
 const origin = 'https://xiiiing.github.io'
+const independentSites = ['/wiki/', '/ui-design-atlas/']
 const routes = JSON.parse(await readFile('migration/legacy-routes.json', 'utf8'))
 const assets = JSON.parse(await readFile('migration/legacy-assets.json', 'utf8'))
 for (const route of routes) {
@@ -33,14 +34,14 @@ for (const path of ['index.html','me/index.html','projects/index.html','404.html
     const value = (match[1] ?? match[2] ?? match[3]).replaceAll('&amp;', '&')
     if (!value || /^(?:data:|mailto:|javascript:|#)/.test(value)) continue
     const url = new URL(value, origin + '/' + path)
-    if (url.origin !== origin || url.pathname.startsWith('/wiki/')) continue
+    if (url.origin !== origin || independentSites.some(path => url.pathname.startsWith(path))) continue
     const target = decodeURIComponent(url.pathname)
     await access(resolve(dist, '.' + target, target.endsWith('/') ? 'index.html' : ''))
     checkedLinks++
   }
 }
 for (const path of assets) await access(resolve(dist, '.' + path))
-for (const reserved of ['wiki','ui','lab']) {
+for (const reserved of ['wiki','ui','ui-design-atlas','lab']) {
   let exists = true
   try { await access(resolve(dist,reserved)) } catch { exists = false }
   assert.equal(exists, false, `Root site masks project path /${reserved}/`)

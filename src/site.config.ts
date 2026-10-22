@@ -15,6 +15,7 @@ const config: Config = {
   head: [], customCss: [],
   header: { menu: [
     { title: 'Wiki', link: '/wiki/' },
+    { title: 'UI 库', link: '/ui-design-atlas/' },
     { title: '项目', link: '/projects/' },
     { title: '关于我', link: '/me/' },
   ] },
