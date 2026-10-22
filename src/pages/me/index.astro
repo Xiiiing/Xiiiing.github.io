@@ -1,11 +1,37 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import { Button } from 'astro-pure/user'
+import Section from '../../components/home/Section.astro'
+import SkillLayout from '../../components/home/SkillLayout.astro'
 import JourneyMap from '../../components/JourneyMap.astro'
 ---
-<BaseLayout title="关于我">
-  <section class="page-intro about-intro"><div><p class="eyebrow">A LITTLE ABOUT ME</p><h1>你好，我是 Xiiiing。</h1><p>计算机硕士，关注计算机视觉与医学影像。<br />希望通过记录，让学习过程更系统，也更容易回看。</p></div><img src="/images/avatar.jpg" alt="Xiiiing 使用的猫咪头像" width="112" height="112" /></section>
-  <section class="about-section"><h2>目前关注</h2><p>我的研究笔记主要围绕数字病理、全切片图像（WSI）与多实例学习（MIL）展开。阅读论文时，除了理解方法，也会整理问题如何提出、实验如何论证，以及写作中的取舍。</p><p>工程方面，记录开发与部署过程中遇到的问题。接下来也希望把更多实践保存成可以直接查看和使用的作品。</p><a class="text-link" href="/wiki/Research/">查看研究笔记 ↗</a></section>
-  <section class="about-section"><h2>技术与工具</h2><dl class="skills-list"><div><dt>编程语言</dt><dd>Python、JavaScript、Java</dd></div><div><dt>工程与部署</dt><dd>Git、Nginx、GitHub Actions</dd></div><div><dt>学习方向</dt><dd>计算机视觉、Web 开发、数据结构与算法</dd></div></dl></section>
-  <section class="about-section"><div class="section-heading"><div><p class="eyebrow">PLACES & MEMORIES</p><h2>求学与驻足</h2></div></div><p>在不同城市求学、生活，也一直对地图和地理探索保持兴趣。</p><JourneyMap /></section>
-  <section class="about-section"><h2>研究之外</h2><p>喜欢地图收集与地理探索，也喜欢技术博客写作、知识整理和室内运动。偏爱简洁的设计，期待把复杂的东西表达得更清楚。</p><p class="personal-motto">慢慢学，慢慢记。</p><a class="primary-link" href="https://github.com/Xiiiing">GitHub 主页 ↗</a></section>
+<BaseLayout title='关于我' highlightColor='#659EB9'>
+  <div class='mx-auto w-full md:w-4/5 lg:w-5/6'>
+    <Button title='返回首页' href='/' variant='back' />
+    <div id='content-header' class='animate mb-10 mt-6 flex flex-col gap-y-4'>
+      <h1 class='text-3xl font-medium'>关于我</h1>
+      <p class='leading-relaxed text-muted-foreground'>你好，我是 Xiiiing。计算机硕士，关注计算机视觉与医学影像。<br />希望通过记录，让学习过程更系统，也更容易回看。</p>
+    </div>
+    <div id='content' class='animate flex flex-col gap-y-10'>
+      <Section title='目前关注'>
+        <p class='leading-relaxed text-muted-foreground'>我的研究笔记主要围绕数字病理、全切片图像（WSI）与多实例学习（MIL）展开。阅读论文时，除了理解方法，也会整理问题如何提出、实验如何论证，以及写作中的取舍。</p>
+        <p class='leading-relaxed text-muted-foreground'>工程方面，记录开发与部署过程中遇到的问题。接下来也希望把更多实践保存成可以直接查看和使用的作品。</p>
+        <Button title='查看研究笔记' class='w-fit self-end' href='/wiki/Research/' variant='ahead' />
+      </Section>
+      <Section title='技术与工具'>
+        <SkillLayout title='语言' skills={['Python', 'JavaScript', 'Java']} />
+        <SkillLayout title='工程' skills={['Git', 'Nginx', 'GitHub Actions']} />
+        <SkillLayout title='学习' skills={['计算机视觉', 'Web 开发', '数据结构与算法']} />
+      </Section>
+      <Section title='求学与驻足'>
+        <p class='text-muted-foreground'>在不同城市求学、生活，也一直对地图和地理探索保持兴趣。</p>
+        <JourneyMap />
+      </Section>
+      <Section title='研究之外'>
+        <p class='leading-relaxed text-muted-foreground'>喜欢地图收集与地理探索，也喜欢技术博客写作、知识整理和室内运动。偏爱简洁的设计，期待把复杂的东西表达得更清楚。</p>
+        <p class='text-muted-foreground'>慢慢学，慢慢记。</p>
+        <Button title='GitHub 主页' class='w-fit self-end' href='https://github.com/Xiiiing' variant='ahead' />
+      </Section>
+    </div>
+  </div>
 </BaseLayout>

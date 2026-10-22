@@ -1,6 +1,6 @@
 import type { Config } from 'astro-pure/types'
 
-// Astro Theme Pure, adapted into a small personal portal.
+// Personal content for the retained Astro Theme Pure template.
 const config: Config = {
   title: 'Xiiiing',
   author: 'Xiiiing',
@@ -8,7 +8,7 @@ const config: Config = {
   favicon: '/favicon.svg',
   socialCard: '/images/avatar.jpg',
   locale: { lang: 'zh-CN', attrs: 'zh_CN', dateLocale: 'zh-CN', dateOptions: { year: 'numeric', month: 'long', day: 'numeric' } },
-  logo: { src: '/images/avatar.jpg', alt: 'Xiiiing 的猫咪头像' },
+  logo: { src: '/src/assets/avatar.jpg', alt: 'Xiiiing 的猫咪头像' },
   titleDelimiter: '·',
   prerender: true,
   npmCDN: 'https://cdn.jsdelivr.net/npm',
@@ -36,4 +36,5 @@ const config: Config = {
     waline: { enable: false, server: '', showMeta: false, emoji: [], additionalConfigs: {} },
   },
 }
+export const integ = config.integ
 export default config

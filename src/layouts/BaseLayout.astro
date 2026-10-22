@@ -1,12 +1,15 @@
 ---
-// Adapted from Astro Theme Pure's BaseLayout.astro (Apache-2.0).
+// Astro Theme Pure's original page shell (Apache-2.0), with this site's metadata.
+import { Font } from 'astro:assets'
 import { Footer, ThemeProvider } from 'astro-pure/components/basic'
 import Header from '../components/Header.astro'
 import config from '../site.config'
+import '../assets/styles/global.css'
+import '../assets/styles/app.css'
 import '../styles/global.css'
 
-interface Props { title?: string; description?: string }
-const { title, description = config.description } = Astro.props
+interface Props { title?: string; description?: string; highlightColor?: string }
+const { title, description = config.description, highlightColor } = Astro.props
 const pageTitle = title ? `${title} · Xiiiing` : 'Xiiiing · 学习、记录与实践'
 const is404 = Astro.url.pathname === '/404/'
 const canonical = new URL(is404 ? '/404.html' : Astro.url.pathname, Astro.site)
@@ -21,6 +24,7 @@ const canonical = new URL(is404 ? '/404.html' : Astro.url.pathname, Astro.site)
     {is404 && <meta name="robots" content="noindex,follow" />}
     <meta name="theme-color" content="#fafaf9" />
     <meta name="color-scheme" content="light dark" />
+    <Font cssVariable='--font-satoshi' preload={[{ subset: 'latin', style: 'normal' }]} />
     <title>{pageTitle}</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href={canonical} />
@@ -35,8 +39,27 @@ const canonical = new URL(is404 ? '/404.html' : Astro.url.pathname, Astro.site)
     <meta name="twitter:card" content="summary" />
     <ThemeProvider />
   </head>
-  <body class="bg-background text-foreground">
+  <body class="flex justify-center bg-background text-foreground">
     <a class="skip-link" href="#main-content">跳至正文</a>
-    <div class="site-shell"><Header /><main id="main-content"><slot /></main><Footer /></div>
+    {highlightColor && <div id='highlight-gradient' class='pointer-events-none absolute start-0 top-0 z-0 h-screen w-full opacity-25' style={`background-image:linear-gradient(${highlightColor},transparent)`} />}
+    <div id='main-container' class='flex min-h-[100dvh] w-full max-w-[70rem] flex-col justify-between'>
+      <Header />
+      <main id='main-content' class='w-full flex-1'><slot /></main>
+      <Footer />
+    </div>
   </body>
 </html>
+
+<style>
+  #main-container {
+    padding-top: env(safe-area-inset-top);
+    padding-left: calc(1rem + env(safe-area-inset-left));
+    padding-right: calc(1rem + env(safe-area-inset-right));
+  }
+  @media (min-width: 640px) {
+    #main-container { padding-left: calc(1.75rem + env(safe-area-inset-left)); padding-right: calc(1.75rem + env(safe-area-inset-right)); }
+  }
+  @media (min-width: 1024px) {
+    #main-container { padding-left: calc(2.5rem + env(safe-area-inset-left)); padding-right: calc(2.5rem + env(safe-area-inset-right)); }
+  }
+</style>

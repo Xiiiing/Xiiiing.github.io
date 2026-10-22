@@ -2,7 +2,9 @@
 
 [Personal homepage](https://xiiiing.github.io/) · [Wiki](https://xiiiing.github.io/wiki/)
 
-Built with Astro Theme Pure, adapted into a static personal portal. The knowledge
+Built from [Astro Theme Pure](https://github.com/cworld1/astro-theme-pure)'s original
+homepage template, with its page shell, gradient, navigation, global styles,
+section layout, illustrated project cards and skill labels retained. The knowledge
 base is maintained independently in [Xiiiing/wiki](https://github.com/Xiiiing/wiki).
 
 ## Development
@@ -26,7 +28,14 @@ with GitHub Pages Actions. Wiki deployments are independent.
 - Personal details: `src/pages/me/index.astro` (`/me/` avoids the legacy `/About/` path)
 - Project directory: `src/pages/projects/index.astro`
 - Curated notes: `src/data/notes.ts`
-- Theme/navigation: `src/site.config.ts`, `src/styles/global.css`
+- Theme/navigation: `src/site.config.ts`, `src/components/Header.astro`
+- Retained upstream theme styles: `src/assets/styles/`
+- Retained upstream homepage components: `src/components/home/`
+- Small accessibility additions: `src/styles/global.css`
+
+Keep visual changes close to the upstream template. Personalize content and links
+instead of replacing the theme's layout and design system. Satoshi, the upstream
+Latin font, is downloaded by Astro at build time and served locally with the site.
 
 `/wiki/`, `/ui/` and `/lab/` are reserved for independent project sites. UI and Lab
 are marked as planned until their sites exist. The root site has no placeholder

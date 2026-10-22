@@ -3,3 +3,18 @@
   <div class="journey-places"><p>点击地点查看地图</p><button type="button" data-province="辽宁省"><span>辽宁</span><strong>沈阳</strong></button><button type="button" data-province="四川省"><span>四川</span><strong>绵阳 · 宜宾</strong></button><button type="button" data-province="广东省"><span>广东</span><strong>深圳</strong></button></div>
 </div>
 <script is:inline src="/scripts/journey-map.js" defer></script>
+
+<style>
+  .journey-layout { min-width: 0; }
+  .journey-map-wrap { position: relative; min-width: 0; overflow: hidden; border: 1px solid hsl(var(--border)); border-radius: 1rem; background: hsl(var(--muted) / .5); }
+  #journey-map { width: 100%; height: 350px; }
+  .map-status { position: absolute; inset: 40% 20px auto; text-align: center; font-size: 13px; }
+  .map-back { position: absolute; left: 15px; top: 15px; background: hsl(var(--background)); padding: 5px 11px; border: 1px solid hsl(var(--border)); border-radius: .5rem; font-size: 12px; color: hsl(var(--foreground)); }
+  .journey-places { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+  .journey-places > p { width: 100%; font-size: 12px; color: hsl(var(--muted-foreground)); }
+  .journey-places button { display: flex; flex: 1; flex-direction: column; text-align: left; gap: 3px; padding: .75rem; border: 1px solid hsl(var(--border)); border-radius: .75rem; color: hsl(var(--foreground)); background: transparent; }
+  .journey-places button:hover, .journey-places button[aria-pressed=true] { background: hsl(var(--primary) / .08); }
+  .journey-places button span { font-size: 12px; color: hsl(var(--muted-foreground)); }
+  .journey-places button strong { font-size: 14px; font-weight: 500; }
+  @media (max-width: 480px) { #journey-map { height: 300px; } }
+</style>

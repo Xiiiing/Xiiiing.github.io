@@ -1,4 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { Button } from 'astro-pure/user'
 ---
-<BaseLayout title="页面未找到"><section class="page-intro not-found"><p class="eyebrow">404</p><h1>这页暂时找不到。</h1><p>原来的知识库已搬到 /wiki/。你可以回到主页，或去 Wiki 搜索笔记。</p><div class="hero-links"><a class="primary-link" href="/">返回主页</a><a class="text-link" href="/wiki/">浏览 Wiki ↗</a></div></section></BaseLayout>
+<BaseLayout title='页面未找到' highlightColor='#659EB9'>
+  <section class='mx-auto my-20 flex max-w-xl flex-col items-center gap-y-6 text-center'>
+    <p class='text-sm text-muted-foreground'>404</p>
+    <h1 class='text-3xl font-medium'>这页暂时找不到。</h1>
+    <p class='leading-relaxed text-muted-foreground'>原来的知识库已搬到 /wiki/。你可以回到主页，或去 Wiki 搜索笔记。</p>
+    <div class='flex gap-4'><Button title='返回主页' href='/' variant='back' /><Button title='浏览 Wiki' href='/wiki/' variant='ahead' /></div>
+  </section>
+</BaseLayout>
