@@ -12,7 +12,7 @@ import { Icon } from 'astro-pure/user'
     class='site-brand z-30 text-xl font-medium group-[.not-top]:ms-2 sm:group-[.not-top]:ms-3'
     style='transition:margin-inline 0.3s'
     href='/'
-    aria-label='Xiiiing 首页'><img src={config.logo.src} alt='' width='36' height='36' /><span>{config.title}</span></a
+    aria-label='Xiiiing 首页'><img class='brand-light' src={config.logo.src} alt='' width='36' height='36' /><img class='brand-dark' src='/_img/logo-reverse.svg' alt='' width='36' height='36' /><span>{config.title}</span></a
   >
 
   <div class='flex items-center gap-x-2'>
@@ -123,6 +123,10 @@ import { Icon } from 'astro-pure/user'
     height: 2.25rem;
     flex-shrink: 0;
   }
+
+  .site-brand .brand-dark { display: none; }
+  :global(.dark) .site-brand .brand-light { display: none; }
+  :global(.dark) .site-brand .brand-dark { display: block; }
 
   header-component {
     transition:

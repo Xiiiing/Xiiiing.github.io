@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+<title id="title">FOLD HOME — standard reverse</title>
+<defs>
+<mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+<rect width="256" height="256" fill="white"/>
+<path d="M83 105 Q98 118 118 112 L184 93 Q195 91 195 105 L177 172 L111 145 Z" fill="black"/>
+<g fill="none" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M65 64 L79 108 Q89 138 73 157 L41 197"/>
+<path d="M213 186 L159 225"/>
+</g>
+</mask>
+</defs>
+<g>
+<g mask="url(#cut)">
+<path d="M24 212 L65 64 Q68 54 80 48 L126 30 Q138 25 150 34 L220 91 Q239 103 227 124 L201 165 L218 200 Q229 228 206 228 H40 Q17 228 24 212 Z" fill="#FFFFFF"/>
+</g>
+<g fill="#FFFFFF">
+<ellipse cx="151" cy="128" rx="5.5" ry="9"/>
+<ellipse cx="168" cy="128" rx="5.5" ry="9"/>
+</g>
+</g>
+</svg>
