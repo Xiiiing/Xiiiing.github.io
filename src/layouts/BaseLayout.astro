@@ -26,7 +26,7 @@ const canonical = new URL(is404 ? '/404.html' : Astro.url.pathname, Astro.site)
     <meta name="color-scheme" content="light dark" />
     <Font cssVariable='--font-satoshi' preload={[{ subset: 'latin', style: 'normal' }]} />
     <title>{pageTitle}</title>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={config.favicon} type="image/svg+xml" />
     <link rel="canonical" href={canonical} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title="Xiiiing 的随笔" href="/wiki/feed_rss_created.xml" />
