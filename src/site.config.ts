@@ -8,7 +8,7 @@ const config: Config = {
   favicon: '/favicon.svg',
   socialCard: '/images/avatar.jpg',
   locale: { lang: 'zh-CN', attrs: 'zh_CN', dateLocale: 'zh-CN', dateOptions: { year: 'numeric', month: 'long', day: 'numeric' } },
-  logo: { src: '/src/assets/avatar.jpg', alt: 'Xiiiing 的猫咪头像' },
+  logo: { src: '/_img/logo.svg', alt: 'Xiiiing 交汇标识' },
   titleDelimiter: '·',
   prerender: true,
   npmCDN: 'https://cdn.jsdelivr.net/npm',

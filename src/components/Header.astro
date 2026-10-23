@@ -9,10 +9,10 @@ import { Icon } from 'astro-pure/user'
   class='group sticky top-4 z-50 max-md:z-30 mb-12 flex items-center justify-between rounded-xl border border-transparent max-sm:py-1 sm:rounded-2xl'
 >
   <a
-    class='z-30 text-xl font-medium group-[.not-top]:ms-2 sm:group-[.not-top]:ms-3'
+    class='site-brand z-30 text-xl font-medium group-[.not-top]:ms-2 sm:group-[.not-top]:ms-3'
     style='transition:margin-inline 0.3s'
     href='/'
-    aria-label='Xiiiing 首页'>{config.title}</a
+    aria-label='Xiiiing 首页'><img src={config.logo.src} alt='' width='36' height='36' /><span>{config.title}</span></a
   >
 
   <div class='flex items-center gap-x-2'>
@@ -111,6 +111,19 @@ import { Icon } from 'astro-pure/user'
 </script>
 
 <style>
+  .site-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex-shrink: 0;
+  }
+  .site-brand img {
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+  }
+
   header-component {
     transition:
       padding 0.3s,
