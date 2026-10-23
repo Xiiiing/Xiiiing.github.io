@@ -12,6 +12,10 @@
 <p align="center">学习、记录与实践。把感兴趣的事，慢慢做成自己的作品。</p>
 
 <p align="center">
+  <strong>个人主页：</strong><a href="https://xiiiing.github.io/">xiiiing.github.io</a>
+</p>
+
+<p align="center">
   <a href="https://xiiiing.github.io/">访问主页</a> · <a href="https://xiiiing.github.io/me/">关于我</a> · <a href="https://xiiiing.github.io/projects/">项目与作品</a>
 </p>
 
