@@ -1,0 +1,110 @@
+---
+export type ProjectKind = 'wiki' | 'ui' | 'lab' | 'projects'
+
+interface Props {
+  kind: ProjectKind
+}
+
+const { kind } = Astro.props
+---
+
+<svg class='project-artwork' viewBox='0 0 360 160' fill='none' aria-hidden='true' focusable='false'>
+  {kind === 'wiki' && (
+    <g stroke-linecap='round' stroke-linejoin='round'>
+      <path class='art-guide' d='M57 120H304M77 33V134M284 28V134' stroke-dasharray='2 6' />
+      <g transform='rotate(-10 179 83)'>
+        <rect class='art-sheet' x='102' y='35' width='143' height='100' rx='9' />
+        <path class='art-line' d='M119 53H180M119 63H200' />
+      </g>
+      <g transform='rotate(5 184 79)'>
+        <rect class='art-sheet' x='119' y='25' width='135' height='107' rx='8' />
+        <path class='art-line' d='M142 25V132M157 49H216M157 60H232M157 71H222M157 92H203M157 103H224' />
+        <path class='art-accent-fill' d='M219 25H235V57L227 51L219 57V25Z' />
+        <rect class='art-tab' x='249' y='66' width='11' height='15' rx='3' />
+        <rect class='art-tab' x='249' y='87' width='11' height='15' rx='3' />
+      </g>
+      <circle class='art-accent-fill' cx='84' cy='63' r='3' />
+      <path class='art-accent' d='M275 111H283M279 107V115' />
+    </g>
+  )}
+  {kind === 'ui' && (
+    <g stroke-linecap='round' stroke-linejoin='round'>
+      <path class='art-guide' d='M65 39H298M65 117H298M89 20V140M272 20V140' stroke-dasharray='2 6' />
+      <g transform='rotate(-6 139 77)'>
+        <rect class='art-sheet' x='84' y='35' width='112' height='90' rx='11' />
+        <rect class='art-tint' x='98' y='49' width='83' height='37' rx='6' />
+        <circle class='art-accent-fill' cx='113' cy='64' r='5' />
+        <path class='art-accent' d='M101 79L125 66L138 73L158 57L178 71' />
+        <path class='art-line' d='M99 99H135M99 109H156' />
+      </g>
+      <g transform='rotate(5 233 80)'>
+        <rect class='art-sheet' x='206' y='27' width='68' height='39' rx='10' />
+        <rect class='art-tint' x='218' y='39' width='43' height='15' rx='7.5' />
+        <circle class='art-accent-fill' cx='253' cy='46.5' r='5' />
+        <rect class='art-sheet' x='205' y='77' width='80' height='49' rx='10' />
+        <rect class='art-accent-fill' x='218' y='91' width='18' height='21' rx='4' />
+        <rect class='art-tint' x='242' y='91' width='12' height='21' rx='4' />
+        <rect class='art-tab' x='260' y='91' width='12' height='21' rx='4' />
+      </g>
+      <path class='art-accent' d='M183 23H191M187 19V27' />
+    </g>
+  )}
+  {kind === 'lab' && (
+    <g stroke-linecap='round' stroke-linejoin='round'>
+      <path class='art-guide' d='M76 39H285M76 65H285M76 91H285M76 117H285M102 26V133M154 26V133M206 26V133M258 26V133' stroke-dasharray='1 6' />
+      <path class='art-line' d='M82 29V125H283M77 45H87M77 71H87M77 97H87M108 120V130M160 120V130M212 120V130M264 120V130' />
+      <path class='art-tint' d='M88 110C122 110 116 63 151 63S179 100 207 100S236 43 276 43V124H88Z' />
+      <path class='art-accent' d='M88 110C122 110 116 63 151 63S179 100 207 100S236 43 276 43' />
+      <path class='art-line' d='M88 104C134 117 151 28 186 42S231 113 276 90' stroke-dasharray='4 5' />
+      <circle class='art-sheet' cx='151' cy='63' r='7' />
+      <circle class='art-accent-fill' cx='151' cy='63' r='3' />
+      <circle class='art-sheet' cx='246' cy='58' r='5' />
+      <path class='art-line' d='M217 29H240M217 35H230' />
+    </g>
+  )}
+  {kind === 'projects' && (
+    <g stroke-linecap='round' stroke-linejoin='round'>
+      <path class='art-guide' d='M62 123H300M80 28V139M282 22V139' stroke-dasharray='2 6' />
+      <g transform='rotate(-7 185 70)'>
+        <rect class='art-sheet' x='121' y='25' width='139' height='86' rx='8' />
+        <path class='art-line' d='M121 44H260M134 35H135M141 35H142M148 35H149' />
+        <path class='art-accent' d='M150 61L140 70L150 79M174 61L184 70L174 79M165 57L158 83' />
+        <path class='art-line' d='M201 64H242M201 74H230M140 94H207' />
+      </g>
+      <g transform='rotate(5 160 105)'>
+        <path class='art-sheet' d='M91 84A7 7 0 0 1 98 77H133L143 87H219A7 7 0 0 1 226 94V127A7 7 0 0 1 219 134H98A7 7 0 0 1 91 127Z' />
+        <rect class='art-tint' x='105' y='99' width='25' height='22' rx='4' />
+        <rect class='art-tab' x='139' y='99' width='25' height='22' rx='4' />
+        <rect class='art-tint' x='173' y='99' width='39' height='22' rx='4' />
+        <path class='art-accent' d='M111 110H123M117 104V116M181 110H204' />
+      </g>
+      <path class='art-accent' d='M279 83V101H257M263 96L257 101L263 106' />
+      <circle class='art-accent-fill' cx='88' cy='49' r='3' />
+    </g>
+  )}
+</svg>
+
+<style>
+  .project-artwork {
+    width: 100%;
+    height: 100%;
+    stroke-width: 1.25;
+  }
+
+  .art-guide { stroke: hsl(var(--muted-foreground) / 0.18); }
+  .art-line { stroke: hsl(var(--muted-foreground) / 0.45); }
+  .art-sheet {
+    fill: var(--project-surface);
+    stroke: hsl(var(--muted-foreground) / 0.42);
+  }
+  .art-tint {
+    fill: hsl(var(--primary) / 0.12);
+    stroke: hsl(var(--primary) / 0.35);
+  }
+  .art-tab {
+    fill: hsl(var(--muted-foreground) / 0.12);
+    stroke: hsl(var(--muted-foreground) / 0.3);
+  }
+  .art-accent { stroke: hsl(var(--primary) / 0.85); }
+  .art-accent-fill { fill: hsl(var(--primary) / 0.65); }
+</style>
